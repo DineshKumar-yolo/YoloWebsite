@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Inter */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@1,200&family=Work+Sans:wght@300&display=swap');
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -21,4 +24,15 @@ input[type="number"] {
   border-right: 1px solid rgb(138, 137, 137);
   border-image: linear-gradient(to bottom, rgb(138, 137, 137), transparent);
   border-image-slice: 1;
+}
+
+.flex-grid{
+  flex: 1 0 0;
+}
+
+.paybill-bg {
+  background-image: url('../public/rupay-card.png');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }
