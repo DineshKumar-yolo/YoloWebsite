@@ -15,7 +15,7 @@ export default function Home() {
       <Extras />
       <PayBills />
       <Rewards />
-      {/* Currently workin on review section */}
+      {/* Currently working on review section */}
       {/* <Reviews /> */}
     </main>
   )
