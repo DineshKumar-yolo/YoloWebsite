@@ -19,25 +19,25 @@ const ScanandPay = () => {
               </span>
             </h1>
           </div>
-          <div className="flex justify-between items-stretch pt-[30px] gap-[30px] px-[20px]">
+          <div className="flex justify-between items-stretch pt-[30px] gap-[30px] px-5">
             <p className="text-white font-poppins text-sm">
               Pay Anywhere in Seconds
             </p>
             <RiAddLine className="text-white text-[24px]" />
           </div>
-          <div className="flex justify-between items-stretch pt-[30px] gap-[30px] px-[20px]">
+          <div className="flex justify-between items-stretch pt-[30px] gap-[30px] px-5">
             <p className="text-white font-poppins text-sm">
               Get Rewards for every payment
             </p>
             <RiAddLine className="text-white text-[24px]" />
           </div>
-          <div className="flex justify-between items-stretch pt-[30px] gap-[30px] px-[20px]">
+          <div className="flex justify-between items-stretch pt-[30px] gap-[30px] px-5">
             <p className="text-white font-poppins text-sm">
               Subscribe to favourite OTT’s
             </p>
             <RiAddLine className="text-white text-[24px]" />
           </div>
-          <div className="flex justify-between items-stretch pt-[30px] gap-[30px] px-[20px]">
+          <div className="flex justify-between items-stretch pt-[30px] gap-[30px] px-5">
             <p className="text-white font-poppins text-sm">
               Get internship opportunities
             </p>

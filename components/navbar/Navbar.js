@@ -29,7 +29,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="border-gradient shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3">
+      <div className="border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3">
         <button className="flex w-[20px] p-[1px] items-start shrink-0">
           <BiLogoPlayStore />
         </button>

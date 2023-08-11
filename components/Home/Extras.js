@@ -15,7 +15,7 @@ const Extras = () => {
               </div>
           </div>
           <div className='flex items-center gap-5'>
-              <div className='py-[75px] px-[55px] flex flex-col justify-center items-center gap-[10px] bg-[#F8F8F8] border-gradient'>
+              <div className='py-[75px] px-[55px] flex flex-col justify-center items-center gap-[10px] bg-[#F8F8F8] border-gradient-bottom'>
                   <div className='flex flex-col items-start gap-[30px] w-[290px]'>
                       <Image src={yolo_coins} />
                       <div className='flex flex-col items-start gap-5'>
@@ -24,7 +24,7 @@ const Extras = () => {
                       </div>
                   </div>
               </div>
-              <div className='py-[61px] px-[55px] flex flex-col justify-center items-center gap-[10px] bg-[#F8F8F8] border-gradient'>
+              <div className='py-[61px] px-[55px] flex flex-col justify-center items-center gap-[10px] bg-[#F8F8F8] border-gradient-bottom'>
                   <div className='flex flex-col items-start gap-[30px] w-[290px]'>
                       <Image src={yolo_money} />
                       <div className='flex flex-col items-start gap-5'>
@@ -33,7 +33,7 @@ const Extras = () => {
                       </div>
                   </div>
               </div>
-              <div className='py-[75px] px-[55px] flex flex-col justify-center items-center gap-[10px] bg-[#F8F8F8] border-gradient'>
+              <div className='py-[75px] px-[55px] flex flex-col justify-center items-center gap-[10px] bg-[#F8F8F8] border-gradient-bottom'>
                   <div className='flex flex-col items-start gap-[30px] w-[290px]'>
                       <Image src={yolo_giveaways} />
                       <div className='flex flex-col items-start gap-5'>

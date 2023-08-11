@@ -5,6 +5,9 @@ import Extras from '../components/Home/Extras'
 import PayBills from '../components/Home/PayBills'
 import Rewards from '../components/Home/Rewards'
 import Reviews from '../components/Home/Reviews'
+import Faq from '../components/Home/Faq'
+import AboutYoloApp from '../components/Home/AboutYoloApp'
+import Footer from '../components/footer/Footer'
 
 export default function Home() {
   return (
@@ -15,8 +18,11 @@ export default function Home() {
       <Extras />
       <PayBills />
       <Rewards />
-      {/* Currently working on review section */}
-      {/* <Reviews /> */}
+      <Reviews />
+      <Faq />
+      <AboutYoloApp />
+      {/* Currently working on footer */}
+      {/* <Footer /> */}
     </main>
   )
 }

@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="bg-gradient-to-b from-black from-40% to-[#650B0B] mix-blend-overlay">
       <Navtop />
       <Navbar />
-          <div className="flex flex-col gap-8 items-center my-12 w-1/2 mx-auto font-poppins">
+          <div className="flex flex-col gap-8 items-center py-12 w-1/2 mx-auto font-poppins">
               <div className="flex flex-col gap-4">
                   <h1 className="text-[#F8F8F8] text-center text-[44px] font-semibold leading-[150%]">Raising Financially Savvy Kids, Introducing Genie</h1>
                   <p className="text-[#9C9C9C] text-center text-base font-normal leading-[170%] tracking-[-0.165px]">Seamless Payments, Exciting Rewards, and Premium App Subscriptions</p>
