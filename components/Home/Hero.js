@@ -2,6 +2,7 @@ import React from "react";
 import Navtop from "../navtop/Navtop";
 import Navbar from "../navbar/Navbar";
 import Image from "next/image";
+import Button from '../modules/Button'
 import hero_phone_1 from "../../public/hero-phone-1.png"
 import hero_phone_2 from "../../public/hero-phone-2.png"
 import hero_phone_3 from "../../public/hero-phone-3.png"
@@ -19,8 +20,8 @@ const Hero = () => {
                   <p className="text-[#9C9C9C] text-center text-base font-normal leading-[170%] tracking-[-0.165px]">Seamless Payments, Exciting Rewards, and Premium App Subscriptions</p>
               </div>
               <div className="w-2/3 flex gap-4 items-start">
-                  <input type="number" className="py-4 px-3 text-[#3b3b3b] w-7/12 text-sm rounded-sm focus:outline-none leading-[150%] lowercase" placeholder="Enter mobile number" />
-                  <button className="flex px-8 py-4 justify-center items-center text-base text-white rounded-sm font-medium leading-[150%] bg-gradient-to-r from-[#BB0707] to-[#650B0B]">Get Started</button>
+                  <input type="number" className="py-3 px-3 text-[#3b3b3b] w-7/12 text-base rounded-sm focus:outline-none leading-[150%] lowercase" placeholder="Enter mobile number" />
+                  <Button buttonName={"Get Started"} />
               </div>
           </div>
           <div className="w-[241px] flex gap-2 py-3 px-2 justify-center absolute top-[95%] left-[7%] items-center rounded-2xl backdrop-blur-sm shrink-0 bg-gradient-to-br from-[#FFFFFF52] via-[#FFFFFF33] to-[#FFE0E033]">

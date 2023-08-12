@@ -65,3 +65,10 @@ input[type="number"] {
   background-position-y: bottom;
   background-repeat: no-repeat;
 }
+
+.FinancialEnlightment-bg {
+  background-image: url('../public/Yolo-DebitCard.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
