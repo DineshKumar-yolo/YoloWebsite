@@ -1,13 +1,13 @@
 import React from "react";
-import Navtop from "../navtop/Navtop";
-import Navbar from "../navbar/Navbar";
+import Navtop from "../modules/navtop/Navtop";
+import Navbar from "../modules/navbar/Navbar";
 import Image from "next/image";
-import Button from '../modules/Button'
-import hero_phone_1 from "../../public/hero-phone-1.png"
-import hero_phone_2 from "../../public/hero-phone-2.png"
-import hero_phone_3 from "../../public/hero-phone-3.png"
-import hero_image from '../../public/hero-image.png'
-import hero_image_2 from '../../public/hero-image-2.jpg'
+import Button from "../modules/Button";
+import hero_phone_1 from "../../public/hero-phone-1.png";
+import hero_phone_2 from "../../public/hero-phone-2.png";
+import hero_phone_3 from "../../public/hero-phone-3.png";
+import hero_image from "../../public/hero-image.png";
+import hero_image_2 from "../../public/hero-image-2.png";
 
 const Hero = () => {
   return (

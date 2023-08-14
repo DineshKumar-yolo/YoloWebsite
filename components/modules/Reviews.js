@@ -90,22 +90,22 @@ const Reviews = () => {
         }
     };
 
-    const handleScroll = () => {
-        const container = reviewsContainerRef.current;
-        if (container) {
-            setIsLeftButtonDisabled(container.scrollLeft === 0);
-            setIsRightButtonDisabled(
-                container.scrollLeft >=
-                container.scrollWidth - container.clientWidth
-            );
-        }
-    };
-
+    
     useEffect(() => {
-        handleScroll();
-        reviewsContainerRef.current.addEventListener('scroll', handleScroll);
+        const container = reviewsContainerRef.current;
+        const handleScroll = () => {
+            if (container) {
+                setIsLeftButtonDisabled(container.scrollLeft === 0);
+                setIsRightButtonDisabled(
+                    container.scrollLeft >=
+                    container.scrollWidth - container.clientWidth
+                );
+            }
+        };
+        // handleScroll();
+        container.addEventListener('scroll', handleScroll);
         return () => {
-            reviewsContainerRef.current.removeEventListener('scroll', handleScroll);
+            container.removeEventListener('scroll', handleScroll);
         };
     }, []);
 

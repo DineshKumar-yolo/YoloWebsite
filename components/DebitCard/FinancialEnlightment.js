@@ -1,5 +1,5 @@
 import React from 'react'
-import hero_image_2 from '../../public/hero-image-2.jpg'
+import hero_image_2 from '../../public/hero-image-2.png'
 import Image from 'next/image'
 
 const FinancialEnlightment = () => {
