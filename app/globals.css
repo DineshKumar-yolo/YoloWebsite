@@ -2,26 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Font Inter */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@1,200&family=Work+Sans:wght@300&display=swap');
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar-thumb{
+  width: 2px;
+  height: 2px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #BB0707 0%, #650B0B 100%);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+.border-gradient-bottom {
+  background: linear-gradient(to bottom, rgb(138, 137, 137), transparent);
+  /* background-clip: padding-box; */
+  background: transparent;
+  border-top: 1px solid rgb(138, 137, 137);
+  border-left: 1px solid rgb(138, 137, 137);
+  border-right: 1px solid rgb(138, 137, 137);
+  border-image: linear-gradient(to bottom, rgb(138, 137, 137), transparent);
+  border-image-slice: 1;
+}
+
+.border-gradient-right {
+  background: linear-gradient(to right, rgb(138, 137, 137), transparent);
+  background: transparent;
+  border-top: 1px solid rgb(138, 137, 137);
+  border-left: 1px solid rgb(138, 137, 137);
+  border-bottom: 1px solid rgb(138, 137, 137);
+  border-image: linear-gradient(to right, rgb(138, 137, 137), transparent);
+  border-image-slice: 1;
+}
+
+.flex-grid{
+  flex: 1 0 0;
+}
+
+.paybill-bg {
+  background-image: url('../public/rupay-card.png');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.bg-design {
+  background-image: url('../public/bg-design.png');
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+
+.FinancialEnlightment-bg {
+  background-image: url('../public/Yolo-DebitCard.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
