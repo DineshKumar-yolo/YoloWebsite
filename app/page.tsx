@@ -21,7 +21,6 @@ export default function Home() {
       <Reviews />
       <Faq />
       <AboutYoloApp />
-      {/* Currently working on footer */}
       <Footer />
     </main>
   );

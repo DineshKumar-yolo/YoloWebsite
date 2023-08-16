@@ -6,8 +6,9 @@ import yolo_giveaways from '../../public/yolo-giveaways.svg'
 import Image from 'next/image'
 
 const Extras = () => {
-  return (
-      <div className='py-24 px-[100px] flex flex-col justify-center items-start gap-20'>
+    return (
+        <div className='py-24 px-[100px] flex justify-center items-center'>  
+            <div className='flex flex-col justify-center items-start gap-20 w-[1240px]'>
           <div className='flex justify-center self-stretch items-start gap-[10px]'>
               <h1 className='flex-grid text-[#0D0D0D] font-poppins text-[40px] font-semibold leading-normal -tracking-[0.165px]'>Children's love more <br /> and we are happy to provide</h1>
               <div className='h-full'>
@@ -44,6 +45,7 @@ const Extras = () => {
               </div>
           </div>
     </div>
+      </div>
   )
 }
 

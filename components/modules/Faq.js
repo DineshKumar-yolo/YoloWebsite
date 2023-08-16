@@ -6,7 +6,7 @@ import { VscAdd } from "react-icons/vsc";
 const Faq = () => {
   return (
     <div className="flex h-screen justify-center items-center bg-[#0D0D0D]">
-      <div className="flex flex-col items-center self-stretch w-[1240px] gap-10 m-auto">
+      <div className="flex flex-col items-center self-stretch w-10/12 gap-10 m-auto">
         <div className="flex items-start justify-between gap-3 self-stretch">
           <div className="flex flex-col items-start gap-3 flex-grid">
             <p className="text-white font-poppins text-base font-normal leading-[170%] tracking-[-0.165px] opacity-50">
