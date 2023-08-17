@@ -6,7 +6,7 @@ import Image from "next/image";
 const ScanandPay = () => {
   return (
     <div className="bg-[#0D0D0D] flex flex-col justify-center items-center h-screen">
-      <div className="flex gap-[123px]">
+      <div className="flex gap-[123px] w-[85.97%]">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p className="text-[#7F7F7F] font-poppins text-base font-normal leading-[170%] tracking-[2px] uppercase">

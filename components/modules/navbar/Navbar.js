@@ -1,14 +1,16 @@
-import Link from 'next/link'
-import React from 'react'
-import { BiLogoPlayStore, BiLogoApple } from 'react-icons/bi'
-import logo from '../../public/logo.svg';
-import Image from 'next/image';
+import Link from "next/link";
+import React from "react";
+import { BiLogoPlayStore, BiLogoApple } from "react-icons/bi";
+import logo from "../../../public/logo.svg";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
     <div className="flex justify-between items-center mx-24 text-white py-5 text-lg">
       <div>
-        <Image src={logo} />
+        <Link href="/">
+          <Image src={logo} />
+        </Link>
       </div>
       <div>
         <ul className="flex list-none gap-[32px] font-poppins text-slate-300">
@@ -39,6 +41,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

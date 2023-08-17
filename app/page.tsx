@@ -7,7 +7,7 @@ import Rewards from '../components/Home/Rewards'
 import Reviews from '../components/modules/Reviews'
 import Faq from '../components/modules/Faq'
 import AboutYoloApp from '../components/modules/AboutYoloApp'
-import Footer from '../components/footer/Footer'
+import Footer from "../components/modules/footer/Footer";
 
 export default function Home() {
   return (
@@ -21,7 +21,6 @@ export default function Home() {
       <Reviews />
       <Faq />
       <AboutYoloApp />
-      {/* Currently working on footer */}
       <Footer />
     </main>
   );

@@ -73,23 +73,22 @@ const TimeSavers = () => {
         }
     };
 
-    const handleScroll = () => {
-        const container = TimeSaverContainerRef.current;
-        if (container) {
-            setIsLeftButtonDisabled(container.scrollLeft === 0);
-            setIsRightButtonDisabled(
-                container.scrollLeft >=
-                container.scrollWidth - container.clientWidth
-            );
-        }
-    };
-
     useEffect(() => {
-        handleScroll();
-        TimeSaverContainerRef.current.addEventListener('scroll', handleScroll);
-        return () => {
-            TimeSaverContainerRef.current.removeEventListener('scroll', handleScroll);
-        };
+      const container = TimeSaverContainerRef.current;
+      const handleScroll = () => {
+        if (container) {
+          setIsLeftButtonDisabled(container.scrollLeft === 0);
+          setIsRightButtonDisabled(
+            container.scrollLeft >=
+              container.scrollWidth - container.clientWidth
+          );
+        }
+      };
+      // handleScroll();
+      container.addEventListener("scroll", handleScroll);
+      return () => {
+        container.removeEventListener("scroll", handleScroll);
+      };
     }, []);
   return (
       <div className='flex flex-col py-24 px-[100px] gap-20 items-center bg-[#151515]'>
