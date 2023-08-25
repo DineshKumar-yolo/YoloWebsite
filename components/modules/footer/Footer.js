@@ -17,8 +17,8 @@ const Partnerships = [{ name: 'For Classrooms', link: 'for-classrooms' }, { name
 
 const Footer = () => {
   return (
-    <div className="py-16 px-[100px] w-full bg-[#121213] inline-flex justify-center flex-col items-start gap-36">
-      <div className="flex w-[1240px] h-[216px] items-start gap-5 shrink-0">
+    <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-start gap-36">
+      <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
         <div className="w-[190px]">
           <Image src={logo} className="mb-[31px]" />
           <Image
@@ -31,8 +31,8 @@ const Footer = () => {
             <AiFillTwitterCircle className="rounded-[50%]" />
           </div>
         </div>
-        <div className="flex pb-4 items-start gap-5 flex-grid">
-          <div className="flex flex-col w-[190px] items-start justify-start">
+        <div className="flex pb-4 flex-wrap items-start gap-5 flex-grid">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
               Features
             </h5>
@@ -48,7 +48,7 @@ const Footer = () => {
                 );
               })}
           </div>
-          <div className="flex flex-col w-[190px] items-start justify-start">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
               Plans
             </h5>
@@ -64,7 +64,7 @@ const Footer = () => {
                 );
               })}
           </div>
-          <div className="flex flex-col w-[190px] items-start justify-start">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
               Learn
             </h5>
@@ -80,7 +80,7 @@ const Footer = () => {
                 );
               })}
           </div>
-          <div className="flex flex-col w-[190px] items-start justify-start">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px] uppercase">
               Resources
             </h5>
@@ -96,7 +96,7 @@ const Footer = () => {
                 );
               })}
           </div>
-          <div className="flex flex-col w-[190px] items-start justify-start">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
               Partnerships
             </h5>
@@ -114,9 +114,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start gap-[68px] w-[1240px]">
+      <div className="flex flex-col flex-wrap items-start gap-[68px] xl:w-[1240px]">
         <div className="flex flex-col items-start gap-12">
-          <div className="flex items-start justify-between w-full">
+          <div className="flex items-start flex-wrap justify-between w-full gap-5 xl:gap-0">
             <div className="flex flex-col justify-center items-start gap-1">
               <h4 className="text-white text-center font-poppins text-2xl font-semibold leading-[133.333%]">
                 We work with trusted partners
@@ -126,14 +126,14 @@ const Footer = () => {
                 safe
               </p>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="min-w-[341px] flex flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
+            <div className="flex items-start flex-wrap gap-4">
+              <div className="max-w-[341px] flex flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   SECURITY PARTNERS
                 </p>
                 <Image src={SecurityPartners} />
               </div>
-              <div className="min-w-[341px] flex flex-col p-4 pb-[26px] gap-3 bg-white rounded-[7px] items-start">
+              <div className="max-w-[341px] flex flex-col p-4 pb-[26px] gap-3 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   BANKING AND PAYMENT PARTNERS
                 </p>
@@ -152,7 +152,7 @@ const Footer = () => {
             change at any time.
           </p>
         </div>
-        <div className="w-full flex justify-between items-start">
+        <div className="w-full flex-wrap flex justify-between items-start gap-5 md:gap-0">
           <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
             copyright © 2020-22 Dreamplug Technologies Pvt Ltd.
           </p>

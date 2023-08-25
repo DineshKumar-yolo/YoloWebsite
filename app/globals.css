@@ -60,6 +60,12 @@ input[type="number"] {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+  .paybill-bg {
+    background: black;
+  }
+}
+
 .bg-design {
   background-image: url('../public/bg-design.png');
   background-position-y: bottom;
