@@ -114,7 +114,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col flex-wrap items-start gap-[68px] xl:w-[1240px]">
+      <div className="flex flex-col flex-wrap items-start gap-[68px] 2xl:w-[1240px]">
         <div className="flex flex-col items-start gap-12">
           <div className="flex items-start flex-wrap justify-between w-full gap-5 xl:gap-0">
             <div className="flex flex-col justify-center items-start gap-1">

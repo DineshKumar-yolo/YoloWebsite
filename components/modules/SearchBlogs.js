@@ -19,7 +19,7 @@ const SearchBlogs = () => {
   const [activeItem, setActiveItem] = useState(Items[0].label);
 
   return (
-    <div className="flex justify-center items-center mx-auto bg-[#151515]">
+    <div className="flex xl:justify-center items-center px-4 xl:px-0 mx-auto overflow-x-scroll bg-[#151515]">
       <div className="flex justify-center py-3 items-start gap-9">
         <div className="flex items-center gap-1">
           {Items.map((item) => (

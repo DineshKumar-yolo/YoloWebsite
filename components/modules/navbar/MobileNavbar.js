@@ -12,8 +12,8 @@ const MobileNavbar = () => {
     const [isMenuOpen, setisMenuOpen] = useState(false);
 
   return (
-      <div className='flex px-10 sm:py-10 py-5 items-center justify-between gap-3 text-white relative'>
-          <div><Image src={logo} alt='YOLO' className='h-6 w-20' /></div>
+      <div className='flex px-10 sm:py-10 py-5 items-center justify-between gap-3 text-white w-full relative'>
+          <Link href="/"><Image src={logo} alt='YOLO' className='h-6 w-20' /></Link>
           <button onClick={() => setisMenuOpen(!isMenuOpen)}><HiOutlineMenu className="text-3xl" /></button>
           <div className={`${!isMenuOpen ? '-translate-y-[100%] -z-10' : 'translate-y-0 z-10'} transition-all duration-300 w-full md:py-10 py-7 m-0 absolute top-0 left-0 flex flex-col items-center gap-8 bg-gradient-to-b from-[#BB0707] via-20% to-[#650B0B]`}>
               <button onClick={() => setisMenuOpen(!isMenuOpen)} className='flex items-end w-full justify-end px-10 text-white text-2xl'><VscChromeClose /></button>

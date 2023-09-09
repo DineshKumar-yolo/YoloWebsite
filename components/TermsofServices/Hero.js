@@ -2,8 +2,8 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className="bg-[#F8F8F8] px-[100px] pt-[80px] pb-[184px]">
-      <div className="flex w-[1240px] flex-col items-start gap-16">
+    <div className="bg-[#F8F8F8] xl:px-[100px] px-10 pt-[80px] pb-[184px]">
+      <div className="flex max-w-[1240px] flex-col items-start gap-16">
         <div className="flex flex-col items-start gap-2">
           <h1 className="text-black font-poppins text-[44px] font-semibold leading-[150%]">
             YOLO Terms of Service
@@ -12,7 +12,7 @@ const Hero = () => {
             Last Updated : 2 Aug 2023
           </p>
         </div>
-        <div className="text-black font-poppins text-base font-normal leading-[180%] tracking-[-0.165px]">
+        <div className="text-black font-poppins text-base font-normal leading-[180%] tracking-[-0.165px] text-justify">
                   <p>{`Your use of the Yolo website, yolo.com (the “Website”), the Yolo application for a mobile phone, tablet, or any other portable device (the “Application”), and the Yolo Services (defined below) are subject to your compliance with Yolo’s terms and conditions of service (the “Terms of Service”). These Terms of Service constitute a legally binding agreement between Yolo Financial Technology, Inc. (“Yolo,” “we,” “our,” or “us”) and you, and describe the terms under which you agree to use the services, products, features, functions, technologies, or content offered on the Website, the Application, and all related sites and applications, regardless of how accessed, including by computer, mobile phone, tablet, or any other device (collectively, the “Yolo Services”). “Yolo Account” means the non-monetary service account in the Application, established by the Primary Accountholder, through which the Yolo Services are provided with regard to the Primary Account and any associated Secondary Account(s). The Yolo Account does not hold any consumer funds; any consumer funds related to the Yolo program described in these Terms of Service are held in the Card Account (as defined below) established and maintained by Community Federal Savings Bank on behalf of the Primary Accountholder, or in the Invest Account held by DriveWealth, LLC. PLEASE READ THESE TERMS OF SERVICE CAREFULLY.`}</p>
                   <br />
                   <h5 className='font-semibold'>Yolo Services Overview: </h5>

@@ -60,28 +60,35 @@ const DebitCardCompanion = () => {
     const [isRightButtonDisabled, setIsRightButtonDisabled] = useState(false);
 
     const scrollLeft = () => {
-        if (CardCompanionContainerRef.current?.scrollLeft > 0) {
-            CardCompanionContainerRef.current.scrollTo({
-                left: CardCompanionContainerRef.current.scrollLeft - 1029,
-                behavior: "smooth",
-            });
-            setScrollPosition(CardCompanionContainerRef.current.scrollLeft);
-        }
+      const innerWidth = window.innerWidth;
+      const scrollLeft = CardCompanionContainerRef.current?.scrollLeft;
+
+      if (scrollLeft > 0) {
+        const scrollAmount = Math.min(1029, innerWidth); // Set the maximum scroll amount to either 1029 or the inner width, whichever is smaller.
+        CardCompanionContainerRef.current.scrollTo({
+          left: scrollLeft - scrollAmount,
+          behavior: "smooth",
+        });
+        setScrollPosition(CardCompanionContainerRef.current.scrollLeft);
+      }
     };
 
     const scrollRight = () => {
-        if (
-            CardCompanionContainerRef.current?.scrollLeft <
-            CardCompanionContainerRef.current?.scrollWidth -
-            CardCompanionContainerRef.current?.clientWidth
-        ) {
-            CardCompanionContainerRef.current.scrollTo({
-                left: CardCompanionContainerRef.current.scrollLeft + 1029,
-                behavior: "smooth",
-            });
-            setScrollPosition(CardCompanionContainerRef.current.scrollLeft);
-        }
+      const innerWidth = window.innerWidth;
+      const scrollLeft = CardCompanionContainerRef.current?.scrollLeft;
+      const scrollWidth = CardCompanionContainerRef.current?.scrollWidth;
+      const clientWidth = CardCompanionContainerRef.current?.clientWidth;
+
+      if (scrollLeft < scrollWidth - clientWidth) {
+        const scrollAmount = Math.min(1029, innerWidth); // Set the maximum scroll amount to either 1029 or the inner width, whichever is smaller.
+        CardCompanionContainerRef.current.scrollTo({
+          left: scrollLeft + scrollAmount,
+          behavior: "smooth",
+        });
+        setScrollPosition(CardCompanionContainerRef.current.scrollLeft);
+      }
     };
+
 
     useEffect(() => {
         const container = CardCompanionContainerRef.current;
@@ -101,14 +108,14 @@ const DebitCardCompanion = () => {
           };
     }, []);
     return (
-        <div className='flex justify-center items-center h-screen'>
-            <div className='w-[1029px] inline-flex flex-col items-center gap-10'>
-                <div className="flex overflow-x-hidden w-full" ref={CardCompanionContainerRef}>
+        <div className='flex justify-center items-center min-h-screen'>
+            <div className='xl:w-[1029px] w-full inline-flex flex-col items-center gap-10'>
+                <div className="flex xl:overflow-x-hidden overflow-x-auto w-full" ref={CardCompanionContainerRef}>
                     {
                         scrollContent && scrollContent.map((scrollcontent, index) => {
                             return (
-                                <div key={index} className='flex items-center gap-10 w-full shrink-0'>
-                                    <Image src={scrollcontent.image} className='w-[504px] h-[430px] rounded-2xl' />
+                                <div key={index} className='flex flex-wrap xl:flex-nowrap items-center gap-10 w-full px-5 shrink-0'>
+                                    <Image src={scrollcontent.image} className='xl:w-[504px] xl:h-[430px] aspect-square xl:aspect-auto rounded-2xl block' />
                                     <div className='flex flex-col items-start gap-3 w-[485px]'>
                                         <div className='flex flex-col items-start gap-3'>
                                             <div className='flex flex-col items-start gap-6'>
