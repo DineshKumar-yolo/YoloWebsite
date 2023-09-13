@@ -122,7 +122,7 @@ const Reviews = () => {
                         <button className={`flex h-14 px-3 justify-center items-center xl:text-2xl text-lg border-gradient-bottom ${isRightButtonDisabled ? 'text-[#383838]' : 'text-[#585858]'}`} onClick={scrollRight} disabled={isRightButtonDisabled}><GoArrowRight /></button>
                     </div>
                 </div>
-                <div className='review flex gap-5 w-full overflow-x-auto' ref={reviewsContainerRef}>
+                <div className='review flex flex-wrap xl:flex-nowrap gap-5 w-full overflow-x-auto' ref={reviewsContainerRef}>
                     {
                         AllReviews && AllReviews.map((EachReview) => {
                             return (

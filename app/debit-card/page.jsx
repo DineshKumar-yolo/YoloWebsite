@@ -1,4 +1,5 @@
 import Navbar from "@/components/modules/navbar/Navbar";
+import MobileNavbar from "../../components/modules/navbar/MobileNavbar";
 import Navtop from "@/components/modules/navtop/Navtop";
 import Footer from "@/components/modules/footer/Footer";
 import Hero from "@/components/DebitCard/Hero";
@@ -11,9 +12,7 @@ import AboutYoloDebitCard from "@/components/DebitCard/AboutYoloDebitCard";
 
 const page = () => {
   return (
-    <div className="bg-[#0D0D0D] shrink-0">
-      <Navtop />
-      <Navbar />
+    <div className="">
       <Hero />
       <TimeSavers />
       <FinancialEnlightment />
@@ -21,7 +20,6 @@ const page = () => {
       <Reviews />
       <Faq />
       <AboutYoloApp />
-      <Footer />
     </div>
   );
 };

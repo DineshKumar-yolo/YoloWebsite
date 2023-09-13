@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const Works = () => {
   return (
-    <div className="bg-[#0D0D0D] flex flex-col justify-center items-center xl:h-screen">
-      <div className="flex flex-col xl:flex-row justify-center gap-[123px] sm:w-[85.97%] w-full px-10 py-12 xl:py-0">
-        <div className="flex flex-col gap-8 w-[505px] shrink-0">
+    <div className="bg-[#0D0D0D] flex flex-col justify-center items-center lg:h-screen">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-[12%] sm:w-[85.97%] w-full px-10 py-12 lg:py-0">
+        <div className="flex flex-col gap-8 flex-1 xl:w-5/12 shrink-0">
           <div className="flex flex-col gap-4">
-            <h1 className="text-white font-poppins text-[40px] w-3/4 font-semibold leading-normal tracking-[-0.165px]">
+            <h1 className="text-white font-poppins text-[40px] xl:w-3/4 font-semibold leading-normal tracking-[-0.165px]">
               How It Works
             </h1>
           </div>
@@ -38,8 +38,8 @@ const Works = () => {
             <RiArrowDownSLine className="text-white text-[24px]" />
           </div>
         </div>
-        <div className="sm:block">
-          <Image src={scanandpay} className="" />
+        <div className="sm:block flex-1">
+          <Image src={scanandpay} className="shrink-0 xl:w-11/12" />
         </div>
       </div>
     </div>

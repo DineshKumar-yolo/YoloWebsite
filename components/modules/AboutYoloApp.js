@@ -3,6 +3,7 @@ import heroImage from '../../public/hero-phone-2.png'
 import PlayStore from '../../public/play-store.png'
 import AppStore from '../../public/app-store.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const AboutYoloApp = () => {
     return (
@@ -14,12 +15,12 @@ const AboutYoloApp = () => {
                         <p className='text-[#878787] font-poppins text-lg font-normal leading-[150%]'>With this platform,  you can access to all the features, and learn investing and saving</p>
                     </div>
                     <div className='inline-flex items-start gap-5'>
-                        <button>
+                        <Link href={"/download"}>
                             <Image src={PlayStore} />
-                        </button>
-                        <button>
+                        </Link>
+                        <Link href={"/download"}>
                             <Image src={AppStore} />
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <Image src={heroImage} className='hidden xl:block w-[344px] h-[526px] shrink-0' />

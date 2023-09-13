@@ -10,20 +10,12 @@ import Blogs from "@/components/Blog/Blogs"
 
 const page = () => {
   return (
-    <div className="bg-[#0D0D0D] overflow-x-hidden">
-      <Navtop />
-      <div className="xl:block hidden">
-      <Navbar />
-      </div>
-      <div className="flex xl:hidden">
-        <MobileNavbar />
-      </div>
+    <div className="overflow-x-hidden">
       <Hero />
       <SearchBlogs />
       <DebitCardCompanion />
       <Blogs />
       <AboutYoloApp />
-      <Footer />
     </div>
   );
 };

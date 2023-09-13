@@ -6,16 +6,8 @@ import MobileNavbar from "../../components/modules/navbar/MobileNavbar";
 
 const page = () => {
   return (
-    <div className="bg-[#0D0D0D]">
-      <Navtop />
-      <div className="lg:block hidden">
-        <Navbar />
-      </div>
-      <div className="block lg:hidden">
-        <MobileNavbar />
-      </div>
+    <div className="">
       <Hero />
-      <Footer />
     </div>
   );
 };

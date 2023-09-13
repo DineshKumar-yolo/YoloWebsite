@@ -33,8 +33,8 @@ const TimeSaverContext = [
 
 const TimeSaverBoxes = ( {timeImage, timeHead, timeContent} ) => {
     return (
-        <div className='w-[400px] border-gradient-bottom'>
-            <div className='flex flex-col items-start mx-[41px] mt-[59px] gap-[30px] w-[319px] h-[326px]'>
+        <div className='xl:w-[400px] border-gradient-bottom'>
+            <div className='flex flex-col items-start mx-[41px] mt-[59px] gap-[30px] xl:w-[319px] h-[326px]'>
                 <Image src={timeImage} />
                 <div className='flex flex-col items-start gap-5'>
                     <h5 className='text-white font-poppins text-[26px] font-semibold leading-[92.308%] lowercase'>{timeHead}</h5>
@@ -91,17 +91,17 @@ const TimeSavers = () => {
       };
     }, []);
   return (
-      <div className='flex flex-col py-24 px-[100px] gap-20 items-center bg-[#151515]'>
-          <div className='flex justify-between items-start w-[1240px]'>
+      <div className='flex flex-col py-24 xl:px-[100px] px-10 gap-20 items-center bg-[#151515] overflow-hidden'>
+          <div className='flex justify-between items-start flex-wrap max-w-[1240px] w-full'>
               <div className='flex flex-col items-start flex-grid gap-3'>
                   <h1 className='text-white font-poppins text-[40px] font-semibold leading-normal tracking-[-0.165px]'>Unlock these time-savers.</h1>
               </div>
-              <div className='flex justify-center items-start gap-[17px]'>
+              <div className='xl:flex hidden justify-center items-start gap-[17px]'>
                   <button className={`flex h-14 px-3 justify-center items-center text-2xl border-gradient-bottom ${isLeftButtonDisabled ? 'text-[#383838]' : 'text-white'}`} onClick={scrollLeft} disabled={isLeftButtonDisabled}><GoArrowLeft /></button>
                   <button className={`flex h-14 px-3 justify-center items-center text-2xl border-gradient-bottom ${isRightButtonDisabled ? 'text-[#383838]' : 'text-white'}`} onClick={scrollRight} disabled={isRightButtonDisabled}><GoArrowRight /></button>
               </div>
           </div>
-          <div ref={TimeSaverContainerRef} className='w-[1240px] flex justify-start items-center gap-5 overflow-x-auto'>
+          <div ref={TimeSaverContainerRef} className='max-w-[1240px] flex flex-col xl:flex-row justify-start items-center gap-5 overflow-x-auto'>
               {
                   TimeSaverContext && TimeSaverContext.map((timesaver) => {
                       return (

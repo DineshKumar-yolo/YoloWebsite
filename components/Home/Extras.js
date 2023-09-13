@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Extras = () => {
   return (
-    <div className="xl:py-24 xl:px-[100px] px-10 py-8 flex justify-center items-center">
+    <div className="xl:py-24 xl:px-[100px] bg-[#F8F8F8] px-10 py-8 flex justify-center items-center">
       <div className="flex flex-col justify-center items-start gap-20 xl:w-[1240px] w-full">
         <div className="flex flex-col sm:flex-row justify-center self-stretch items-start gap-[10px]">
           <h1 className="flex-grid text-[#0D0D0D] font-poppins xl:text-[40px] text-2xl font-semibold leading-normal -tracking-[0.165px]">

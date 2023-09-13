@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between w-full items-center mx-24 text-white py-5 text-lg">
+    <div className="flex justify-between items-center mx-24 text-white py-5 text-lg">
       <div>
         <Link href="/">
           <Image src={logo} />

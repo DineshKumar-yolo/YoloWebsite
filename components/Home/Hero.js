@@ -12,14 +12,7 @@ import hero_image_2 from "../../public/hero-image-2.png";
 
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-b from-black from-40% to-[#650B0B] mix-blend-overlay">
-      <Navtop />
-      <div className="lg:block hidden">
-      <Navbar />
-      </div>
-      <div className="block lg:hidden">
-        <MobileNavbar />
-      </div>
+    <div className="bg-gradient-to-b from-[#0D0D0D] from-40% to-[#650B0B]">
       <div className="flex flex-col gap-8 items-center xl:py-12 py-16 xl:w-1/2 px-10 mx-auto font-poppins">
         <div className="flex flex-col gap-4">
           <h1 className="text-[#F8F8F8] text-center text-2xl xl:text-4xl font-semibold leading-[150%]">

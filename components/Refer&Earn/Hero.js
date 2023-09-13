@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 const Hero = () => {
     return (
-        <div className='flex justify-center items-start h-screen overflow-hidden w-full mb-36 mt-10 bg-transparent z-10'>
+        <div className='flex justify-center items-start lg:h-screen overflow-hidden w-full mb-36 mt-10 bg-transparent z-10'>
             <div className="flex flex-col items-center gap-6 justify-center">
                 <h5 className='text-white text-center font-poppins xl:text-lg text-base font-normal leading-[170%] tracking-[2px] uppercase'>Refer and Earn ₹5000</h5>
                 <h1 className='text-[#F8F8F8] text-center font-poppins xl:text-[44px] text-3xl font-semibold leading-[150%]'>
@@ -21,7 +21,7 @@ const Hero = () => {
                     <input type="number" className="py-3 px-3 text-[#3b3b3b] xl:w-[56%] w-[80%] text-base rounded-sm focus:outline-none leading-[150%] lowercase" placeholder="Enter mobile number" />
                     <Button buttonName={"Get Started"} />
                 </div>
-                <div className="hidden relative top-10 w-full xl:flex justify-center">
+                <div className="hidden relative top-10 w-full lg:flex justify-center">
                     <div className="absolute z-10">
                         <Image src={heroImg} />
                     </div>
