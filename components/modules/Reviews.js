@@ -44,7 +44,7 @@ const AllReviews = [
 const Review = ({ userImg, name, username, date, reviewContent }) => {
     return (
         <div>
-            <div className='flex flex-col flex-grid p-5 items-start rounded-[10px] w-[400px] bg-[#121213]'>
+            <div className='flex flex-col flex-grid p-5 items-start rounded-[10px] lg:w-[400px] w-[280px] sm:w-[320px] bg-[#121213]'>
                 <div className="flex pb-4 gap-[10px] self-stretch items-center">
                     <Image src={userImg} />
                     <div>
@@ -110,19 +110,19 @@ const Reviews = () => {
     }, []);
 
     return (
-        <div className='py-24 px-12 flex flex-col justify-center items-center bg-[#0D0D0D]'>
-            <div className='flex flex-col justify-center items-center gap-10 w-11/12'>
+        <div className='md:py-24 md:px-12 py-8 px-10 flex flex-col justify-center items-center bg-[#0D0D0D] overflow-hidden'>
+            <div className='flex flex-col justify-center items-center gap-10 xl:w-11/12 w-full'>
                 <div className='flex w-full justify-between items-start'>
                     <div className='flex flex-col items-start flex-grid gap-3'>
-                        <p className='self-stretch text-[#676767] font-poppins text-base font-normal leading-[170%] tracking-[2px] uppercase'>Testimonials</p>
-                        <h2 className='self-stretch text-white font-poppins text-[40px] font-semibold leading-normal tracking-[-0.165px]'>Voices of Happy Customers</h2>
+                        <p className='self-stretch text-[#676767] font-poppins xl:text-base text-sm font-normal leading-[170%] tracking-[2px] uppercase'>Testimonials</p>
+                        <h2 className='self-stretch text-white font-poppins xl:text-[40px] text-3xl font-semibold leading-normal tracking-[-0.165px]'>Voices of Happy Customers</h2>
                     </div>
-                    <div className='flex justify-center items-start gap-[17px]'>
-                        <button className={`flex h-14 px-3 justify-center items-center text-2xl border-gradient-bottom ${isLeftButtonDisabled ? 'text-[#383838]' : 'text-[#585858]'}`} onClick={scrollLeft} disabled={isLeftButtonDisabled}><GoArrowLeft /></button>
-                        <button className={`flex h-14 px-3 justify-center items-center text-2xl border-gradient-bottom ${isRightButtonDisabled ? 'text-[#383838]' : 'text-[#585858]'}`} onClick={scrollRight} disabled={isRightButtonDisabled}><GoArrowRight /></button>
+                    <div className='hidden md:flex justify-center items-start gap-[17px]'>
+                        <button className={`flex h-14 px-3 justify-center items-center xl:text-2xl text-lg border-gradient-bottom ${isLeftButtonDisabled ? 'text-[#383838]' : 'text-[#585858]'}`} onClick={scrollLeft} disabled={isLeftButtonDisabled}><GoArrowLeft /></button>
+                        <button className={`flex h-14 px-3 justify-center items-center xl:text-2xl text-lg border-gradient-bottom ${isRightButtonDisabled ? 'text-[#383838]' : 'text-[#585858]'}`} onClick={scrollRight} disabled={isRightButtonDisabled}><GoArrowRight /></button>
                     </div>
                 </div>
-                <div className='review flex gap-5 w-full overflow-x-auto' ref={reviewsContainerRef}>
+                <div className='review flex flex-wrap xl:flex-nowrap gap-5 w-full overflow-x-auto' ref={reviewsContainerRef}>
                     {
                         AllReviews && AllReviews.map((EachReview) => {
                             return (

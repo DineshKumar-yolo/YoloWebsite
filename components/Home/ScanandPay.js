@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const ScanandPay = () => {
   return (
-    <div className="bg-[#0D0D0D] flex flex-col justify-center items-center h-screen">
-      <div className="flex gap-[123px] w-[85.97%]">
+    <div className="bg-[#0D0D0D] flex flex-col justify-center items-center xl:h-screen">
+      <div className="flex flex-col xl:flex-row gap-[123px] sm:w-[85.97%] w-full px-10 py-12 xl:py-0">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p className="text-[#7F7F7F] font-poppins text-base font-normal leading-[170%] tracking-[2px] uppercase">
@@ -44,7 +44,7 @@ const ScanandPay = () => {
             <RiAddLine className="text-white text-[24px]" />
           </div>
         </div>
-        <div className="">
+        <div className="sm:block">
           <Image src={scanandpay} />
         </div>
       </div>

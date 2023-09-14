@@ -1,6 +1,10 @@
+import Navtop from '@/components/modules/navtop/Navtop'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import MobileNavbar from '@/components/modules/navbar/MobileNavbar'
+import Navbar from '@/components/modules/navbar/Navbar'
+import Footer from '@/components/modules/footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[#0D0D0D]">
       <head>
         <link
           rel="stylesheet"
@@ -23,7 +27,15 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <Navtop />
+        <div className="block lg:hidden">
+          <MobileNavbar />
+        </div>
+        <div className="lg:block hidden">
+          <Navbar />
+        </div>
         {children}
+        <Footer />
       </body>
     </html>
   );

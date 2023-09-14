@@ -1,38 +1,62 @@
-import React from 'react'
-import logo from '../../../public/logo.svg'
-import playStore from '../../../public/play-store.png'
-import BankingPartners from '../../../public/banking-partners.png';
-import SecurityPartners from '../../../public/security-partners.png'
-import { FaFacebook } from 'react-icons/fa'
-import { ImLinkedin } from 'react-icons/im'
-import { AiFillTwitterCircle } from 'react-icons/ai'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from "react";
+import logo from "../../../public/logo.svg";
+import playStore from "../../../public/play-store.png";
+import BankingPartners from "../../../public/banking-partners.png";
+import SecurityPartners from "../../../public/security-partners.png";
+import { FaFacebook } from "react-icons/fa";
+import { ImLinkedin } from "react-icons/im";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import Image from "next/image";
+import Link from "next/link";
 
-const Features = [{name: "Debit Card", link: "debit-card",}, {name: "Investing", link: "investing",}, {name: "Security", link: "security",}, {name: "Chores & Allowance", link: "chores-and-allowance",}, {name: "Cashback and Savings", link: "chashback-and-savings",}];
-const Plans = [{name: 'Refer Freinds', link: 'refer-freinds'}, {name: 'Gifts', link: 'gifts'}];
-const Learn = [{ name: 'Blog', link: 'blog' }, { name: 'Help Center', link: 'help-center' }, { name: 'FAQ', link: 'faq' }, { name: 'Financial Literacy', link: 'financial-literacy' }];
-const Resources = [{ name: 'Careers', link: 'careers' }, { name: 'Leadership', link: 'leadership' }, { name: 'Press', link: 'press' }];
-const Partnerships = [{ name: 'For Classrooms', link: 'for-classrooms' }, { name: 'Credit Unions', link: 'credit-unions' }, {name: 'Partner With Us', link: 'partner-with-us'}];
+const Features = [
+  { name: "Debit Card", link: "debit-card" },
+  { name: "Investing", link: "investing" },
+  { name: "Security", link: "security" },
+  { name: "Chores & Allowance", link: "chores-and-allowance" },
+  { name: "Cashback and Savings", link: "chashback-and-savings" },
+];
+const Plans = [
+  { name: "Refer Freinds", link: "refer-freinds" },
+  { name: "Gifts", link: "gifts" },
+];
+const Learn = [
+  { name: "Blog", link: "blog" },
+  { name: "Help Center", link: "help-center" },
+  { name: "FAQ", link: "faq" },
+  { name: "Financial Literacy", link: "financial-literacy" },
+];
+const Resources = [
+  { name: "Careers", link: "careers" },
+  { name: "Leadership", link: "leadership" },
+  { name: "Press", link: "press" },
+];
+const Partnerships = [
+  { name: "For Classrooms", link: "for-classrooms" },
+  { name: "Credit Unions", link: "credit-unions" },
+  { name: "Partner With Us", link: "partner-with-us" },
+];
 
 const Footer = () => {
   return (
-    <div className="py-16 px-[100px] w-full bg-[#121213] inline-flex justify-center flex-col items-start gap-36">
-      <div className="flex w-[1240px] h-[216px] items-start gap-5 shrink-0">
+    <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-start gap-36">
+      <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
         <div className="w-[190px]">
           <Image src={logo} className="mb-[31px]" />
-          <Image
-            src={playStore}
-            className="mb-[20.86px] w-[120.83px] h-[37.31px] shrink-0"
-          />
+          <Link href={"/download"}>
+            <Image
+              src={playStore}
+              className="mb-[20.86px] w-[120.83px] h-[37.31px] shrink-0"
+            />
+          </Link>
           <div className="flex gap-4 items-start opacity-20 text-white text-2xl">
-            <FaFacebook className="rounded-full " />
-            <ImLinkedin className="rounded-[50%] " />
-            <AiFillTwitterCircle className="rounded-[50%]" />
+            <FaFacebook className="rounded-full cursor-pointer" />
+            <ImLinkedin className="rounded-[50%] cursor-pointer" />
+            <AiFillTwitterCircle className="rounded-[50%] cursor-pointer" />
           </div>
         </div>
-        <div className="flex pb-4 items-start gap-5 flex-grid">
-          <div className="flex flex-col w-[190px] items-start justify-start">
+        <div className="flex pb-4 flex-wrap items-start gap-5 flex-grid">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
               Features
             </h5>
@@ -48,7 +72,7 @@ const Footer = () => {
                 );
               })}
           </div>
-          <div className="flex flex-col w-[190px] items-start justify-start">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
               Plans
             </h5>
@@ -64,7 +88,7 @@ const Footer = () => {
                 );
               })}
           </div>
-          <div className="flex flex-col w-[190px] items-start justify-start">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
               Learn
             </h5>
@@ -80,7 +104,7 @@ const Footer = () => {
                 );
               })}
           </div>
-          <div className="flex flex-col w-[190px] items-start justify-start">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px] uppercase">
               Resources
             </h5>
@@ -96,7 +120,7 @@ const Footer = () => {
                 );
               })}
           </div>
-          <div className="flex flex-col w-[190px] items-start justify-start">
+          <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
               Partnerships
             </h5>
@@ -114,9 +138,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start gap-[68px] w-[1240px]">
+      <div className="flex flex-col flex-wrap items-start gap-[68px] 2xl:w-[1240px]">
         <div className="flex flex-col items-start gap-12">
-          <div className="flex items-start justify-between w-full">
+          <div className="flex items-start flex-wrap justify-between w-full gap-5 xl:gap-0">
             <div className="flex flex-col justify-center items-start gap-1">
               <h4 className="text-white text-center font-poppins text-2xl font-semibold leading-[133.333%]">
                 We work with trusted partners
@@ -126,14 +150,14 @@ const Footer = () => {
                 safe
               </p>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="min-w-[341px] flex flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
+            <div className="flex items-start flex-wrap gap-4">
+              <div className="max-w-[341px] flex flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   SECURITY PARTNERS
                 </p>
                 <Image src={SecurityPartners} />
               </div>
-              <div className="min-w-[341px] flex flex-col p-4 pb-[26px] gap-3 bg-white rounded-[7px] items-start">
+              <div className="max-w-[341px] flex flex-col p-4 pb-[26px] gap-3 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   BANKING AND PAYMENT PARTNERS
                 </p>
@@ -152,7 +176,7 @@ const Footer = () => {
             change at any time.
           </p>
         </div>
-        <div className="w-full flex justify-between items-start">
+        <div className="w-full flex-wrap flex justify-between items-start gap-5 md:gap-0">
           <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
             copyright © 2020-22 Dreamplug Technologies Pvt Ltd.
           </p>
@@ -173,6 +197,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;
