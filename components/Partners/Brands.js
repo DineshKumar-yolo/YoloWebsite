@@ -14,7 +14,7 @@ const Brands = () => {
   return (
       <div className='flex px-24 py-16 flex-col items-start gap-12 bg-[#F8F8F8]'>
           <h1 className='text-[#212426] font-poppins text-2xl font-normal leading-[170%]'>Brands we have worked with</h1>
-          <div className='flex w-full justify-between items-center flex-wrap mix-blend-darken'>
+          <div className='flex w-full justify-between gap-10 items-center flex-wrap mix-blend-darken'>
               <Image src={group} />
               <Image src={starbucks} />
               <Image src={netflix} />
