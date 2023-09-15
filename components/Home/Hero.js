@@ -12,11 +12,11 @@ import hero_image_2 from "../../public/hero-image-2.png";
 
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-b from-[#0D0D0D] from-40% to-[#650B0B]">
+    <div className="bg-gradient-to-b from-[#0D0D0D] from-40% to-[#650B0B] overflow-hidden">
       <div className="flex flex-col gap-8 items-center xl:py-12 py-16 xl:w-1/2 px-10 mx-auto font-poppins">
         <div className="flex flex-col gap-4">
           <h1 className="text-[#F8F8F8] text-center text-2xl xl:text-4xl font-semibold leading-[150%]">
-            Raising Financially Savvy Kids, Introducing Genie
+            Unlock Financial confidence for young minds
           </h1>
           <p className="text-[#9C9C9C] text-center xl:text-base text-xs font-normal leading-[170%] tracking-[-0.165px]">
             Seamless Payments, Exciting Rewards, and Premium App Subscriptions
@@ -25,10 +25,10 @@ const Hero = () => {
         <div className="sm:w-2/3 flex flex-col w-full sm:flex-row items-center gap-4 sm:items-start">
           <input
             type="number"
-            className="py-3 px-3 text-[#3b3b3b] sm:w-7/12 w-full xl:text-base text-sm rounded-sm focus:outline-none leading-[150%] lowercase"
+            className="py-3 px-3 text-[#3b3b3b] flex-1 w-full xl:text-base text-sm rounded-sm focus:outline-none leading-[150%] lowercase"
             placeholder="Enter mobile number"
           />
-          <Button buttonName={"Get Started"} />
+          <Button buttonName={"Join the waitlist"} />
         </div>
       </div>
       <div className="w-[241px] xl:flex hidden gap-2 py-3 px-2 justify-center absolute top-[95%] left-[7%] items-center rounded-2xl backdrop-blur-sm shrink-0 bg-gradient-to-br from-[#FFFFFF52] via-[#FFFFFF33] to-[#FFE0E033]">

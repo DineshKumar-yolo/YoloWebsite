@@ -14,7 +14,7 @@ const Features = [
   { name: "Investing", link: "investing" },
   { name: "Security", link: "security" },
   { name: "Chores & Allowance", link: "chores-and-allowance" },
-  { name: "Cashback and Savings", link: "chashback-and-savings" },
+  { name: "Cashback and Savings", link: "cashback-and-savings" },
 ];
 const Plans = [
   { name: "Refer Freinds", link: "refer-freinds" },
@@ -39,11 +39,16 @@ const Partnerships = [
 
 const Footer = () => {
   return (
-    <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-start gap-36">
+    <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-center gap-36">
       <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
         <div className="w-[190px]">
           <Image src={logo} className="mb-[31px]" />
-          <Link href={"/download"}>
+          <Link
+            target="_blank"
+            href={
+              "https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"
+            }
+          >
             <Image
               src={playStore}
               className="mb-[20.86px] w-[120.83px] h-[37.31px] shrink-0"

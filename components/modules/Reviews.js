@@ -39,6 +39,20 @@ const AllReviews = [
         date: '22.03.2021',
         reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
     },
+    {
+        name: 'Vishal',
+        userImg: review_2,
+        username: '@username',
+        date: '22.03.2021',
+        reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
+    },
+    {
+        name: 'Karanjot',
+        userImg: review_3,
+        username: '@username',
+        date: '22.03.2021',
+        reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
+    },
 ]
 
 const Review = ({ userImg, name, username, date, reviewContent }) => {
@@ -122,7 +136,7 @@ const Reviews = () => {
                         <button className={`flex h-14 px-3 justify-center items-center xl:text-2xl text-lg border-gradient-bottom ${isRightButtonDisabled ? 'text-[#383838]' : 'text-[#585858]'}`} onClick={scrollRight} disabled={isRightButtonDisabled}><GoArrowRight /></button>
                     </div>
                 </div>
-                <div className='review flex flex-wrap xl:flex-nowrap gap-5 w-full overflow-x-auto' ref={reviewsContainerRef}>
+                <div className='review flex flex-wrap xl:flex-nowrap gap-5 w-full overflow-x-scroll' ref={reviewsContainerRef}>
                     {
                         AllReviews && AllReviews.map((EachReview) => {
                             return (
