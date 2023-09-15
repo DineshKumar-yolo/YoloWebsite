@@ -3,6 +3,7 @@ import React from "react";
 import { BiLogoPlayStore, BiLogoApple } from "react-icons/bi";
 import logo from "../../../public/logo.svg";
 import Image from "next/image";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
   return (
@@ -13,21 +14,26 @@ const Navbar = () => {
         </Link>
       </div>
       <div>
-        <ul className="flex list-none gap-[32px] font-poppins text-slate-300">
-          <li className="inline-block">
+        <ul className="flex list-none gap-7 font-poppins text-slate-300">
+          <li className="flex gap-px">
             <Link href="">Features</Link>
+            <RiArrowDropDownLine className="text-3xl" />
           </li>
-          <li className="inline-block">
+          <li className="flex gap-px">
             <Link href="">Plans</Link>
+            <RiArrowDropDownLine className="text-3xl" />
           </li>
-          <li className="inline-block">
+          <li className="flex gap-px">
             <Link href="">Learn</Link>
+            <RiArrowDropDownLine className="text-3xl" />
           </li>
-          <li className="inline-block">
+          <li className="flex gap-px">
             <Link href="">Who we are</Link>
+            <RiArrowDropDownLine className="text-3xl" />
           </li>
-          <li className="inline-block">
+          <li className="flex gap-px">
             <Link href="">Partnerships</Link>
+            <RiArrowDropDownLine className="text-3xl" />
           </li>
         </ul>
       </div>

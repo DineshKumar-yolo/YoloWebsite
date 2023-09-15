@@ -43,7 +43,12 @@ const Footer = () => {
       <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
         <div className="w-[190px]">
           <Image src={logo} className="mb-[31px]" />
-          <Link href={"/download"}>
+          <Link
+            target="_blank"
+            href={
+              "https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"
+            }
+          >
             <Image
               src={playStore}
               className="mb-[20.86px] w-[120.83px] h-[37.31px] shrink-0"
