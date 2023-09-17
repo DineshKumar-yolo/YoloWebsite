@@ -49,7 +49,7 @@ const AllReviews = [
     username: "@username",
     date: "22.03.2021",
     reviewContent:
-      "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.",
+      "Getting my first prepaid card through this product was a breeze. I never thought it would be this easy, and now I feel more in control of my finances than ever before.",
   },
   {
     name: "Karanjot",
@@ -57,14 +57,14 @@ const AllReviews = [
     username: "@username",
     date: "22.03.2021",
     reviewContent:
-      "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.",
+      "This service has saved me so much time and effort when it comes to managing my bills. I love how it simplifies the process and keeps everything in one place.",
   },
 ];
 
 const Review = ({ userImg, name, username, date, reviewContent }) => {
     return (
         <div>
-            <div className='flex flex-col flex-grid p-5 items-start rounded-[10px] h-full lg:w-[400px] w-[280px] sm:w-[320px] bg-[#121213]'>
+            <div className='flex flex-col flex-grid p-5 items-start rounded-[10px] h-[260px] lg:w-[400px] w-[280px] sm:w-[320px] bg-[#121213]'>
                 <div className="flex pb-4 gap-[10px] self-stretch items-center">
                     <Image src={userImg} />
                     <div>
@@ -130,7 +130,7 @@ const Reviews = () => {
     }, []);
 
     return (
-        <div className='md:py-24 md:px-12 py-8 px-10 flex flex-col justify-center items-center bg-[#0D0D0D] overflow-hidden'>
+        <div className='md:py-24 md:px-12 py-8 px-10 flex flex-col justify-center items-center overflow-hidden'>
             <div className='flex flex-col justify-center items-center gap-10 xl:w-11/12 w-full'>
                 <div className='flex w-full justify-between items-start'>
                     <div className='flex flex-col items-start flex-grid gap-3'>

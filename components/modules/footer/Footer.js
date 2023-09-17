@@ -68,12 +68,12 @@ const Footer = () => {
             {Features &&
               Features.map((feature) => {
                 return (
-                  <Link
-                    href={`/${feature.link}`}
+                  <p
+                    // href={`/${feature.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {feature.name}
-                  </Link>
+                  </p>
                 );
               })}
           </div>
@@ -84,12 +84,12 @@ const Footer = () => {
             {Plans &&
               Plans.map((plan) => {
                 return (
-                  <Link
-                    href={`/${plan.link}`}
+                  <p
+                    // href={`/${plan.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {plan.name}
-                  </Link>
+                  </p>
                 );
               })}
           </div>
@@ -100,12 +100,12 @@ const Footer = () => {
             {Learn &&
               Learn.map((learn) => {
                 return (
-                  <Link
-                    href={`/${learn.link}`}
+                  <p
+                    // href={`/${learn.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {learn.name}
-                  </Link>
+                  </p>
                 );
               })}
           </div>
@@ -116,12 +116,12 @@ const Footer = () => {
             {Resources &&
               Resources.map((resource) => {
                 return (
-                  <Link
-                    href={`/${resource.link}`}
+                  <p
+                    // href={`/${resource.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {resource.name}
-                  </Link>
+                  </p>
                 );
               })}
           </div>
@@ -132,12 +132,12 @@ const Footer = () => {
             {Partnerships &&
               Partnerships.map((partners) => {
                 return (
-                  <Link
-                    href={`/${partners.link}`}
+                  <p
+                    // href={`/${partners.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {partners.name}
-                  </Link>
+                  </p>
                 );
               })}
           </div>
@@ -181,10 +181,10 @@ const Footer = () => {
             change at any time.
           </p>
         </div>
-        <div className="w-full flex-wrap flex justify-between items-start gap-5 md:gap-0">
-          <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
+        <div className="w-full flex-wrap flex justify-end items-start gap-5 md:gap-0">
+          {/* <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
             copyright © 2020-22 Dreamplug Technologies Pvt Ltd.
-          </p>
+          </p> */}
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy">
               <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">

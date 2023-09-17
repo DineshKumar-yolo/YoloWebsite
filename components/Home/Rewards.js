@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Rewards = () => {
   return (
-    <div className="flex xl:px-[100px] bg-[#F8F8F8] px-10 xl:py-[60px] py-8 flex-col items-start lg:gap-12 gap-8">
+    <div className="flex xl:px-[100px] bg-[#F8F8F8] px-10 xl:py-[60px] py-8 flex-col items-start lg:gap-12 gap-8 overflow-hidden">
       <p className="text-[#212426] font-poppins text-2xl font-normal leading-[170%]">
         rewards from brands you love.
       </p>
