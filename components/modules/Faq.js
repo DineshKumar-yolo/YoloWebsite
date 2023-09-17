@@ -64,7 +64,7 @@ const Faq = () => {
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 justify-between w-full gap-5">
           {faqData.map((item, index) => (
-            <div className="grid grid-col-1 gap-3 items-start self-stretch relative">
+            <div className={`grid grid-col-1 gap-3 items-start self-stretch relative ${activeIndex === index ? "bg-[#121212]" : ""}`}>
               <div
                 key={index}
                 className="flex py-4 flex-col items-start gap-4 self-stretch cursor-pointer hover:bg-[#121212]"
@@ -72,7 +72,7 @@ const Faq = () => {
               >
                 <div className="flex justify-between px-5 items-start self-stretch">
                   <p
-                    className={`font-poppins font-normal leading-[142.857%] ${
+                    className={`font-poppins font-normal leading-[142.857%] transition-all duration-300 ${
                       activeIndex === index
                         ? "text-[#676767] text-xs"
                         : "text-white text-sm"
@@ -91,12 +91,12 @@ const Faq = () => {
                   )}
                 </div>
               </div>
-              <div
+              {/* <div
                 className={`${activeIndex === index ? "relative translate-y-0 z-10" : "-z-10 absolute top-16 -translate-y-[100%]"
                   } transition-all ease-in-out duration-300 p-4`}
               >
                 <p className="text-white text-sm">{item.answer}</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
