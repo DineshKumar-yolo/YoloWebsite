@@ -78,3 +78,22 @@ input[type="number"] {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scrolling-photos {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scrolling-photos:hover {
+  animation-play-state: paused;
+}
+

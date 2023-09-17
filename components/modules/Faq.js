@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { BiMinus } from "react-icons/bi";
 import { GoArrowRight } from "react-icons/go";
 import { VscAdd } from "react-icons/vsc";
 
@@ -18,23 +19,24 @@ const Faq = () => {
 
   const faqData = [
     {
-      question: "How do I register on Yolo?",
+      question: "How does using my personal debit card for bill payments work?",
       answer: "To register on Yolo, you can follow these steps...",
     },
     {
-      question: "Another FAQ Question",
+      question: "Are there any hidden fees or charges when using this service?",
       answer: "The answer to another frequently asked question...",
     },
     {
-      question: "Yet Another FAQ Question",
+      question: "How can I get started with your product?",
       answer: "The answer to yet another frequently asked question...",
     },
     {
-      question: "One More FAQ Question",
+      question: "Can I trust the prepaid card provided by your service?",
       answer: "The answer to one more frequently asked question...",
     },
     {
-      question: "Last FAQ Question",
+      question:
+        "What benefits do I get from using your service for bill payments?",
       answer: "The answer to the last frequently asked question...",
     },
   ];
@@ -60,27 +62,38 @@ const Faq = () => {
             </button>
           </Link>
         </div>
-        <div className="flex justify-start flex-col flex-wrap items-start gap-5 self-stretch md:max-h-[252px] h-auto">
+        <div className="grid lg:grid-cols-2 grid-cols-1 justify-between w-full gap-5">
           {faqData.map((item, index) => (
-            <div
-              key={index}
-              className="flex pt-[30px] flex-col items-start gap-[30px] self-stretch relative cursor-pointer hover:bg-[#121212]"
-              onClick={() => toggleAccordion(index)}
-            >
-              <div className="flex justify-between px-5 items-start self-stretch">
-                <p className="text-white font-poppins text-sm font-normal leading-[142.857%]">
-                  {item.question}
-                </p>
-                <VscAdd
-                  className={`text-white text-sm transition-all duration-300 ${
-                    activeIndex === index ? "transform rotate-45" : ""
-                  }`}
-                />
+            <div className="grid grid-col-1 gap-3 items-start self-stretch relative">
+              <div
+                key={index}
+                className="flex py-4 flex-col items-start gap-4 self-stretch cursor-pointer hover:bg-[#121212]"
+                onClick={() => toggleAccordion(index)}
+              >
+                <div className="flex justify-between px-5 items-start self-stretch">
+                  <p
+                    className={`font-poppins font-normal leading-[142.857%] ${
+                      activeIndex === index
+                        ? "text-[#676767] text-xs"
+                        : "text-white text-sm"
+                    }`}
+                  >
+                    {item.question}
+                  </p>
+                  {activeIndex === index ? (
+                    <>
+                      <BiMinus className="text-white text-lg shrink-0 transition-all duration-300" />
+                    </>
+                  ) : (
+                    <>
+                      <VscAdd className="text-white text-lg shrink-0 transition-all duration-300" />
+                    </>
+                  )}
+                </div>
               </div>
               <div
-                className={`${
-                  activeIndex === index ? "block" : "hidden"
-                } transition-all ease-in-out duration-300 bg-[#0D0D0D] w-full p-4 z-10 absolute top-16`}
+                className={`${activeIndex === index ? "relative translate-y-0 z-10" : "-z-10 absolute top-16 -translate-y-[100%]"
+                  } transition-all ease-in-out duration-300 p-4`}
               >
                 <p className="text-white text-sm">{item.answer}</p>
               </div>

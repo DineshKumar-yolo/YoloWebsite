@@ -11,54 +11,60 @@ import review_4 from '../../public/review-4.png'
 
 
 const AllReviews = [
-    {
-        name: 'Rajesh Jain',
-        userImg: review_1,
-        username: '@username',
-        date: '22.03.2021',
-        reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
-    },
-    {
-        name: 'RK Vishnoi',
-        userImg: review_2,
-        username: '@username',
-        date: '22.03.2021',
-        reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
-    },
-    {
-        name: 'Gopal Das',
-        userImg: review_3,
-        username: '@username',
-        date: '22.03.2021',
-        reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
-    },
-    {
-        name: 'Deepika',
-        userImg: review_4,
-        username: '@username',
-        date: '22.03.2021',
-        reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
-    },
-    {
-        name: 'Vishal',
-        userImg: review_2,
-        username: '@username',
-        date: '22.03.2021',
-        reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
-    },
-    {
-        name: 'Karanjot',
-        userImg: review_3,
-        username: '@username',
-        date: '22.03.2021',
-        reviewContent: 'There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.'
-    },
-]
+  {
+    name: "Rajesh Jain",
+    userImg: review_1,
+    username: "@username",
+    date: "22.03.2021",
+    reviewContent:
+      "I was skeptical at first, but using my personal debit card for bill payments with this service has been a game-changer. It's so convenient, and I can't believe I didn't start using it sooner!",
+  },
+  {
+    name: "RK Vishnoi",
+    userImg: review_2,
+    username: "@username",
+    date: "22.03.2021",
+    reviewContent:
+      "Getting my first prepaid card through this product was a breeze. I never thought it would be this easy, and now I feel more in control of my finances than ever before.",
+  },
+  {
+    name: "Gopal Das",
+    userImg: review_3,
+    username: "@username",
+    date: "22.03.2021",
+    reviewContent:
+      "The prepaid card I got through this service has been a lifesaver. It's perfect for managing my expenses and staying on top of my budget.",
+  },
+  {
+    name: "Deepika",
+    userImg: review_4,
+    username: "@username",
+    date: "22.03.2021",
+    reviewContent:
+      "This service has saved me so much time and effort when it comes to managing my bills. I love how it simplifies the process and keeps everything in one place.",
+  },
+  {
+    name: "Vishal",
+    userImg: review_2,
+    username: "@username",
+    date: "22.03.2021",
+    reviewContent:
+      "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.",
+  },
+  {
+    name: "Karanjot",
+    userImg: review_3,
+    username: "@username",
+    date: "22.03.2021",
+    reviewContent:
+      "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.",
+  },
+];
 
 const Review = ({ userImg, name, username, date, reviewContent }) => {
     return (
         <div>
-            <div className='flex flex-col flex-grid p-5 items-start rounded-[10px] lg:w-[400px] w-[280px] sm:w-[320px] bg-[#121213]'>
+            <div className='flex flex-col flex-grid p-5 items-start rounded-[10px] h-full lg:w-[400px] w-[280px] sm:w-[320px] bg-[#121213]'>
                 <div className="flex pb-4 gap-[10px] self-stretch items-center">
                     <Image src={userImg} />
                     <div>
@@ -66,7 +72,7 @@ const Review = ({ userImg, name, username, date, reviewContent }) => {
                         <p className='text-[#676767] font-inter text-sm font-normal leading-[140%]'>{username}</p>
                     </div>
                 </div>
-                <div className='mt-[16px] flex pb-[16px] items-start gap-[10px] self-stretch'>
+                <div className='mt-[16px] flex pb-[16px] items-start gap-[10px] self-stretch flex-grow'>
                     <p className='text-[#878787] font-poppins text-sm font-normal leading-[170%] tracking-[-0.165px]'>{reviewContent}</p>
                 </div>
                 <div className='flex justify-between items-end self-stretch'>
@@ -131,12 +137,12 @@ const Reviews = () => {
                         <p className='self-stretch text-[#676767] font-poppins xl:text-base text-sm font-normal leading-[170%] tracking-[2px] uppercase'>Testimonials</p>
                         <h2 className='self-stretch text-white font-poppins xl:text-[40px] text-3xl font-semibold leading-normal tracking-[-0.165px]'>Voices of Happy Customers</h2>
                     </div>
-                    <div className='hidden md:flex justify-center items-start gap-[17px]'>
+                    <div className='hidden xl:flex justify-center items-start gap-[17px]'>
                         <button className={`flex h-14 px-3 justify-center items-center xl:text-2xl text-lg border-gradient-bottom ${isLeftButtonDisabled ? 'text-[#383838]' : 'text-[#585858]'}`} onClick={scrollLeft} disabled={isLeftButtonDisabled}><GoArrowLeft /></button>
                         <button className={`flex h-14 px-3 justify-center items-center xl:text-2xl text-lg border-gradient-bottom ${isRightButtonDisabled ? 'text-[#383838]' : 'text-[#585858]'}`} onClick={scrollRight} disabled={isRightButtonDisabled}><GoArrowRight /></button>
                     </div>
                 </div>
-                <div className='review flex flex-wrap xl:flex-nowrap gap-5 w-full overflow-x-scroll' ref={reviewsContainerRef}>
+                <div className='review flex flex-wrap xl:flex-nowrap justify-between gap-5 w-full overflow-x-scroll' ref={reviewsContainerRef}>
                     {
                         AllReviews && AllReviews.map((EachReview) => {
                             return (

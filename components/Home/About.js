@@ -11,7 +11,7 @@ const About = () => {
           </p>
           <div className="sm:w-[153px] w-[130px] sm:h-1 h-[2px] relative bottom-1 rounded-[40px] bg-gradient-to-l from-[#D21A1A] to-[#171717]"></div>
           <h1 className="text-[#F8F8F8] font-poppins sm:w-[496px] sm:text-[32px] text-2xl leading-[150%] font-semibold">
-            Be the first in line for a financial adventure
+            Be First in Line for a Financial Adventure!
           </h1>
         </div>
         <div className="flex flex-col sm:flex-row items-start gap-14">
