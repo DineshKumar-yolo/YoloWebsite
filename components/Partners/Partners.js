@@ -12,23 +12,27 @@ import { title } from "process";
 
 const AllPartners = [
   {
+    key:1,
     image: lightning,
     title: "Future of Finances",
     content:
       "Differentiate your offerings with Industry's only Genz’s Payment platform",
   },
   {
+    key:2,
     image: chats,
     title: "Dedicated support",
     content:
       "Get your personal Sandbox, receive tailored sales demos and strategic partner support.",
   },
   {
+    key:3,
     image: users,
     title: "broad target audience",
     content: "They make up 40% of India's total population",
   },
   {
+    key:4,
     image: visa,
     title: "Certified payment partner",
     content:
@@ -132,7 +136,7 @@ const Partners = () => {
           </div>
         </div>
         <div
-        key={key}
+        // key={key}
           className="partner flex flex-wrap xl:flex-nowrap gap-5 w-full overflow-x-auto"
           ref={PartnersContainerRef}
         >
@@ -140,7 +144,7 @@ const Partners = () => {
             AllPartners.map((partner) => {
               return (
                 <Partner
-                  key={key}
+                  key={partner.key}
                   image={partner.image}
                   title={partner.title}
                   content={partner.content}

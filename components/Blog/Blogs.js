@@ -51,7 +51,7 @@ const Blogs = () => {
               {
                   MockBlogs && MockBlogs.map((blog) => {
                       return (
-                          <div className='2xl:w-[400px] h-[550px] border border-white' key={key}>
+                          <div className='2xl:w-[400px] h-[550px] border border-white' key={MockBlogs.key}>
                               <div className='flex flex-col items-start gap-10 p-4'>
                                   <Image src={blog.image} className="md:aspect-auto xl:w-[368px] h-[270px] aspect-square bg-[#211F37] shrink-0 mix-blend-luminosity" alt='Blogs' />
                                   <div className='w-full flex flex-col items-start gap-2'>

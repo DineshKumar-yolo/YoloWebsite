@@ -213,7 +213,7 @@ const Testimonials = () => {
             AllTestimonials.map((testimonial) => {
               return (
                 <Testimonial
-                  key={key}
+                  key={testimonial.key}
                   name={testimonial.name}
                   img={testimonial.img}
                   title={testimonial.title}

@@ -8,6 +8,7 @@ import parent1 from "@/public/parent1.svg";
 
 const AllTestimonials = [
   {
+    key:1,
     name: "Aviral Malthora",
     position: "VP Scaler",
     img: parent1,
@@ -16,6 +17,7 @@ const AllTestimonials = [
       "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch.",
   },
   {
+    key:2,
     name: "Aviral Malthora",
     position: "VP Scaler",
     img: parent1,
@@ -24,6 +26,7 @@ const AllTestimonials = [
       "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch.",
   },
   {
+    key:3,
     name: "Aviral Malthora",
     position: "VP Scaler",
     img: parent1,
@@ -32,6 +35,7 @@ const AllTestimonials = [
       "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch.",
   },
   {
+    key:4,
     name: "Aviral Malthora",
     position: "VP Scaler",
     img: parent1,
@@ -209,7 +213,7 @@ const Testimonials = () => {
             AllTestimonials.map((testimonial) => {
               return (
                 <Testimonial
-                  key={key}
+                  key={testimonial.key}
                   name={testimonial.name}
                   img={testimonial.img}
                   title={testimonial.title}

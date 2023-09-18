@@ -109,7 +109,7 @@ const TimeSavers = () => {
               {
                   TimeSaverContext && TimeSaverContext.map((timesaver) => {
                       return (
-                          <TimeSaverBoxes timeImage={timesaver.timeImage} timeHead={timesaver.timeHead} timeContent={timesaver.timeContent} key={key}/>
+                          <TimeSaverBoxes timeImage={timesaver.timeImage} timeHead={timesaver.timeHead} timeContent={timesaver.timeContent} key={timesaver.key}/>
                       )
                   })
               }

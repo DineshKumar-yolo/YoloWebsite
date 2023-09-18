@@ -7,31 +7,37 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const MockNews = [
   {
+    key:1,
     title: "Your Reliable Debit Card Companion",
     details: "5 mins read • Ganesh Das • Aug 4 2023",
     image: Blog1,
   },
   {
+    key:2,
     title: "Your Reliable Debit Card Companion",
     details: "5 mins read • Ganesh Das • Aug 4 2023",
     image: Blog2,
   },
   {
+    key:3,
     title: "Your Reliable Debit Card Companion",
     details: "5 mins read • Ganesh Das • Aug 4 2023",
     image: Blog3,
   },
   {
+    key:4,
     title: "Your Reliable Debit Card Companion",
     details: "5 mins read • Ganesh Das • Aug 4 2023",
     image: Blog1,
   },
   {
+    key:5,
     title: "Your Reliable Debit Card Companion",
     details: "5 mins read • Ganesh Das • Aug 4 2023",
     image: Blog2,
   },
   {
+    key:6,
     title: "Your Reliable Debit Card Companion",
     details: "5 mins read • Ganesh Das • Aug 4 2023",
     image: Blog3,
@@ -45,7 +51,7 @@ const NewsLetters = () => {
         {MockNews &&
           MockNews.map((news) => {
             return (
-              <div className="2xl:w-[400px] h-[550px] border border-white" key={key}>
+              <div className="2xl:w-[400px] h-[550px] border border-white" key={MockNews.key}>
                 <div className="flex flex-col items-start gap-10 p-4">
                   <Image
                   alt="NewsLetter"
