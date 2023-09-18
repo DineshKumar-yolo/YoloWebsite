@@ -23,14 +23,14 @@ const Hero = () => {
                 </div>
                 <div className="hidden relative top-10 w-full lg:flex justify-center">
                     <div className="absolute z-10">
-                        <Image src={heroImg} />
+                        <Image src={heroImg}alt='Hero' />
                     </div>
-                    <Image src={girl1} className='absolute z-10 -translate-y-[50%] translate-x-[300%]' />
-                    <Image src={thread} className='z-[9] w-[811px]' />
-                        <Image src={circle} className='z-[9] absolute' />
-                        <Image src={circle} className='z-[5] w-[500px] absolute' />
-                    <Image src={circle} className='z-[2] w-[700px] absolute' />
-                    <Image src={girl2} className='absolute z-10 translate-y-[30%] -translate-x-[300%]' />
+                    <Image src={girl1} className='absolute z-10 -translate-y-[50%] translate-x-[300%]' alt='Hero'/>
+                    <Image src={thread} className='z-[9] w-[811px]' alt='Hero'/>
+                        <Image src={circle} className='z-[9] absolute' alt='Hero'/>
+                        <Image src={circle} className='z-[5] w-[500px] absolute'alt='Hero' />
+                    <Image src={circle} className='z-[2] w-[700px] absolute' alt='Hero'/>
+                    <Image src={girl2} className='absolute z-10 translate-y-[30%] -translate-x-[300%]'alt='Hero' />
                 </div>
             </div>
         </div>

@@ -11,16 +11,16 @@ const Extras = () => {
       <div className="flex flex-col justify-center items-start gap-20 xl:w-[1240px] w-full">
         <div className="flex flex-col sm:flex-row justify-center self-stretch items-start gap-[10px]">
           <h1 className="flex-1 text-[#0D0D0D] font-poppins xl:text-[40px] text-2xl font-semibold leading-normal -tracking-[0.165px]">
-            Children's happiness is our delight.
+            Children`&apos;`s happiness is our delight.
           </h1>
           <div className="h-full flex-1 flex justify-end">
-            <Image src={profile_2} />
+            <Image src={profile_2} alt="Extras"/>
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center gap-5 w-full md:overflow-x-auto xl:overflow-hidden">
           <div className="md:py-[75px] py-12 md:px-[55px] px-8 flex flex-col justify-center h-80 items-center gap-[10px] bg-[#F8F8F8] border-gradient-bottom">
             <div className="flex flex-col items-start gap-[30px] md:w-[290px]">
-              <Image src={yolo_coins} />
+              <Image src={yolo_coins} alt="Extras"/>
               <div className="flex flex-col items-start gap-5">
                 <h5 className="text-[#0D0D0D] font-poppins text-[26px] leading-[92.308%] lowercase font-semibold">
                   Yolo Coin Rewards
@@ -33,7 +33,7 @@ const Extras = () => {
           </div>
           <div className="md:py-[61px] py-10 md:px-[50px] px-8 flex flex-col justify-center h-80 items-center gap-[10px] bg-[#F8F8F8] border-gradient-bottom">
             <div className="flex flex-col items-start gap-[30px] md:w-[290px]">
-              <Image src={yolo_money} />
+              <Image src={yolo_money} alt="Extras" />
               <div className="flex flex-col items-start gap-5">
                 <h5 className="text-[#0D0D0D] font-poppins text-[26px] leading-[92.308%] lowercase font-semibold">
                   Task-Based Earnings
@@ -47,7 +47,7 @@ const Extras = () => {
           </div>
           <div className="md:py-[75px] py-10 md:px-[55px] px-8 flex flex-col justify-center h-80 items-center gap-[10px] bg-[#F8F8F8] border-gradient-bottom">
             <div className="flex flex-col items-start gap-[30px] md:w-[290px]">
-              <Image src={yolo_giveaways} />
+              <Image src={yolo_giveaways} alt="Extras" />
               <div className="flex flex-col items-start gap-5">
                 <h5 className="text-[#0D0D0D] font-poppins text-[26px] leading-[92.308%] lowercase font-semibold">
                   exciting Giveaways

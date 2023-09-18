@@ -10,31 +10,31 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Features = [
-  { name: "Debit Card", link: "debit-card" },
-  { name: "Investing", link: "investing" },
-  { name: "Security", link: "security" },
-  { name: "Chores & Allowance", link: "chores-and-allowance" },
-  { name: "Cashback and Savings", link: "cashback-and-savings" },
+  { name: "Debit Card", link: "debit-card", key:1 },
+  { name: "Investing", link: "investing", key:2 },
+  { name: "Security", link: "security", key:3 },
+  { name: "Chores & Allowance", link: "chores-and-allowance", key:4 },
+  { name: "Cashback and Savings", link: "cashback-and-savings", key:5 },
 ];
 const Plans = [
-  { name: "Refer Freinds", link: "refer-freinds" },
-  { name: "Gifts", link: "gifts" },
+  { name: "Refer Freinds", link: "refer-freinds", key:1 },
+  { name: "Gifts", link: "gifts", key:2 },
 ];
 const Learn = [
-  { name: "Blog", link: "blog" },
-  { name: "Help Center", link: "help-center" },
-  { name: "FAQ", link: "faq" },
-  { name: "Financial Literacy", link: "financial-literacy" },
+  { name: "Blog", link: "blog", key:1 },
+  { name: "Help Center", link: "help-center", key:2  },
+  { name: "FAQ", link: "faq", key:3 },
+  { name: "Financial Literacy", link: "financial-literacy", key:4 },
 ];
 const Resources = [
-  { name: "Careers", link: "careers" },
-  { name: "Leadership", link: "leadership" },
-  { name: "Press", link: "press" },
+  { name: "Careers", link: "careers", key:1 },
+  { name: "Leadership", link: "leadership", key:2 },
+  { name: "Press", link: "press", key:3 },
 ];
 const Partnerships = [
-  { name: "For Classrooms", link: "for-classrooms" },
-  { name: "Credit Unions", link: "credit-unions" },
-  { name: "Partner With Us", link: "partner-with-us" },
+  { name: "For Classrooms", link: "for-classrooms", key:1 },
+  { name: "Credit Unions", link: "credit-unions", key:2 },
+  { name: "Partner With Us", link: "partner-with-us", key:3 },
 ];
 
 const Footer = () => {
@@ -42,7 +42,7 @@ const Footer = () => {
     <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-center gap-36">
       <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
         <div className="w-[190px]">
-          <Image src={logo} className="mb-[31px]" />
+          <Image src={logo} className="mb-[31px]" alt="Logo" />
           <Link
             target="_blank"
             href={
@@ -50,6 +50,7 @@ const Footer = () => {
             }
           >
             <Image
+              alt="PlayStore"
               src={playStore}
               className="mb-[20.86px] w-[120.83px] h-[37.31px] shrink-0"
             />
@@ -69,6 +70,7 @@ const Footer = () => {
               Features.map((feature) => {
                 return (
                   <p
+                  key={feature.key}
                     // href={`/${feature.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -85,6 +87,7 @@ const Footer = () => {
               Plans.map((plan) => {
                 return (
                   <p
+                  key={Plans.key}
                     // href={`/${plan.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -101,6 +104,7 @@ const Footer = () => {
               Learn.map((learn) => {
                 return (
                   <p
+                  key={Learn.key}
                     // href={`/${learn.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -117,6 +121,7 @@ const Footer = () => {
               Resources.map((resource) => {
                 return (
                   <p
+                  key={Resources.key}
                     // href={`/${resource.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -133,6 +138,7 @@ const Footer = () => {
               Partnerships.map((partners) => {
                 return (
                   <p
+                  key={Partnerships.key}
                     // href={`/${partners.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -160,13 +166,13 @@ const Footer = () => {
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   SECURITY PARTNERS
                 </p>
-                <Image src={SecurityPartners} />
+                <Image src={SecurityPartners} alt="Security"/>
               </div>
               <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-3 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   BANKING AND PAYMENT PARTNERS
                 </p>
-                <Image src={BankingPartners} />
+                <Image src={BankingPartners} alt="Footer" />
               </div>
             </div>
           </div>

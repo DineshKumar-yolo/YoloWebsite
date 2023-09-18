@@ -12,6 +12,7 @@ import review_4 from '../../public/review-4.png'
 
 const AllReviews = [
   {
+    key:1,
     name: "Rajesh Jain",
     userImg: review_1,
     username: "@username",
@@ -20,6 +21,7 @@ const AllReviews = [
       "I was skeptical at first, but using my personal debit card for bill payments with this service has been a game-changer. It's so convenient, and I can't believe I didn't start using it sooner!",
   },
   {
+    key:2,
     name: "RK Vishnoi",
     userImg: review_2,
     username: "@username",
@@ -28,6 +30,7 @@ const AllReviews = [
       "Getting my first prepaid card through this product was a breeze. I never thought it would be this easy, and now I feel more in control of my finances than ever before.",
   },
   {
+    key:3,
     name: "Gopal Das",
     userImg: review_3,
     username: "@username",
@@ -36,6 +39,7 @@ const AllReviews = [
       "The prepaid card I got through this service has been a lifesaver. It's perfect for managing my expenses and staying on top of my budget.",
   },
   {
+    key:4,
     name: "Deepika",
     userImg: review_4,
     username: "@username",
@@ -44,6 +48,7 @@ const AllReviews = [
       "This service has saved me so much time and effort when it comes to managing my bills. I love how it simplifies the process and keeps everything in one place.",
   },
   {
+    key:5,
     name: "Vishal",
     userImg: review_2,
     username: "@username",
@@ -52,6 +57,7 @@ const AllReviews = [
       "Getting my first prepaid card through this product was a breeze. I never thought it would be this easy, and now I feel more in control of my finances than ever before.",
   },
   {
+    key:6,
     name: "Karanjot",
     userImg: review_3,
     username: "@username",
@@ -66,7 +72,7 @@ const Review = ({ userImg, name, username, date, reviewContent }) => {
         <div>
             <div className='flex flex-col flex-grid p-5 items-start rounded-[10px] h-[260px] lg:w-[400px] w-[280px] sm:w-[320px] bg-[#121213]'>
                 <div className="flex pb-4 gap-[10px] self-stretch items-center">
-                    <Image src={userImg} />
+                    <Image src={userImg} alt="Review"/>
                     <div>
                         <h5 className='text-white font-poppins text-sm font-medium leading-[140%]'>{name}</h5>
                         <p className='text-[#676767] font-inter text-sm font-normal leading-[140%]'>{username}</p>
@@ -146,7 +152,7 @@ const Reviews = () => {
                     {
                         AllReviews && AllReviews.map((EachReview) => {
                             return (
-                                <Review userImg={EachReview.userImg} name={EachReview.name} username={EachReview.username} date={EachReview.date} reviewContent={EachReview.reviewContent} />
+                                <Review key={AllReviews.key} userImg={EachReview.userImg} name={EachReview.name} username={EachReview.username} date={EachReview.date} reviewContent={EachReview.reviewContent} />
                             )
                         })
                     }

@@ -10,10 +10,10 @@ const Media = () => {
       <div className='py-10 mx-auto max-w-[1030px] flex flex-col items-center gap-8 shrink-0'>
           <h1 className='text-white text-center font-poppins text-4xl font-semibold leading-[150%]'>In the Media</h1>
           <div className='flex flex-wrap w-full justify-between items-center'>
-              <Image src={Media4} />
-              <Image src={Media3} />
-              <Image src={Media2} />
-              <Image src={Media1} />
+              <Image src={Media4} alt='Media' />
+              <Image src={Media3} alt='Media' />
+              <Image src={Media2} alt='Media' />
+              <Image src={Media1}  alt='Media'/>
           </div>
     </div>
   )

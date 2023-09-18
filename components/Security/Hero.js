@@ -20,7 +20,7 @@ const Hero = () => {
               </div>
           </div>
           <div className='shrink-0 max-w-3xl'>
-              <Image src={Securityinfo} />
+              <Image src={Securityinfo} alt='Security' />
           </div>
     </div>
   )

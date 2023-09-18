@@ -15,7 +15,7 @@ const EarnCB = () => {
                         yolo card.
                     </p>
                 </div>
-                <Image className="rounded-2xl" src={transaction} />
+                <Image className="rounded-2xl" src={transaction} alt="Earn"/>
             </div>
         </div>
     );

@@ -10,10 +10,10 @@ const MoreFaqs = () => {
               <div className='md:mx-28 flex flex-col items-start gap-10 my-14 xl:px-0 px-6'>
                   <div className="flex max-w-[505px] w-full flex-col justify-center items-center gap-4">
                       <h2 className='text-white font-poppins text-4xl font-semibold leading-normal tracking-[-0.165px]'>
-                          Can't find what you're looking for?
+                          Can`&apos;`t find what you`&apos;`re looking for?
                       </h2>
                       <p className="font-poppins text-[#878787] text-lg font-normal leading-[150%]">
-                          We’re here to help 24 hours a day, 7 days a week. Holiday hours may apply.
+                          We`&apos;`re here to help 24 hours a day, 7 days a week. Holiday hours may apply.
                       </p>
                   </div>
                   <div className='flex items-start gap-5'>

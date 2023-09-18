@@ -13,7 +13,7 @@ const Hero = () => {
               </div>
               <Button buttonName={"Book a Demo Now"} />
           </div> 
-         <Image src={education} className='hidden xl:block' />
+         <Image src={education} className='hidden xl:block' alt='Hero' />
     </div>
   )
 }

@@ -10,21 +10,25 @@ import Wallet from '../../public/Wallet.svg'
 
 const TimeSaverContext = [
     {
+        key:1,
         'timeHead': 'Instant money transfers',
         'timeImage': Lightning,
         'timeContent': "Send money instantly to your kids' accounts.",
     },
     {
+        key:2,
         'timeHead': 'Real-time notifications',
         'timeImage': Bell,
         'timeContent': 'Keep tabs on spending with alerts any time the card is used — or declined.'
     },
     {
+        key:3,
         'timeHead': 'Mobile payments',
         'timeImage': Mobile,
         'timeContent': 'Use our pay feature in app for payments.',
     },
     {
+        key:4,
         'timeHead': 'Balance tracking',
         'timeImage': Wallet,
         'timeContent': 'Use our pay feature in app for payments.',
@@ -35,7 +39,7 @@ const TimeSaverBoxes = ( {timeImage, timeHead, timeContent} ) => {
     return (
         <div className='xl:w-[400px] border-gradient-bottom'>
             <div className='flex flex-col items-start mx-[41px] mt-[59px] gap-[30px] xl:w-[319px] h-[326px]'>
-                <Image src={timeImage} />
+                <Image src={timeImage} alt='TimeSavers'/>
                 <div className='flex flex-col items-start gap-5'>
                     <h5 className='text-white font-poppins text-[26px] font-semibold leading-[92.308%] lowercase'>{timeHead}</h5>
                     <p className='text-[#9C9C9C] font-poppins text-base font-normal leading-[170%] tracking-[-0.165px]'>
@@ -105,7 +109,7 @@ const TimeSavers = () => {
               {
                   TimeSaverContext && TimeSaverContext.map((timesaver) => {
                       return (
-                          <TimeSaverBoxes timeImage={timesaver.timeImage} timeHead={timesaver.timeHead} timeContent={timesaver.timeContent} />
+                          <TimeSaverBoxes timeImage={timesaver.timeImage} timeHead={timesaver.timeHead} timeContent={timesaver.timeContent} key={key}/>
                       )
                   })
               }

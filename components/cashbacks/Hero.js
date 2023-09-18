@@ -19,10 +19,10 @@ const Hero = () => {
   return (
       <div className='flex flex-col mx-auto gap-20 mt-12 max-w-3xl relative'>
           <div className="absolute -left-[20%] top-[30%]">
-              <Image src={yoloCoin} />
+              <Image src={yoloCoin}  alt='Hero'/>
           </div>
           <div className="absolute -right-[15%] top-[10%]">
-              <Image src={yoloCoin} />
+              <Image src={yoloCoin}  alt='Hero'/>
           </div>
           <div className='flex flex-col items-center gap-6'>
               <div className='flex flex-col items-center gap-4'>
@@ -42,36 +42,36 @@ const Hero = () => {
               <div className='relative flex items-center flex-col h-[300px] top-20 max-w-3xl'>
                   <div className="absolute top-[10%] max-w-3xl mx-auto flex justify-center items-end w-11/12">
                       <div className='absolute shadow-2xl p-5 left-[10%] -translate-x-[110%] z-10 flex justify-center items-center w-20 h-20 bg-white rounded-full'>
-                          <Image src={netflix} />
+                          <Image src={netflix}  alt='Hero'/>
                       </div>
                       <div className='absolute shadow-2xl p-5 left-[20%] -translate-x-[110%] z-20 flex justify-center items-center w-24 h-24 bg-white rounded-full'>
-                          <Image src={swiggy} />
+                          <Image src={swiggy}  alt='Hero'/>
                       </div>
                       <div className='absolute shadow-2xl p-5 left-[30%] -translate-x-[100%] z-30 flex justify-center items-center w-28 h-28 bg-white rounded-full'>
-                          <Image src={spotify} />
+                          <Image src={spotify}  alt='Hero'/>
                       </div>
                       <div className='absolute shadow-2xl p-5 left-[40%] -translate-x-[80%] z-40 flex justify-center items-center w-32 h-32 bg-white rounded-full'>
-                          <Image src={zomato} />
+                          <Image src={zomato}  alt='Hero'/>
                       </div>
                       <div className='absolute shadow-2xl p-5 left-[50%] -translate-x-[50%] z-50 flex justify-center items-center w-36 h-36 bg-white rounded-full'>
-                          <Image src={starbucks} />
+                          <Image src={starbucks}  alt='Hero'/>
                       </div>
                       <div className='absolute shadow-2xl p-5 left-[60%] -translate-x-[20%] z-40 flex justify-center items-center w-32 h-32 bg-white rounded-full'>
-                          <Image src={puma} />
+                          <Image src={puma}  alt='Hero'/>
                       </div>
                       <div className='absolute shadow-2xl p-5 left-[70%] translate-x-0 z-30 flex justify-center items-center w-28 h-28 bg-white rounded-full'>
-                          <Image src={dominos} />
+                          <Image src={dominos}  alt='Hero'/>
                       </div>
                       <div className='absolute shadow-2xl p-5 left-[80%] translate-x-[10%] z-20 flex justify-center items-center w-24 h-24 bg-white rounded-full'>
-                          <Image src={macdonald} />
+                          <Image src={macdonald}  alt='Hero'/>
                       </div>
                       <div className='absolute shadow-2xl p-5 left-[90%] translate-x-[15%] z-10 flex justify-center items-center w-20 h-20 bg-white rounded-full'>
-                          <Image src={group} />
+                          <Image src={group}  alt='Hero'/>
                       </div>
                   </div>
-                  <Image src={cashback1} className='absolute -top-[10%] z-[9]' width={800} />
-                  <Image src={cashback2} className='absolute top-0 z-[5]' width={800} />
-                  <Image src={cashback3} className='absolute top-[10%] z-0' width={800} />
+                  <Image src={cashback1} className='absolute -top-[10%] z-[9]' width={800} alt='Hero' />
+                  <Image src={cashback2} className='absolute top-0 z-[5]' width={800}  alt='Hero'/>
+                  <Image src={cashback3} className='absolute top-[10%] z-0' width={800}  alt='Hero'/>
              </div>
           </div>
     </div>

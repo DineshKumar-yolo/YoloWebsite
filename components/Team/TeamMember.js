@@ -11,21 +11,21 @@ const TeamMember = () => {
               <h1 className='text-white text-center font-poppins text-4xl font-semibold leading-[150%]'>Team Members</h1>
               <div className='flex flex-wrap px-12 w-full justify-between items-center self-stretch'>
                   <div className="relative">
-                      <Image src={member1} className='' />
+                      <Image src={member1} className='' alt='TeamMember'/>
                       <div className="flex h-1/2 w-full py-3 flex-col justify-end items-center absolute left-0 bottom-0 text-white font-poppins bg-gradient-to-t from-[#0E0F10] to-transparent">
                           <p className='text-base font-bold leading-[150%]'>Mike Jones</p>
                           <p className="text-sm font-medium leading-[150%]">Former CEO of MySpace | Board Director</p>
                         </div>
                   </div>
                   <div className="relative">
-                      <Image src={member2} className='' />
+                      <Image src={member2} className='' alt='media'/>
                       <div className="flex h-1/2 w-full py-3 flex-col justify-end items-center absolute left-0 bottom-0 text-white font-poppins bg-gradient-to-t from-[#0E0F10] to-transparent">
                           <p className='text-base font-bold leading-[150%]'>Mike Jones</p>
                           <p className="text-sm font-medium leading-[150%]">Former CEO of MySpace | Board Director</p>
                         </div>
                   </div>
                   <div className="relative">
-                      <Image src={member3} className='' />
+                      <Image src={member3} className='' alt='media'/>
                       <div className="flex h-1/2 w-full py-3 flex-col justify-end items-center absolute left-0 bottom-0 text-white font-poppins bg-gradient-to-t from-[#0E0F10] to-transparent">
                           <p className='text-base font-bold leading-[150%]'>Mike Jones</p>
                           <p className="text-sm font-medium leading-[150%]">Former CEO of MySpace | Board Director</p>
@@ -34,21 +34,21 @@ const TeamMember = () => {
               </div>
               <div className='flex flex-wrap px-12 w-full justify-between items-center self-stretch'>
                   <div className="relative">
-                      <Image src={member1} className='' />
+                      <Image src={member1} className='' alt='Media' />
                       <div className="flex h-1/2 w-full py-3 flex-col justify-end items-center absolute left-0 bottom-0 text-white font-poppins bg-gradient-to-t from-[#0E0F10] to-transparent">
                           <p className='text-base font-bold leading-[150%]'>Mike Jones</p>
                           <p className="text-sm font-medium leading-[150%]">Former CEO of MySpace | Board Director</p>
                         </div>
                   </div>
                   <div className="relative">
-                      <Image src={member2} className='' />
+                      <Image src={member2} className='' alt='Media'/>
                       <div className="flex h-1/2 w-full py-3 flex-col justify-end items-center absolute left-0 bottom-0 text-white font-poppins bg-gradient-to-t from-[#0E0F10] to-transparent">
                           <p className='text-base font-bold leading-[150%]'>Mike Jones</p>
                           <p className="text-sm font-medium leading-[150%]">Former CEO of MySpace | Board Director</p>
                         </div>
                   </div>
                   <div className="relative">
-                      <Image src={member3} className='' />
+                      <Image src={member3} className='' alt='Media'/>
                       <div className="flex h-1/2 w-full py-3 flex-col justify-end items-center absolute left-0 bottom-0 text-white font-poppins bg-gradient-to-t from-[#0E0F10] to-transparent">
                           <p className='text-base font-bold leading-[150%]'>Mike Jones</p>
                           <p className="text-sm font-medium leading-[150%]">Former CEO of MySpace | Board Director</p>

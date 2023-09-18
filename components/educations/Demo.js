@@ -9,7 +9,7 @@ const Demo = () => {
             <div className="flex xl:px-24 flex-col xl:flex-row xl:py-32 p-10 gap-32 items-start">
                 <div className="flex flex-col flex-1 items-start gap-8">
                     <div className="flex items-center gap-6">
-                        <Image src={logo} />
+                        <Image src={logo} alt="Demo"/>
                         <Button buttonName={"Education Partner"} styles={"rounded-xl"} />
                     </div>
                     <div className="flex flex-col items-start gap-2">

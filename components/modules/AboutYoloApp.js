@@ -26,7 +26,7 @@ const AboutYoloApp = () => {
                 "https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"
               }
             >
-              <Image src={PlayStore} />
+              <Image src={PlayStore} alt="About"/>
             </Link>
             <Link
               target="_blank"
@@ -34,11 +34,12 @@ const AboutYoloApp = () => {
                 "https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"
               }
             >
-              <Image src={AppStore} />
+              <Image src={AppStore} alt="AppStore" />
             </Link>
           </div>
         </div>
         <Image
+        alt="Hero"
           src={heroImage}
           className="hidden xl:block w-[344px] h-[526px] shrink-0"
         />

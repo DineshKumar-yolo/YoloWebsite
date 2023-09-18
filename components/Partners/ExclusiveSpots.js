@@ -14,7 +14,7 @@ const ExclusiveSpots = () => {
                 </div>
             </div>
             <div>
-                <Image src={exclusive} />
+                <Image src={exclusive} alt='Exclusive Spots'/>
             </div>
         </div>
     )

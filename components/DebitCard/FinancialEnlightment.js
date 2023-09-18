@@ -14,7 +14,7 @@ const FinancialEnlightment = () => {
           <div className='flex flex-1 FinancialEnlightment-bg'>
               <div className="w-[217px] h-[104.16px] px-2 py-4 flex flex-col gap-3 justify-center items-center relative top-[25%] xl:left-[50%] left-[20%] rounded-2xl backdrop-blur-sm shrink-0 bg-gradient-to-br from-[#FFFFFF52] via-[#FFFFFF33] to-[#FFE0E033]">
                   <div className="flex justify-between items-center gap-4">
-                      <Image src={hero_image_2} className='aspect-video xl:aspect-auto' height={29.5} width={29.5} />
+                      <Image src={hero_image_2} className='aspect-video xl:aspect-auto' height={29.5} width={29.5} alt='Financial' />
                       <h5 className="text-black font-poppins text-[13.5px] font-medium leading-normal tracking-[-0.052px]">Get Verified Instantly</h5>
                   </div>
                   <p className="text-black w-[163.836px] font-poppins text-[9px] font-normal leading-normal tracking-[-0.059px]">Get your account verified in just 60 secs and enjoy the product</p>

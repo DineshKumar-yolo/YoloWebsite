@@ -45,9 +45,10 @@ const NewsLetters = () => {
         {MockNews &&
           MockNews.map((news) => {
             return (
-              <div className="2xl:w-[400px] h-[550px] border border-white">
+              <div className="2xl:w-[400px] h-[550px] border border-white" key={key}>
                 <div className="flex flex-col items-start gap-10 p-4">
                   <Image
+                  alt="NewsLetter"
                     src={news.image}
                     className="md:aspect-auto xl:w-[368px] h-[270px] aspect-square bg-[#211F37] shrink-0 mix-blend-luminosity"
                   />

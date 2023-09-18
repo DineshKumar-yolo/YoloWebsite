@@ -33,7 +33,7 @@ const Works = () => {
           </div>
         </div>
         <div className="sm:block flex-1">
-          <Image src={scanandpay} className="shrink-0 xl:w-11/12" />
+          <Image src={scanandpay} className="shrink-0 xl:w-11/12" alt="Applications"/>
         </div>
       </div>
     </div>

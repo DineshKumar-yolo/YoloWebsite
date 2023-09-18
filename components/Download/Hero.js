@@ -17,7 +17,7 @@ const Hero = () => {
                       and enjoy using!
                   </h1>
                   <Link href={"/download"}>
-                      <Image src={PlayStore} />
+                      <Image src={PlayStore} alt='PlayStore' />
                   </Link>
               </div>
           </div>
@@ -25,7 +25,7 @@ const Hero = () => {
               <div className="absolute w-[500px] h-[500px] bottom-[10%] -z-10 rounded-full bg-gradient-to-b from-red-900 opacity-20 to-transparent"></div>
               <div className="absolute w-[550px] h-[550px] bottom-[8%] -z-10 rounded-full bg-gradient-to-b from-red-900 opacity-10 to-transparent"></div>
               <div className="absolute w-[600px] h-[600px] bottom-[10%] -z-10 rounded-full bg-gradient-to-b from-red-900 opacity-5 to-transparent"></div>
-              <Image src={DownloadApp} className='z-10' />
+              <Image src={DownloadApp} className='z-10' alt='Download App' />
           </div>
     </div>
   )

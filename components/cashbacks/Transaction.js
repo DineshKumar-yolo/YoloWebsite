@@ -13,7 +13,7 @@ const Transaction = () => {
           Get yolo coins on every spent and use it for shopping
         </h2>
       </div>
-      <Image src={Money} />
+      <Image src={Money} alt='Transactions' />
     </div>
   );
 }

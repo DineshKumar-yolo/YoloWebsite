@@ -16,15 +16,15 @@ const EducationPartners = () => {
             <div className='max-w-[1240px] flex flex-col items-start gap-12 mx-auto px-10 xl:px-0 py-14'>
                 <h2 className='text-[#212426] text-2xl not-italic font-normal leading-[170%]'>Our School & University Partners</h2>
                 <div className="flex flex-wrap items-center gap-12 mix-blend-darken">
-                    <Image src={smu} />
-                    <Image src={amity} />
-                    <Image src={lpu} />
-                    <Image src={ashoka} />
-                    <Image src={gu} />
-                    <Image src={nu} />
-                    <Image src={university} />
-                    <Image src={nmims} />
-                    <Image src={iim} />
+                    <Image src={smu} alt='Edu' />
+                    <Image src={amity} alt='Edu' />
+                    <Image src={lpu} alt='Edu' />
+                    <Image src={ashoka} alt='Edu' />
+                    <Image src={gu}  alt='Edu'/>
+                    <Image src={nu} alt='Edu' />
+                    <Image src={university} alt='Edu' />
+                    <Image src={nmims} alt='Edu' />
+                    <Image src={iim} alt='Edu' />
                 </div>
             </div>
         </div>

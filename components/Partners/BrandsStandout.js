@@ -18,7 +18,7 @@ const BrandsStandout = () => {
                 <div className='flex flex-wrap lg:flex-nowrap items-center gap-5'>
                     <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom bg-[#F8F8F8]">
                         <div className="flex flex-col items-start gap-7">
-                            <Image src={instagram} />
+                            <Image src={instagram} alt='Brands' />
                             <div className="flex max-w-xs flex-col items-start gap-5">
                                 <h1 className="font-poppins text-[#0D0D0D] text-2xl font-semibold leading-[24px] lowercase">
                                     Instagram
@@ -31,7 +31,7 @@ const BrandsStandout = () => {
                     </div>
                     <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom bg-[#F8F8F8]">
                         <div className="flex flex-col items-start gap-7">
-                            <Image src={discord} />
+                            <Image src={discord} alt='Brands' />
                             <div className="flex max-w-xs flex-col items-start gap-5">
                                 <h1 className="font-poppins text-[#0D0D0D] text-2xl font-semibold leading-[24px] lowercase">
                                     Discord
@@ -43,7 +43,7 @@ const BrandsStandout = () => {
                     </div>
                     <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom bg-[#F8F8F8]">
                         <div className="flex flex-col items-start gap-7">
-                            <Image src={users} />
+                            <Image src={users} alt='Brands'/>
                             <div className="flex max-w-xs flex-col items-start gap-5">
                                 <h1 className="font-poppins text-[#0D0D0D] text-2xl font-semibold leading-[24px] lowercase">
                                     Community

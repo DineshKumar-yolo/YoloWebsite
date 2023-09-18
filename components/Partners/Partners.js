@@ -40,13 +40,17 @@ const Partner = ({ image, title, content }) => {
   return (
     <div className="w-[400px] h-[326px] flex flex-col items-center justify-center gap-3 border-gradient-bottom shrink-0">
       <div className="max-w-xs max-h-[203px]">
-          <div className="flex flex-col items-start gap-8 max-w-xs">
-              <Image src={image} />
-              <div className="flex flex-col items-start gap-5">
-                  <h5 className="text-white font-poppins text-2xl font-semibold leading-[24px] lowercase">{title}</h5>
-                  <p className="text-[#9C9C9C] font-poppins text-base font-normal leading-[170%]">{content}</p>
-              </div>
+        <div className="flex flex-col items-start gap-8 max-w-xs">
+          <Image src={image} alt="Partners" />
+          <div className="flex flex-col items-start gap-5">
+            <h5 className="text-white font-poppins text-2xl font-semibold leading-[24px] lowercase">
+              {title}
+            </h5>
+            <p className="text-[#9C9C9C] font-poppins text-base font-normal leading-[170%]">
+              {content}
+            </p>
           </div>
+        </div>
       </div>
     </div>
   );
@@ -103,9 +107,9 @@ const Partners = () => {
     <div className="md:py-24 md:px-12 py-8 px-10 flex flex-col justify-center items-center bg-[#0D0D0D] overflow-hidden">
       <div className="flex flex-col justify-center items-center gap-10 xl:w-11/12 max-w-[1240px]">
         <div className="flex w-full justify-center lg:justify-between items-start">
-            <h2 className="self-stretch text-white text-center lg:text-left font-poppins xl:text-[40px] text-3xl font-semibold leading-normal tracking-[-0.165px]">
-                      Why partner with us?
-            </h2>
+          <h2 className="self-stretch text-white text-center lg:text-left font-poppins xl:text-[40px] text-3xl font-semibold leading-normal tracking-[-0.165px]">
+            Why partner with us?
+          </h2>
           <div className="hidden md:flex justify-center items-start gap-[17px]">
             <button
               className={`flex h-14 px-3 justify-center items-center xl:text-2xl text-lg border-gradient-bottom ${
@@ -128,6 +132,7 @@ const Partners = () => {
           </div>
         </div>
         <div
+        key={key}
           className="partner flex flex-wrap xl:flex-nowrap gap-5 w-full overflow-x-auto"
           ref={PartnersContainerRef}
         >
@@ -135,9 +140,10 @@ const Partners = () => {
             AllPartners.map((partner) => {
               return (
                 <Partner
-                      image={partner.image}
-                      title={partner.title}
-                      content={partner.content}
+                  key={key}
+                  image={partner.image}
+                  title={partner.title}
+                  content={partner.content}
                 />
               );
             })}

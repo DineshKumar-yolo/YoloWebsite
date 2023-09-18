@@ -32,8 +32,8 @@ const SecurityPartners = () => {
               {
                   Partners && Partners.map((partner) => {
                       return (
-                          <div>
-                              <Image src={partner} />
+                          <div key={key}>
+                              <Image src={partner} alt='Security' />
                           </div>
                       )
                   })

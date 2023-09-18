@@ -19,18 +19,22 @@ const ScanandPay = () => {
 
   const accordionData = [
     {
+      key:1,
       title: "Pay Anywhere in Seconds",
       content: "Effortlessly manage transactions tailored for students and kids, making money matters stress-free."
     },
     {
+      key:2,
       title: "Get Rewards for every payment",
       content: "Dive into financial literacy while having fun, turning learning into an adventure.",
     },
     {
+      key:3,
       title: "Subscribe to favourite OTT’s",
       content: "Enjoy your favorite shows and content hassle-free, without any complications.",
     },
     {
+      key:4,
       title: "Get internship opportunities",
       content: "Unlock doors to real-world experience and growth, kickstarting your career journey.",
     },
@@ -52,7 +56,7 @@ const ScanandPay = () => {
             </h1>
           </div>
           {accordionData.map((item, index) => (
-            <div className={`flex flex-col relative justify-between items-stretch gap-4 transition-all duration-300 ease-in-out cursor-pointer ${activeIndex === index ? "bg-[#121212]" : ""}`}>
+            <div key={accordionData.key} className={`flex flex-col relative justify-between items-stretch gap-4 transition-all duration-300 ease-in-out cursor-pointer ${activeIndex === index ? "bg-[#121212]" : ""}`}>
               <div
                 key={index}
                 className="flex justify-between items-stretch px-5 py-4 hover:bg-[#121212] cursor-pointer"
@@ -85,7 +89,7 @@ const ScanandPay = () => {
           ))}
         </div>
         <div className="sm:block flex-1 h-full">
-          <Image src={scanandpay} />
+          <Image src={scanandpay} alt="Scan&Pay"/>
         </div>
       </div>
     </div>

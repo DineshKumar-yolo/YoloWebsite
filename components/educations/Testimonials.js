@@ -8,6 +8,7 @@ import parent1 from "@/public/parent1.svg";
 
 const AllTestimonials = [
   {
+    key: 1,
     name: "Aviral Malthora",
     position: "VP Scaler",
     img: parent1,
@@ -16,6 +17,7 @@ const AllTestimonials = [
       "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch.",
   },
   {
+    key: 2,
     name: "Aviral Malthora",
     position: "VP Scaler",
     img: parent1,
@@ -24,6 +26,7 @@ const AllTestimonials = [
       "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch.",
   },
   {
+    key: 3,
     name: "Aviral Malthora",
     position: "VP Scaler",
     img: parent1,
@@ -32,6 +35,7 @@ const AllTestimonials = [
       "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch.",
   },
   {
+    key: 4,
     name: "Aviral Malthora",
     position: "VP Scaler",
     img: parent1,
@@ -106,7 +110,11 @@ const Testimonial = ({ name, position, img, title, content }) => {
           </svg>
         </div>
         <div className="flex xl:flex-col justify-center w-full xl:w-auto items-center gap-4">
-          <Image src={img} className="h-20 w-20 xl:h-40 xl:w-40" />
+          <Image
+            src={img}
+            className="h-20 w-20 xl:h-40 xl:w-40"
+            alt="Testimonials"
+          />
           <div className="flex text-white font-poppins leading-[150%] flex-col justify-center items-center gap-1">
             <p className="text-xl font-semibold">{name}</p>
             <p className="text-base font-normal opacity-60">{position}</p>
@@ -205,6 +213,7 @@ const Testimonials = () => {
             AllTestimonials.map((testimonial) => {
               return (
                 <Testimonial
+                  key={key}
                   name={testimonial.name}
                   img={testimonial.img}
                   title={testimonial.title}

@@ -19,22 +19,27 @@ const Faq = () => {
 
   const faqData = [
     {
+      key: 1,
       question: "How does using my personal debit card for bill payments work?",
       answer: "To register on Yolo, you can follow these steps...",
     },
     {
+      key: 2,
       question: "Are there any hidden fees or charges when using this service?",
       answer: "The answer to another frequently asked question...",
     },
     {
+      key: 3,
       question: "How can I get started with your product?",
       answer: "The answer to yet another frequently asked question...",
     },
     {
+      key: 4,
       question: "Can I trust the prepaid card provided by your service?",
       answer: "The answer to one more frequently asked question...",
     },
     {
+      key: 5,
       question:
         "What benefits do I get from using your service for bill payments?",
       answer: "The answer to the last frequently asked question...",
@@ -64,7 +69,12 @@ const Faq = () => {
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 justify-between w-full gap-5">
           {faqData.map((item, index) => (
-            <div className={`grid grid-col-1 gap-3 items-start self-stretch relative ${activeIndex === index ? "bg-[#121212]" : ""}`}>
+            <div
+            key={item.key} 
+              className={`grid grid-col-1 gap-3 items-start self-stretch relative ${
+                activeIndex === index ? "bg-[#121212]" : ""
+              }`}
+            >
               <div
                 key={index}
                 className="flex py-4 flex-col items-start gap-4 self-stretch cursor-pointer hover:bg-[#121212]"

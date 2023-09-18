@@ -40,7 +40,7 @@ const Works = () => {
                     </div>
                 </div>
                 <div className="flex-1">
-                    <Image src={tasksWorks} className="shrink-0" />
+                    <Image src={tasksWorks} className="shrink-0" alt="Works"/>
                 </div>
             </div>
         </div>

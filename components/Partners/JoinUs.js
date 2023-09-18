@@ -9,11 +9,11 @@ const JoinUs = () => {
       <div className='flex w-full flex-wrap justify-between items-center lg:mx-28 mx-10'>
         <div className='flex flex-col items-start gap-8'>
           <div className="flex items-center gap-6">
-            <Image src={logo} />
+            <Image src={logo} alt='JoinUs'/>
             <Button buttonName={"Brand Partner"} />
           </div>
           <div className='flex flex-col max-w-md items-start gap-2'>
-            <h3 className='text-white font-poppins text-3xl font-semibold'>Join us, and together we'll define the future of Children Finances</h3>
+            <h3 className='text-white font-poppins text-3xl font-semibold'>Join us, and together we`&apos;`ll define the future of Children Finances</h3>
             <p className='text-[#878787] font-poppins text-sm font-normal leading-[170%]'>Apply to the Yolo Partnership Program</p>
           </div>
         </div>

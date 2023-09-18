@@ -9,6 +9,7 @@ const Rewards = () => {
         rewards from brands you love.
       </p>
       <Image
+      alt='Rewards'
         src={companies}
         className="min-w-[1520px] h-auto animate-scrolling-photos"
       />

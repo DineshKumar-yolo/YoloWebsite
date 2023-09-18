@@ -22,9 +22,9 @@ const Hero = () => {
                 </div>
             </div>
             <div className="flex">
-                <Image src={task2} className='relative -top-24 lg:block hidden' />
-                <Image src={girl} />
-                <Image src={task1} className='lg:block hidden' />
+                <Image src={task2} className='relative -top-24 lg:block hidden'  alt='Hero'/>
+                <Image src={girl}  alt='Hero'/>
+                <Image src={task1} className='lg:block hidden' alt='Hero' />
             </div>
         </div>
     )

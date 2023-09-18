@@ -34,7 +34,7 @@ const Works = () => {
           </div>
         </div>
         <div className="flex-1">
-          <Image src={eductionFeatures} className="shrink-0" />
+          <Image src={eductionFeatures} className="shrink-0" alt="Work" />
         </div>
       </div>
     </div>

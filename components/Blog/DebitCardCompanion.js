@@ -115,7 +115,7 @@ const DebitCardCompanion = () => {
                         scrollContent && scrollContent.map((scrollcontent, index) => {
                             return (
                                 <div key={index} className='flex flex-wrap xl:flex-nowrap items-center gap-10 w-full px-5 shrink-0'>
-                                    <Image src={scrollcontent.image} className='xl:w-[504px] xl:h-[430px] aspect-square xl:aspect-auto rounded-2xl block' />
+                                    <Image src={scrollcontent.image} className='xl:w-[504px] xl:h-[430px] aspect-square xl:aspect-auto rounded-2xl block' alt='Debit'/>
                                     <div className='flex flex-col items-start gap-3 w-[485px]'>
                                         <div className='flex flex-col items-start gap-3'>
                                             <div className='flex flex-col items-start gap-6'>

@@ -19,13 +19,13 @@ const Hero = () => {
               <Button buttonName={"Let’s Collaborate"} />
           </div>
           <div className="relative lg:block hidden">
-              <Image src={group} className='absolute -left-96 -top-32' />
-              <Image src={netflix} className='absolute -left-48' />
-              <Image src={starbucks} className='absolute -left-[500px] top-48' />
-              <Image src={partners} className='flex max-w-3xl justify-end center ' />
-              <Image src={macdonald} className='absolute left-96 -top-32' />
-              <Image src={dominos} className='absolute left-[700px] -top-12' />
-              <Image src={puma} className='absolute left-[500px] top-48' />
+              <Image src={group} className='absolute -left-96 -top-32'  alt='Hero'/>
+              <Image src={netflix} className='absolute -left-48'  alt='Hero'/>
+              <Image src={starbucks} className='absolute -left-[500px] top-48'  alt='Hero'/>
+              <Image src={partners} className='flex max-w-3xl justify-end center ' alt='Hero' />
+              <Image src={macdonald} className='absolute left-96 -top-32'  alt='Hero'/>
+              <Image src={dominos} className='absolute left-[700px] -top-12'  alt='Hero'/>
+              <Image src={puma} className='absolute left-[500px] top-48' alt='Hero' />
           </div>
     </div>
   )

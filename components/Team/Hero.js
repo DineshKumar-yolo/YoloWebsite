@@ -14,9 +14,9 @@ const Hero = () => {
               Through yolo we are making finances simple for teenagers and making them understand the value of money at the earliest stage possible and providing opportunities through internships
           </p>
           <div className="relative">
-              <Image src={heroTeam2} className='absolute -left-[50%] -top-16' />
-              <Image src={heroTeam} className='shrink-0 max-w-2xl' />
-              <Image src={heroTeam3} className='absolute left-[100%] top-0' />
+              <Image src={heroTeam2} className='absolute -left-[50%] -top-16'  alt='Hero'/>
+              <Image src={heroTeam} className='shrink-0 max-w-2xl'  alt='Hero'/>
+              <Image src={heroTeam3} className='absolute left-[100%] top-0' alt='Hero' />
           </div>
     </div>
   )

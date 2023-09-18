@@ -14,7 +14,7 @@ const Hero = () => {
                     </div>
                     <Button buttonName={"Apply Now"} />
                 </div>
-                <div><Image src={debitCard} /></div>
+                <div><Image src={debitCard} alt='Hero'/></div>
             </div>
         </div>
     )

@@ -7,31 +7,37 @@ import { FaArrowRight } from "react-icons/fa6"
 
 const MockBlogs = [
     {
+        key:1,
         title: "Your Reliable Debit Card Companion",
         details: "5 mins read • Ganesh Das • Aug 4 2023",
         image: Blog1
     },
     {
+        key:2,
         title: "Your Reliable Debit Card Companion",
         details: "5 mins read • Ganesh Das • Aug 4 2023",
         image: Blog2
     },
     {
+        key:3,
         title: "Your Reliable Debit Card Companion",
         details: "5 mins read • Ganesh Das • Aug 4 2023",
         image: Blog3
     },
     {
+        key:4,
         title: "Your Reliable Debit Card Companion",
         details: "5 mins read • Ganesh Das • Aug 4 2023",
         image: Blog1
     },
     {
+        key:5,
         title: "Your Reliable Debit Card Companion",
         details: "5 mins read • Ganesh Das • Aug 4 2023",
         image: Blog2
     },
     {
+        key:6,
         title: "Your Reliable Debit Card Companion",
         details: "5 mins read • Ganesh Das • Aug 4 2023",
         image: Blog3
@@ -45,9 +51,9 @@ const Blogs = () => {
               {
                   MockBlogs && MockBlogs.map((blog) => {
                       return (
-                          <div className='2xl:w-[400px] h-[550px] border border-white'>
+                          <div className='2xl:w-[400px] h-[550px] border border-white' key={key}>
                               <div className='flex flex-col items-start gap-10 p-4'>
-                                  <Image src={blog.image} className="md:aspect-auto xl:w-[368px] h-[270px] aspect-square bg-[#211F37] shrink-0 mix-blend-luminosity" />
+                                  <Image src={blog.image} className="md:aspect-auto xl:w-[368px] h-[270px] aspect-square bg-[#211F37] shrink-0 mix-blend-luminosity" alt='Blogs' />
                                   <div className='w-full flex flex-col items-start gap-2'>
                                       <h5 className='text-[#F8F8F8] font-poppins text-2xl font-semibold leading-[150%]'>{blog.title}</h5>
                                       <p className='text-[#9C9C9C] font-poppins text-sm font-normal leading-[170%] tracking-[-0.165px]'>{blog.details}</p>

@@ -21,7 +21,7 @@ const DigitalTf = () => {
                 <div className="flex flex-wrap lg:flex-nowrap items-center gap-5">
                     <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom h-80">
                         <div className="flex flex-col items-start gap-7 mt-14">
-                            <Image src={chats} />
+                            <Image src={chats} alt="Digital"/>
                             <div className="flex max-w-xs flex-col items-start gap-5">
                                 <h1 className="font-poppins text-[#0D0D0D] text-2xl font-semibold leading-[24px] lowercase">
                                     Live Chat support
@@ -34,7 +34,7 @@ const DigitalTf = () => {
                     </div>
                     <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom h-80">
                         <div className="flex flex-col items-start gap-7">
-                            <Image src={clock} />
+                            <Image src={clock} alt="Digital" />
                             <div className="flex max-w-xs flex-col items-start gap-5">
                                 <h1 className="font-poppins text-[#0D0D0D] text-2xl font-semibold leading-[24px] lowercase">
                                     quick response 
@@ -47,7 +47,7 @@ const DigitalTf = () => {
                     </div>
                     <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom h-80">
                         <div className="flex flex-col items-start gap-7">
-                            <Image src={events} />
+                            <Image src={events} alt="Digital"/>
                             <div className="flex max-w-xs flex-col items-start gap-5">
                                 <h1 className="font-poppins text-[#0D0D0D] text-2xl font-semibold leading-[24px] lowercase">
                                     Monthly Events

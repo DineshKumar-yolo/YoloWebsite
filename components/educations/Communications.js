@@ -16,7 +16,7 @@ const Communications = () => {
       <div className="flex flex-wrap lg:flex-nowrap items-center gap-5">
         <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom h-80">
           <div className="flex flex-col items-start gap-7 mt-14">
-            <Image src={social} />
+            <Image src={social} alt="Communications"/>
             <div className="flex max-w-xs flex-col items-start gap-5">
               <h1 className="font-poppins text-white text-2xl font-semibold leading-[24px] lowercase">
                 Centralised Communication
@@ -30,7 +30,7 @@ const Communications = () => {
         </div>
         <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom h-80">
           <div className="flex flex-col items-start gap-7">
-            <Image src={iot} />
+            <Image src={iot} alt="IOT" />
             <div className="flex max-w-xs flex-col items-start gap-5">
               <h1 className="font-poppins text-white text-2xl font-semibold leading-[24px] lowercase">
                 IOT Intergration
@@ -44,7 +44,7 @@ const Communications = () => {
         </div>
         <div className="flex px-14 py-16 flex-col justify-center items-center gap-3 border-gradient-bottom h-80">
           <div className="flex flex-col items-start gap-7">
-            <Image src={plugins} />
+            <Image src={plugins} alt="Plugins" />
             <div className="flex max-w-xs flex-col items-start gap-5">
               <h1 className="font-poppins text-white text-2xl font-semibold leading-[24px] lowercase">
                 Software Plug-in
