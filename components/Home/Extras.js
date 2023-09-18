@@ -11,7 +11,7 @@ const Extras = () => {
       <div className="flex flex-col justify-center items-start gap-20 xl:w-[1240px] w-full">
         <div className="flex flex-col sm:flex-row justify-center self-stretch items-start gap-[10px]">
           <h1 className="flex-1 text-[#0D0D0D] font-poppins xl:text-[40px] text-2xl font-semibold leading-normal -tracking-[0.165px]">
-            Children`&apos;`s happiness is our delight.
+            Children&apos;s happiness is our delight.
           </h1>
           <div className="h-full flex-1 flex justify-end">
             <Image src={profile_2} alt="Extras"/>
