@@ -8,18 +8,18 @@ import Link from "next/link";
 const AboutYoloApp = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-[#0D0D0D] w-full">
-      <div className="w-10/12 h-[398px] px-10 flex gap-[181px] m-auto justify-center items-end shrink-0 bg-[#121213] rounded-2xl bg-design">
-        <div className="flex flex-col gap-8 items-start justify-center my-auto">
+      <div className="w-10/12 lg:h-[398px] px-10 flex flex-col lg:flex-row lg:gap-[181px] gap-8 m-auto justify-center lg:items-end items-center shrink-0 bg-[#121213] rounded-2xl bg-design">
+        <div className="flex flex-col lg:gap-8 gap-6 items-start justify-center my-auto">
           <div className="flex xl:w-[505px] flex-col justify-center items-start gap-[14px]">
-            <h1 className="text-white font-poppins text-[40px] font-semibold leading-normal tracking-[-0.165px]">
+            <h1 className="text-white font-poppins md:text-[40px] text-xl font-semibold leading-normal tracking-[-0.165px]">
               Get the YOLO App Now.
             </h1>
-            <p className="text-[#878787] font-poppins text-lg font-normal leading-[150%]">
+            <p className="text-[#878787] font-poppins md:text-lg text-xs font-normal leading-[150%]">
               With this platform, you can access to all the features, and learn
               investing and saving
             </p>
           </div>
-          <div className="inline-flex items-start gap-5">
+          <div className="inline-flex items-start lg:gap-5 gap-3">
             <Link
               target="_blank"
               href={
@@ -41,7 +41,7 @@ const AboutYoloApp = () => {
         <Image
         alt="Hero"
           src={heroImage}
-          className="hidden xl:block w-[344px] h-[526px] shrink-0"
+          className="lg:w-[344px] lg:h-[526px] w-44 h-64 shrink-0"
         />
       </div>
     </div>

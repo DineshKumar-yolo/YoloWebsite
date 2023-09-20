@@ -7,14 +7,19 @@ import Rewards from '../components/Home/Rewards'
 import Reviews from '../components/modules/Reviews'
 import Faq from '../components/modules/Faq'
 import AboutYoloApp from '../components/modules/AboutYoloApp'
-import Footer from "../components/modules/footer/Footer";
+import ScanandPayMobile from "@/components/Home/MobileScanandPay"
 
 export default function Home() {
   return (
     <main className="">
       <Hero />
       <About />
+      <div className='lg:block hidden'>
       <ScanAndPay />
+      </div>
+      <div className='lg:hidden block'>
+        <ScanandPayMobile />
+      </div>
       <Extras />
       <PayBills />
       <Rewards />

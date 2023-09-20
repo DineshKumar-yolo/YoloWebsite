@@ -21,27 +21,32 @@ const Faq = () => {
     {
       key: 1,
       question: "How does using my personal debit card for bill payments work?",
+      mobileQuestion: "How to apply for prepaid card?",
       answer: "To register on Yolo, you can follow these steps...",
     },
     {
       key: 2,
       question: "Are there any hidden fees or charges when using this service?",
+      mobileQuestion: "Can I trust the prepaid card service?",
       answer: "The answer to another frequently asked question...",
     },
     {
       key: 3,
       question: "How can I get started with your product?",
+      mobileQuestion: "Are there any hidden fees or charges?",
       answer: "The answer to yet another frequently asked question...",
     },
     {
       key: 4,
       question: "Can I trust the prepaid card provided by your service?",
+      mobileQuestion: "What benefits do I get?",
       answer: "The answer to one more frequently asked question...",
     },
     {
       key: 5,
       question:
         "What benefits do I get from using your service for bill payments?",
+      mobileQuestion: "How can I get started with product?",
       answer: "The answer to the last frequently asked question...",
     },
   ];
@@ -49,21 +54,21 @@ const Faq = () => {
   return (
     <div className="flex h-screen justify-center items-center bg-[#0D0D0D]">
       <div className="flex flex-col items-center self-stretch w-10/12 gap-10 m-auto">
-        <div className="flex flex-col sm:flex-row items-start justify-between sm:gap-3 gap-10 self-stretch">
-          <div className="flex flex-col items-start gap-3 flex-grid">
-            <p className="text-white font-poppins md:text-base text-sm font-normal leading-[170%] tracking-[-0.165px] opacity-50">
+        <div className="flex flex-col sm:flex-row md:items-start items-center justify-between sm:gap-3 gap-10 self-stretch">
+          <div className="flex flex-col md:items-start items-center gap-3 flex-grid">
+            <p className="text-white font-poppins md:text-base text-xs font-normal leading-[170%] tracking-[2px] opacity-50 uppercase">
               Got Questions ?
             </p>
-            <h1 className="text-white font-poppins md:text-[40px] text-3xl font-semibold leading-normal tracking-[-0.165px]">
+            <h1 className="text-white font-poppins md:text-[40px] text-xl font-semibold leading-normal tracking-[-0.165px]">
               We got you covered
             </h1>
           </div>
           <Link href="/faq">
-            <button className="flex md:w-[295px] min-w-[168px] px-8 py-4 justify-center items-center gap-[10px] border-gradient-right bg-[#0D0D0D]">
-              <p className="text-white md:text-base text-sm font-medium leading-[115%]">
+            <button className="flex md:w-[295px] min-w-[168px] md:px-8 px-6 md:py-4 py-3 justify-center items-center md:gap-[10px] gap-2 border-gradient-right bg-[#0D0D0D]">
+              <p className="text-white md:text-base text-xs font-medium leading-[115%]">
                 Have More Questions
               </p>
-              <GoArrowRight className="text-2xl text-white" />
+              <GoArrowRight className="md:text-2xl text-lg text-white" />
             </button>
           </Link>
         </div>
@@ -82,7 +87,16 @@ const Faq = () => {
               >
                 <div className="flex justify-between px-5 items-start self-stretch">
                   <p
-                    className={`font-poppins font-normal leading-[142.857%] transition-all duration-300 ${
+                    className={`font-poppins font-normal md:hidden block leading-[142.857%] transition-all duration-300 ${
+                      activeIndex === index
+                        ? "text-[#676767] text-sm"
+                        : "text-white text-xs"
+                    }`}
+                  >
+                    {item.mobileQuestion}
+                  </p>
+                  <p
+                    className={`font-poppins font-normal md:block hidden leading-[142.857%] transition-all duration-300 ${
                       activeIndex === index
                         ? "text-[#676767] text-xs"
                         : "text-white text-sm"

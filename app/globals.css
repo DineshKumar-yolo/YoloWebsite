@@ -62,7 +62,10 @@ input[type="number"] {
 
 @media screen and (max-width: 768px) {
   .paybill-bg {
-    background: black;
+    background-image: url('../public/rupay-card-mobile.png');
+    background-size: center;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
@@ -96,4 +99,3 @@ input[type="number"] {
 .animate-scrolling-photos:hover {
   animation-play-state: paused;
 }
-
