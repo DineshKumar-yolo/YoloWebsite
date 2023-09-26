@@ -38,6 +38,9 @@ const Partnerships = [
 ];
 
 const Footer = () => {
+  // const date = new Date();
+  // const year = date.getFullYear();
+
   return (
     <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-center gap-36">
       <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
@@ -189,7 +192,7 @@ const Footer = () => {
         </div>
         <div className="w-full flex-wrap flex justify-between items-start gap-5 md:gap-0">
           <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
-            copyright © 2020-22 Dreamplug Technologies Pvt Ltd.
+            copyright © 2023-24 Trivy Technologies Pvt Ltd.
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy">
