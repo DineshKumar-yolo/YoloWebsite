@@ -132,7 +132,7 @@ const MobileFooter = () => {
                 </div>
                 {/* <p className='text-[#F3F3F3] text-xs font-normal leading-[170%]'>*Yolo Core and Yolo + Invest families can earn monthly rewards of 1% per annum, Yolo Max families can earn 2% per annum, and Yolo Infinity families can earn 5% per annum on an average daily savings balance of up to $5,000 per family. Only Yolo Max and Infinity families can earn 1% cash back on spending monthly. To qualify, the Primary Account must be in Good Standing and have a verified ACH funding account. See Yolo Terms of Service for details. Subject to change at any time.</p> */}
                 <div className='flex flex-wrap justify-start items-start gap-3'>
-                    <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>copyright © 2023 Trivy Technologies Pvt Ltd.</p>
+                    <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>copyright © 2023-24 Trivy Technologies Pvt Ltd.</p>
                     <div className="flex items-center gap-4">
                         <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>privacy policy</p>
                         <div className='w-px h-4 bg-white'></div>
