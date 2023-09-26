@@ -70,7 +70,7 @@ const Footer = () => {
               Features.map((feature) => {
                 return (
                   <p
-                  key={feature.key}
+                    key={feature.key}
                     // href={`/${feature.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -87,7 +87,7 @@ const Footer = () => {
               Plans.map((plan) => {
                 return (
                   <p
-                  key={Plans.key}
+                    key={Plans.key}
                     // href={`/${plan.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -104,7 +104,7 @@ const Footer = () => {
               Learn.map((learn) => {
                 return (
                   <p
-                  key={Learn.key}
+                    key={Learn.key}
                     // href={`/${learn.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -121,7 +121,7 @@ const Footer = () => {
               Resources.map((resource) => {
                 return (
                   <p
-                  key={Resources.key}
+                    key={Resources.key}
                     // href={`/${resource.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -138,7 +138,7 @@ const Footer = () => {
               Partnerships.map((partners) => {
                 return (
                   <p
-                  key={Partnerships.key}
+                    key={Partnerships.key}
                     // href={`/${partners.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
@@ -157,7 +157,7 @@ const Footer = () => {
                 We work with trusted partners
               </h4>
               <p className="text-white opacity-60 text-xs font-normal leading-[133.333%]">
-                Jupiter deploys high level security standards to keep your money
+                Yolo deploys high level security standards to keep your money
                 safe
               </p>
             </div>
@@ -166,7 +166,7 @@ const Footer = () => {
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   SECURITY PARTNERS
                 </p>
-                <Image src={SecurityPartners} alt="Security"/>
+                <Image src={SecurityPartners} alt="Security" />
               </div>
               <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-1 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leading-[145.455%]">
