@@ -4,13 +4,12 @@ import React, { useState } from 'react'
 import logo from "@/public/logo.svg"
 import playStore from "@/public/play-store.png"
 import XLogo from "@/public/X_logo.svg"
-import BankingPartners from "../../../public/banking-partners.png";
-import SecurityPartners from "../../../public/security-partners.png";
+import BankingPartners from "../../../public/banking-partners.svg";
+import SecurityPartners from "../../../public/security-partners.svg";
 import Image from 'next/image';
 import Link from 'next/link';
 import { BiLogoFacebook } from "react-icons/bi"
 import { FiMinus, FiPlus } from 'react-icons/fi'
-import { RiAddLine } from 'react-icons/ri'
 
 const Features = [
     { name: "Debit Card", link: "debit-card", key: 1 },
@@ -123,7 +122,7 @@ const MobileFooter = () => {
                             </p>
                             <Image src={SecurityPartners} alt="Security" className='w-full' />
                         </div>
-                        <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-3 bg-white rounded-[7px] items-start">
+                        <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-1 bg-white rounded-[7px] items-start">
                             <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                                 BANKING AND PAYMENT PARTNERS
                             </p>
@@ -131,9 +130,9 @@ const MobileFooter = () => {
                         </div>
                     </div>
                 </div>
-                <p className='text-[#F3F3F3] text-xs font-normal leading-[170%]'>*Yolo Core and Yolo + Invest families can earn monthly rewards of 1% per annum, Yolo Max families can earn 2% per annum, and Yolo Infinity families can earn 5% per annum on an average daily savings balance of up to $5,000 per family. Only Yolo Max and Infinity families can earn 1% cash back on spending monthly. To qualify, the Primary Account must be in Good Standing and have a verified ACH funding account. See Yolo Terms of Service for details. Subject to change at any time.</p>
+                {/* <p className='text-[#F3F3F3] text-xs font-normal leading-[170%]'>*Yolo Core and Yolo + Invest families can earn monthly rewards of 1% per annum, Yolo Max families can earn 2% per annum, and Yolo Infinity families can earn 5% per annum on an average daily savings balance of up to $5,000 per family. Only Yolo Max and Infinity families can earn 1% cash back on spending monthly. To qualify, the Primary Account must be in Good Standing and have a verified ACH funding account. See Yolo Terms of Service for details. Subject to change at any time.</p> */}
                 <div className='flex flex-wrap justify-start items-start gap-3'>
-                    {/* <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>copyright © 2023 Trivy Technologies Pvt Ltd.</p> */}
+                    <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>copyright © 2023 Trivy Technologies Pvt Ltd.</p>
                     <div className="flex items-center gap-4">
                         <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>privacy policy</p>
                         <div className='w-px h-4 bg-white'></div>

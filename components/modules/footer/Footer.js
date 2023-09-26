@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../../public/logo.svg";
 import playStore from "../../../public/play-store.png";
-import BankingPartners from "../../../public/banking-partners.png";
-import SecurityPartners from "../../../public/security-partners.png";
+import BankingPartners from "../../../public/banking-partners.svg";
+import SecurityPartners from "../../../public/security-partners.svg";
 import { FaFacebook } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
 import { AiFillTwitterCircle } from "react-icons/ai";
@@ -149,8 +149,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col flex-wrap items-start gap-[68px] 2xl:w-[1240px]">
-        <div className="flex flex-col items-start gap-12">
+      <div className="flex flex-col flex-wrap items-start w-full gap-[68px] 2xl:w-[1240px]">
+        <div className="flex flex-col items-start gap-12 w-full">
           <div className="flex items-start flex-wrap justify-between w-full gap-5 xl:gap-0">
             <div className="flex flex-col justify-center items-start gap-1">
               <h4 className="text-white font-poppins text-2xl font-semibold leading-[133.333%]">
@@ -168,15 +168,15 @@ const Footer = () => {
                 </p>
                 <Image src={SecurityPartners} alt="Security"/>
               </div>
-              <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-3 bg-white rounded-[7px] items-start">
-                <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
+              <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-1 bg-white rounded-[7px] items-start">
+                <p className="text-[#656565] font-poppins text-[11px] font-normal leading-[145.455%]">
                   BANKING AND PAYMENT PARTNERS
                 </p>
                 <Image src={BankingPartners} alt="Footer" />
               </div>
             </div>
           </div>
-          <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%] text-justify">
+          {/* <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%] text-justify">
             *Yolo Core and Yolo + Invest families can earn monthly rewards of 1%
             per annum, Yolo Max families can earn 2% per annum, and Yolo
             Infinity families can earn 5% per annum on an average daily savings
@@ -185,12 +185,12 @@ const Footer = () => {
             Primary Account must be in Good Standing and have a verified ACH
             funding account. See Yolo Terms of Service for details. Subject to
             change at any time.
-          </p>
-        </div>
-        <div className="w-full flex-wrap flex justify-end items-start gap-5 md:gap-0">
-          {/* <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
-            copyright © 2020-22 Dreamplug Technologies Pvt Ltd.
           </p> */}
+        </div>
+        <div className="w-full flex-wrap flex justify-between items-start gap-5 md:gap-0">
+          <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
+            copyright © 2020-22 Dreamplug Technologies Pvt Ltd.
+          </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy">
               <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
