@@ -1,13 +1,9 @@
-import Navtop from "../../components/modules/navtop/Navtop";
-import Navbar from "../../components/modules/navbar/Navbar";
-import Hero from "../../components/TermsofServices/Hero";
-import Footer from "../../components/modules/footer/Footer";
-import MobileNavbar from "../../components/modules/navbar/MobileNavbar";
+import PrivacyPolicy from "../../components/privacy-policy/privacypage";
 
 const page = () => {
   return (
     <div className="">
-      <Hero />
+      <PrivacyPolicy />
     </div>
   );
 };
