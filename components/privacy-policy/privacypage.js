@@ -61,11 +61,11 @@ const PrivacyPolicy = () => {
             under the Companies Act, 2013 vide CIN – U63030MH2020PTC336556, –
             having its corporate office at 404 B-WING,GREEN TOWER, CTS NO-216,
             NR PURAB PASCHIM BLDG GILBERT HILL ANDHERI WEST MUMBAI Mumbai City
-            MH 400058 IN, hereinafter referred to as the "YOLO" or "YOLO Pay" or
+            MH 400058 IN, hereinafter referred to as the &quot;YOLO&quot; or &quot;YOLO Pay&quot; or
             “Company” or “We” (which expression shall, unless it be repugnant to
             the context or meaning thereof, include its successors and assigns)
             owns and operates (“Website”) https://getyolo.in/privacy and our
-            mobile application YOLO Pay (jointly referred to as “Platform”).
+            mobile application YOLO Pay (jointly referred to as &quot;Platform&quot;).
             Subject to the terms and conditions and user agreement set out on
             the Platform (available at: https://getyolo.in/privacy) shall be
             read along with this privacy policy (“Privacy Policy”) for any
@@ -134,11 +134,11 @@ const PrivacyPolicy = () => {
             privacy laws in India and utilize the same for providing various
             services including UPI and card payment services. You retain the
             right to revoke the aforementioned access by updating access
-            permissions within your device's settings. Certain features may be
-            restricted, unavailable or unusable if you choose not to provide
-            certain information. For example: You would not be able to complete
-            e-commerce transactions involving delivery if you choose to not
-            share a delivery address. YOLO may require you to provide
+            permissions within your device &apos;s settings. Certain features
+            may be restricted, unavailable or unusable if you choose not to
+            provide certain information. For example: You would not be able to
+            complete e-commerce transactions involving delivery if you choose to
+            not share a delivery address. YOLO may require you to provide
             Aadhaar/PAN details before claiming certain rewards. We use your
             personal information in our business operations to deliver our goods
             and services and To carry out, among other things, the following:
@@ -180,7 +180,7 @@ const PrivacyPolicy = () => {
             13. To engage in financial/regulatory/management reporting; create,
             and maintain different risk management models.
             <br />
-            14. To carry out audits; To make judicious offers and promotions."
+            14. To carry out audits; To make judicious offers and promotions.
           </p>
           <p>
             Based on your requests and in accordance with our Privacy Policy and
@@ -245,7 +245,6 @@ const PrivacyPolicy = () => {
             Information We Collect from Third Parties
           </h5>
           <br />
-
           <p>
             We may, on your consent, request certain third parties to provide
             information about you to further personalize your experience on our
@@ -273,7 +272,7 @@ const PrivacyPolicy = () => {
             <br />
             4. Identify utility billers and insurers / insurance service
             providers you transact with to fetch your utility bill and/or
-            insurance details;
+            insurance details
             <br />
             5. Curate specific financial/investment/other products for you based
             on your financial transactions, investments, and past financial
@@ -426,7 +425,7 @@ const PrivacyPolicy = () => {
           </p>
           <br />
           <h5 className="font-semibold">
-            Updates or Modifications to this Policy{" "}
+            Updates or Modifications to this Policy
           </h5>
           <br />
 

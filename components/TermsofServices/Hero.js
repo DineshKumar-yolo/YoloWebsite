@@ -245,7 +245,7 @@ By using this Service, you acknowledge and accept the Service’s privacy policy
             the renewal date. Subscription to the subscription based Services
             commences immediately upon the realisation of payment of the
             subscription fees from the Users and there can be no cancellation
-            once a User's account is active for the subscription based Services.
+            once a User&apos;s account is active for the subscription based Services.
             The Company reserves the right to suspend or terminate your
             subscription if you breach these Terms, with or without notice and
             without further obligation to you. We may also suspend or terminate
@@ -253,7 +253,7 @@ By using this Service, you acknowledge and accept the Service’s privacy policy
             by circumstances beyond our control. The Company may, in exceptional
             circumstances, cease to publish the Site, the Site content or cease
             to provide subscription-based Services. The Company will give you at
-            least 15 days' notice of this, if possible. If we do so, then we
+            least 15 days&apos; notice of this, if possible. If we do so, then we
             will have no further obligation on you except for a refund of the
             unexpired period of your paid subscription. This means that we will
             refund you with any amounts that you have paid us in advance that
@@ -272,7 +272,7 @@ By using this Service, you acknowledge and accept the Service’s privacy policy
             conversion i.e. user will acquire YOLOCoins based on the
             Participation in Games and through transactions in YOLO Pay App.
             Similarly, each user can also earn YOLO Coins (“YOLO Coins” or
-            “Coins") for referring friends to the YOLO Pay App. A user may get
+            &apos;Coins&apos;) for referring friends to the YOLO Pay App. A user may get
             rewarded up to 1000 (thousand) Coins for each successful referral.
             These YOLO Coins including YOLO Coins are rewarded purely for the
             regular use of the YOLO Pay App does not permit any purchase or
@@ -334,7 +334,7 @@ By using this Service, you acknowledge and accept the Service’s privacy policy
             completely allow the limitation or exclusion of liability for
             incidental or consequential damages, so the above limitations or
             exclusions will apply to You subject to applicable law. In such
-            cases, YOLO's liability will be limited to the fullest extent
+            cases, YOLO&apos;s liability will be limited to the fullest extent
             permitted by applicable law. This paragraph shall survive the
             termination of this Agreement.
           </p>
@@ -450,7 +450,7 @@ By using this Service, you acknowledge and accept the Service’s privacy policy
             for any reason, such as for technical support, to resolve a Dispute,
             to close your YOLO Pay account, or to opt-out of the sharing of
             Personal Information regarding which you have the right to opt-out,
-            contact YOLO's Customer Support Department by e-mail at
+            contact YOLO&apos;s Customer Support Department by e-mail at
             team@getyolo.in
           </p>
           <br />
