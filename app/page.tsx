@@ -9,6 +9,7 @@ import Faq from '../components/modules/Faq'
 import AboutYoloApp from '../components/modules/AboutYoloApp'
 import ScanandPayMobile from "@/components/Home/MobileScanandPay"
 
+
 export default function Home() {
   return (
     <main className="">

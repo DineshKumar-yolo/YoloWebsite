@@ -8,6 +8,7 @@ import { ImLinkedin } from "react-icons/im";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
+import blog from '../../educations/Demo'
 
 const Features = [
   { name: "Debit Card", link: "debit-card", key:1 },
@@ -21,7 +22,7 @@ const Plans = [
   { name: "Gifts", link: "gifts", key:2 },
 ];
 const Learn = [
-  { name: "Blog", link: "blog", key:1 },
+  { name: "Blog", link: blog, key:1 },
   { name: "Help Center", link: "help-center", key:2  },
   { name: "FAQ", link: "faq", key:3 },
   { name: "Financial Literacy", link: "financial-literacy", key:4 },
@@ -74,7 +75,7 @@ const Footer = () => {
                 return (
                   <p
                     key={feature.key}
-                    // href={`/${feature.link}`}
+                    href={`/${feature.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {feature.name}
@@ -91,7 +92,7 @@ const Footer = () => {
                 return (
                   <p
                     key={Plans.key}
-                    // href={`/${plan.link}`}
+                    href={`/${plan.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {plan.name}
@@ -108,7 +109,7 @@ const Footer = () => {
                 return (
                   <p
                     key={Learn.key}
-                    // href={`/${learn.link}`}
+                    href={`/${learn.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {learn.name}
@@ -125,7 +126,7 @@ const Footer = () => {
                 return (
                   <p
                     key={Resources.key}
-                    // href={`/${resource.link}`}
+                    href={`/${resource.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {resource.name}
@@ -142,7 +143,7 @@ const Footer = () => {
                 return (
                   <p
                     key={Partnerships.key}
-                    // href={`/${partners.link}`}
+                    href={`/${partners.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {partners.name}
@@ -204,6 +205,12 @@ const Footer = () => {
             <Link href="/terms-of-services">
               <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
                 terms and conditions
+              </p>
+            </Link>
+            <div className="w-[1px] h-7 bg-white"></div>
+            <Link href="https://forms.gle/iwrBUVszumW5Fi7x7" target="_blank">
+              <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
+              contact-us
               </p>
             </Link>
           </div>
