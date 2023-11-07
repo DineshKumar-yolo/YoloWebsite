@@ -38,7 +38,7 @@ const Partnerships = [
   { name: "Partner With Us", link: "partner-with-us", key:3 },
 ];
 
-const Footer = () => {
+const Footer = () => {  
   // const date = new Date();
   // const year = date.getFullYear();
 
