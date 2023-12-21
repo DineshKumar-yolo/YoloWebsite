@@ -18,19 +18,20 @@ const Features = [
   { name: "Cashback and Savings", link: "cashback-and-savings", key:5 },
 ];
 const Plans = [
-  { name: "Refer Freinds", link: "refer-freinds", key:1 },
+  { name: "Refer Friends", link: "refer-friends", key:1 },
   { name: "Gifts", link: "gifts", key:2 },
 ];
 const Learn = [
-  { name: "Blog", link: blog, key:1 },
+  { name: "Blog", link: "blog", key:1 },
   { name: "Help Center", link: "help-center", key:2  },
   { name: "FAQ", link: "faq", key:3 },
   { name: "Financial Literacy", link: "financial-literacy", key:4 },
 ];
 const Resources = [
-  { name: "Careers", link: "careers", key:1 },
-  { name: "Leadership", link: "leadership", key:2 },
-  { name: "Press", link: "press", key:3 },
+  { name: "team", link: "team", key: 1 },
+  { name: "Careers", link: "careers", key:2 },
+  { name: "Leadership", link: "leadership", key:3 },
+  { name: "Press", link: "press", key:4 },
 ];
 const Partnerships = [
   { name: "For Classrooms", link: "for-classrooms", key:1 },
@@ -73,13 +74,13 @@ const Footer = () => {
             {Features &&
               Features.map((feature) => {
                 return (
-                  <p
+                  <a
                     key={feature.key}
                     href={`/${feature.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {feature.name}
-                  </p>
+                  </a>
                 );
               })}
           </div>
@@ -90,13 +91,13 @@ const Footer = () => {
             {Plans &&
               Plans.map((plan) => {
                 return (
-                  <p
+                  <a
                     key={Plans.key}
                     href={`/${plan.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {plan.name}
-                  </p>
+                  </a>
                 );
               })}
           </div>
@@ -107,13 +108,13 @@ const Footer = () => {
             {Learn &&
               Learn.map((learn) => {
                 return (
-                  <p
+                  <a
                     key={Learn.key}
                     href={`/${learn.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {learn.name}
-                  </p>
+                  </a>
                 );
               })}
           </div>
@@ -124,13 +125,13 @@ const Footer = () => {
             {Resources &&
               Resources.map((resource) => {
                 return (
-                  <p
+                  <a
                     key={Resources.key}
                     href={`/${resource.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {resource.name}
-                  </p>
+                  </a>
                 );
               })}
           </div>
@@ -141,13 +142,13 @@ const Footer = () => {
             {Partnerships &&
               Partnerships.map((partners) => {
                 return (
-                  <p
+                  <a
                     key={Partnerships.key}
                     href={`/${partners.link}`}
                     className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4"
                   >
                     {partners.name}
-                  </p>
+                  </a>
                 );
               })}
           </div>
@@ -180,7 +181,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {/* <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%] text-justify">
+           <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%] text-justify">
             *Yolo Core and Yolo + Invest families can earn monthly rewards of 1%
             per annum, Yolo Max families can earn 2% per annum, and Yolo
             Infinity families can earn 5% per annum on an average daily savings
@@ -189,7 +190,7 @@ const Footer = () => {
             Primary Account must be in Good Standing and have a verified ACH
             funding account. See Yolo Terms of Service for details. Subject to
             change at any time.
-          </p> */}
+          </p>
         </div>
         <div className="w-full flex-wrap flex justify-between items-start gap-5 md:gap-0">
           <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">

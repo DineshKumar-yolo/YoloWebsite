@@ -23,7 +23,7 @@ const Hero = () => {
                 </div>
                 <div className="hidden relative top-10 w-full lg:flex justify-center">
                     <div className="absolute z-10">
-                        <Image src={heroImg}alt='Hero' />
+                        <Image src={heroImg} alt='Hero' />
                     </div>
                     <Image src={girl1} className='absolute z-10 -translate-y-[50%] translate-x-[300%]' alt='Hero'/>
                     <Image src={thread} className='z-[9] w-[811px]' alt='Hero'/>

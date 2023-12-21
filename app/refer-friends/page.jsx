@@ -1,7 +1,3 @@
-import Footer from '@/components/modules/footer/Footer';
-import MobileNavbar from '@/components/modules/navbar/MobileNavbar';
-import Navbar from '@/components/modules/navbar/Navbar';
-import Navtop from '@/components/modules/navtop/Navtop'
 import Hero from "@/components/Refer&Earn/Hero"
 import Works from "@/components/Refer&Earn/Works"
 import ReferFreinds from "@/components/Refer&Earn/ReferFreinds"

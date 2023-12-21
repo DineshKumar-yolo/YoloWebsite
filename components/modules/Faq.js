@@ -115,12 +115,12 @@ const Faq = () => {
                   )}
                 </div>
               </div>
-              {/* <div
+              <div
                 className={`${activeIndex === index ? "relative translate-y-0 z-10" : "-z-10 absolute top-16 -translate-y-[100%]"
                   } transition-all ease-in-out duration-300 p-4`}
               >
                 <p className="text-white text-sm">{item.answer}</p>
-              </div> */}
+              </div>
             </div>
           ))}
         </div>

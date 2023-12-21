@@ -25,8 +25,9 @@ const Hero = () => {
             <Button buttonName={"Join the waitlist"} />
           </div>
         </div>
-        <div>
-          <Image src={debitCard} alt="Hero" />
+        <div >
+          <Image src={debitCard} alt="Hero" className="relative animate-moveUpDown" />
+          <div className="w-full mt-10 h-2 rounded-full bg-gradient-to-r from-transparent via-black to-transparent"></div>
         </div>
       </div>
     </div>

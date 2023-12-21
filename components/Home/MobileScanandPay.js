@@ -62,8 +62,8 @@ const ScanandPayMobile = () => {
   }, [activeIndex]);
 
   return (
-    <div className="bg-[#0D0D0D] min-h-screen">
-      <div className="sm:w-[85.97%] flex flex-col gap-5 items-center w-full px-10 py-12 xl:py-40">
+    <div className="bg-[#0D0D0D]">
+      <div className="flex flex-col gap-5 items-center justify-center w-full px-10 py-12 xl:py-40">
         <div className="flex flex-col items-center gap-3">
           <p className="text-[#7F7F7F] font-poppins text-sm text-center font-normal leading-[170%] tracking-[2px] uppercase">
             Our Features
@@ -99,8 +99,8 @@ const ScanandPayMobile = () => {
             &gt;
           </button>
         </div>
-        <div className="flex flex-col items-start gap-8">
-          <div className="sm:hidden w-full mb-4">
+        <div className="flex flex-col items-center gap-8">
+          <div className="w-full mb-4">
             <Image src={scanandpay} alt="Scan&Pay" />
           </div>
           <div className="flex items-center">

@@ -7,7 +7,7 @@ import AboutYoloApp from '@/components/modules/AboutYoloApp'
 
 const page = () => {
   return (
-      <div>
+    <div>
       <Hero />
       <EmpoweringTeam />
       <TeamMember />

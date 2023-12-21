@@ -46,7 +46,7 @@ const MockNews = [
 
 const NewsLetters = () => {
   return (
-    <div className="flex min-h-screen mx-auto justify-center my-16">
+    <div className="flex min-h-screen justify-center mx-16 my-16">
       <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 my-7 sm:p-0 p-4">
         {MockNews &&
           MockNews.map((news) => {

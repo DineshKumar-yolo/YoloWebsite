@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const AboutYoloApp = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-[#0D0D0D] w-full">
+    <div className="flex justify-center items-center h-screen bg-[#0D0D0D] w-full pt-10">
       <div className="w-10/12 lg:h-[398px] px-10 flex flex-col lg:flex-row lg:gap-[181px] gap-8 m-auto justify-center lg:items-end items-center shrink-0 bg-[#121213] rounded-2xl bg-design">
         <div className="flex flex-col lg:gap-8 gap-6 items-start justify-center my-auto">
           <div className="flex xl:w-[505px] flex-col justify-center items-start gap-[14px]">

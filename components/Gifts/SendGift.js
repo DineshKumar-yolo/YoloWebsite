@@ -10,7 +10,7 @@ const SendGift = () => {
             <div className='flex xl:px-52 flex-col xl:flex-row xl:py-32 p-10 gap-32 items-start'>
                 <div className="flex flex-col flex-1 items-start gap-8">
                     <div className="flex items-center gap-6">
-                        <Image src={logo} alt='Gifts'/>
+                        <Image src={logo} alt='Gifts' />
                         <Button buttonName={"Gift"} styles={"rounded-xl"} />
                     </div>
                     <Image src={debitCard} alt='Gifts' />
@@ -34,11 +34,11 @@ const SendGift = () => {
                                     <p className='text-white text-center font-poppins text-xs font-normal lowercase'>email</p>
                                 </button>
                             </div>
-                            <div className="flex flex-col items-start gap-2">
-                                <div className="flex flex-col items-start gap-1 self-stretch">
-                                    <p className='text-white font-poppins text-sm font-medium opacity-20'>What personal message would you like to send</p>
-                                    <p className='text-white font-poppins text-sm font-medium opacity-50'>Hope you enjoyed your order</p>
-                                </div>
+                        </div>
+                        <div className="flex flex-col items-start gap-2">
+                            <div className="flex flex-col items-start gap-1 self-stretch">
+                                <p className='text-white font-poppins text-sm font-medium opacity-20'>What personal message would you like to send</p>
+                                <p className='text-white font-poppins text-sm font-medium opacity-50'>Hope you enjoyed your order</p>
                             </div>
                         </div>
                     </div>

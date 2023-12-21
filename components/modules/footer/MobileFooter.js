@@ -15,11 +15,11 @@ const Features = [
     { name: "Debit Card", link: "debit-card", key: 1 },
     { name: "Investing", link: "investing", key: 2 },
     { name: "Security", link: "security", key: 3 },
-    { name: "Chores & Allowance", link: "chores-and-allowance", key: 4 },
+    { name: "Chores & Allowance", link: "tasks", key: 4 },
     { name: "Cashback and Savings", link: "cashback-and-savings", key: 5 },
 ];
 const Plans = [
-    { name: "Refer Freinds", link: "refer-freinds", key: 1 },
+    { name: "Refer Friends", link: "refer-friends", key: 1 },
     { name: "Gifts", link: "gifts", key: 2 },
 ];
 const Learn = [
@@ -29,9 +29,10 @@ const Learn = [
     { name: "Financial Literacy", link: "financial-literacy", key: 4 },
 ];
 const Resources = [
-    { name: "Careers", link: "careers", key: 1 },
-    { name: "Leadership", link: "leadership", key: 2 },
-    { name: "Press", link: "press", key: 3 },
+    { name: "team", link: "team", key: 1 },
+    { name: "Careers", link: "careers", key: 2 },
+    { name: "Leadership", link: "leadership", key: 3 },
+    { name: "Press", link: "press", key: 4 },
 ];
 const Partnerships = [
     { name: "For Classrooms", link: "for-classrooms", key: 1 },
@@ -58,7 +59,7 @@ const Dropdowns = ({ title, items }) => {
                 } left-0 transition-all ease-in-out duration-300 p-5`}>
                 {items.map((item) => (
                     <p key={item.key} className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4">
-                        {item.name}
+                        <a href={`/${item.link}`}>{item.name}</a>
                     </p>
                 ))}
             </div>

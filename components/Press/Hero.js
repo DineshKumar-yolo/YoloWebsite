@@ -5,7 +5,7 @@ const Hero = () => {
       <div className='flex flex-col items-center mx-auto gap-6 py-20 max-w-2xl'>
           <div className="flex flex-col items-center gap-4">
               <p className="text-white text-center font-poppins text-lg font-normal leading-[170%] tracking-[2px] uppercase">Press</p>
-              <h1 className='text-[#F8F8F8] text-center font-poppins text-[44px] font-semibold leading-[150%]'>Yolo`&apos;`smaking news.</h1>
+              <h1 className='text-[#F8F8F8] text-center font-poppins text-[44px] font-semibold leading-[150%]'>Yolo&apos;smaking news.</h1>
               <p className='text-[#9C9C9C] text-center font-poppins text-base font-normal leading-[170%] tracking-[-0.165px]'>Subscribe now and get quickest updates and weekly newsletter</p>
           </div>
           <div className="flex items-start gap-4 w-full flex-col sm:flex-row px-10 md:px-0">

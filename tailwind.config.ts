@@ -12,6 +12,15 @@ const config: Config = {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
+      keyframes:{
+        moveUpDown:{
+          '0%, 100%': { bottom: '0' },
+          '50%': { bottom: '40px' }
+        }
+      },
+      animation: {
+        moveUpDown: 'moveUpDown 5s linear infinite',
+      },
     },
   },
   plugins: [],
