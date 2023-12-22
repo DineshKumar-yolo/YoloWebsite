@@ -34,7 +34,6 @@ const Campus = () => {
                             Our Partners
                         </p>
                         <div className="flex flex-row gap-4">
-                            <Image src={Swarnim} alt="Swarnim University Logo" />
                             <Image src={LJUniversity} alt="LJ University" />
                         </div>
                     </div>

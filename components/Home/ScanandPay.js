@@ -59,30 +59,30 @@ const ScanandPay = () => {
             {accordionData.map((item, index) => (
               <div
                 key={accordionData.key}
-                className={`flex flex-col relative justify-between  items-stretch gap-4 px-5 py-[30px] transition-all  duration-300 ease-in-out hover:bg-[#121212] border-b-[0.3px] border-[#1E1E1E] cursor-pointer ${activeIndex === index ? "bg-[#121212]" : ""}`}
+                className={`flex flex-col relative justify-center  items-stretch px-5 py-[30px] transition-all  duration-700 ease-in-out hover:bg-[#121212] border-b-[0.3px] border-[#1E1E1E] cursor-pointer ${activeIndex === index ? "bg-[#121212]" : ""}`}
                 onClick={() => toggleAccordion(index)}
               >
-                <div key={index} className="flex justify-between items-stretch cursor-pointer" >
-                  <p className={`${activeIndex === index ? "text-[#676767] text-xs" : "text-white text-sm"} transition-all duration-300`}>{item.title}</p>
+                <div key={index} className="flex justify-between items-stretch transition-all ease-in-out duration-700" >
+                  <p className={`${activeIndex === index ? "text-[#676767] text-xs" : "text-white text-sm"} transition-all ease-in-out duration-700`}>{item.title}</p>
                   {
                     activeIndex === index ? (
                       <>
                         <FiMinus
-                          className="text-white text-[24px] transition-all duration-300"
+                          className="text-white text-[24px] transition-all duration-700"
                         />
                       </>
                     ) : (
                       <>
                         <RiAddLine
-                          className="text-white text-[24px] transition-all duration-300"
+                          className="text-white text-[24px] transition-all duration-700"
                         />
                       </>
                     )
                   }
                 </div>
                 <div
-                  className={`${activeIndex === index ? "relative translate-y-0 z-10" : "-z-10 absolute top-16 -translate-y-[20%]"
-                    } left-0 transition-all ease-in-out duration-400 `}
+                  className={`${activeIndex === index ? "relative z-10 h-10" : "-z-10 overflow-hidden h-0"
+                    } transition-all linear duration-700 `}
                 >
                   <p className="text-white text-sm">{item.content}</p>
                 </div>

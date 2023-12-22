@@ -21,6 +21,10 @@ const config: Config = {
       animation: {
         moveUpDown: 'moveUpDown 5s linear infinite',
       },
+      screens: {
+        slg: {max: '1259px'},
+        mlg: {min: '1260px'},
+      },
     },
   },
   plugins: [],

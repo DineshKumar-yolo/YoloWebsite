@@ -48,22 +48,25 @@ const Dropdowns = ({ title, items }) => {
     };
 
     return (
-        <div className={`w-full ${isOpen ? 'bg-[#121212]' : ''} relative`}>
-            <div className="flex justify-between items-center py-5 cursor-pointer transition-all ease-in-out duration-300" onClick={toggleAccordion}>
-                <p className={`text-white font-poppins text-sm font-normal transition-all duration-300 ease-in-out leading-[142.857%] ${isOpen ? 'text-[#676767] text-sm opacity-60' : 'text-white text-xs'}`}>
+        <div className={`w-full ${isOpen ? 'bg-[#121212]' : ''} flex flex-col justify-center  items-stretch px-5 py-[30px] transition-all  duration-700 ease-in-out hover:bg-[#121212] border-b-[0.3px] border-[#1E1E1E] cursor-pointer`} onClick={toggleAccordion}>
+            <div className="flex justify-between items-stretch transition-all ease-in-out duration-700" >
+                <p className={`text-white font-poppins text-sm font-normal transition-all duration-700 ease-in-out leading-[142.857%] ${isOpen ? 'text-[#676767] text-sm opacity-60' : 'text-white text-xs'}`}>
                     {title}
                 </p>
-                {isOpen ? <FiMinus className="text-white text-base" /> : <FiPlus className="text-white text-base" />}
+                {isOpen ? 
+                    <FiMinus className="text-white text-base transition-all duration-700" />
+                    :
+                    <FiPlus className="text-white text-base transition-all duration-700" />
+                }
             </div>
-            <div className={`${isOpen ? "relative translate-y-0 z-10" : "-z-10 absolute top-16 -translate-y-[50%]"
-                } left-0 transition-all ease-in-out duration-300 p-5`}>
+            <div className={`${isOpen ? "relative z-10 h-full  pt-4" : "pt-0 -z-10 overflow-hidden h-0"
+                } pl-5 transition-all ease-in-out duration-700`}>
                 {items.map((item) => (
-                    <p key={item.key} className="text-white font-poppins text-sm font-normal leading-[142.857%] mb-4">
+                    <p key={item.key} className="text-white font-poppins text-sm font-normal leading-[142.857%] transition-all ease-in-out duration-700">
                         <a href={`/${item.link}`}>{item.name}</a>
                     </p>
                 ))}
             </div>
-            <hr className='h-px bg-[#1E1E1E] opacity-20' />
         </div>
     );
 };

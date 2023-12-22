@@ -28,28 +28,31 @@ const Hero = () => {
         <div className="rounded-full blur-[100px] -z-10 bg-[#660B0B] w-[461px] h-[461px]"></div>
         <div className="rounded-full blur-[100px] -z-10 bg-[#660B0B] w-[461px] h-[461px]"></div>
       </div>
-      <div className="md:w-[241px] w-[141px] flex gap-2 md:py-3 md:px-2 p-2 justify-center absolute top-[500px] left-[10%]  md:top-[95%] md:left-[7%] items-center rounded-2xl backdrop-blur-sm shrink-0 bg-gradient-to-br from-[#FFFFFF52] via-[#FFFFFF33] to-[#FFE0E033]">
-        <Image src={hero_image} alt="hero" />
-        <p className="text-white font-poppins md:text-xs text-[6px] font-medium leading-normal tracking-[-0.054px]">
-          Money Sent <span className="text-[#38C15E]">successfully</span> to Rai
-          Mahalaxmi{" "}
-        </p>
-      </div>
-      <div className="flex items-end justify-center gap-6 sm:gap-2 md:gap-3 w-[90%] h-3/6 md:px-10 md:py-0 pt-24 shrink-0">
-        <Image src={hero_phone_1} alt="Hero" />
-        <Image src={hero_phone_2} alt="Hero" />
-        <Image src={hero_phone_3} alt="Hero" />
-      </div>
-      <div className="md:w-[191px] w-[124px] md:px-2 md:py-4 p-3 flex flex-col gap-3 justify-center items-start absolute top-[450px] right-[10%] md:top-[79%] md:right-[10%] rounded-2xl backdrop-blur-sm shrink-0 bg-gradient-to-br from-[#FFFFFF52] via-[#FFFFFF33] to-[#FFE0E033]">
-        <div className="flex justify-between items-center md:gap-4 gap-2">
-          <Image src={hero_image_2} height={2.897} width={11.554} alt="hero" />
-          <h5 className="text-white font-poppins md:text-xs text-[7px] font-medium leading-normal tracking-[-0.052px]">
-            Get Verified Instantly
-          </h5>
+      <div className="flex flex-wrap flex-row justify-center gap-5 slg:gap-14">
+        <div className="md:w-[241px] w-[141px] h-16 flex gap-2 mt-10 slg:mt-20 mlg:mt-[300px] md:py-3 md:px-2 p-2 justify-center items-center rounded-2xl backdrop-blur-sm shrink-0 bg-gradient-to-br from-[#FFFFFF52] via-[#FFFFFF33] to-[#FFE0E033]">
+          <Image src={hero_image} alt="hero" />
+          <p className="text-white font-poppins md:text-xs text-[6px] font-medium leading-normal tracking-[-0.054px]">
+            Money Sent <span className="text-[#38C15E]">successfully</span> to Rai
+            Mahalaxmi{" "}
+          </p>
         </div>
-        <p className="text-white md:w-[163.836px] w-[106px] font-poppins md:text-[9.489px] text-[5px] font-normal leading-normal tracking-[-0.052px]">
-          Get your account verified in just 60 secs and enjoy the product
-        </p>
+        <div className="flex slg:order-last items-end justify-center gap-6 sm:gap-2 md:gap-3 h-3/6 md:px-10 shrink-[10]">
+          <Image src={hero_phone_1} alt="Hero" />
+          <Image src={hero_phone_2} alt="Hero" />
+          <Image src={hero_phone_3} alt="Hero" />
+        </div>
+        <div className="md:w-[191px] w-[124px] md:h-[91px] h-16 mlg:mt-[100px] md:px-2 md:py-4 p-2 flex flex-col gap-3 justify-center items-start rounded-2xl backdrop-blur-sm shrink-0 bg-gradient-to-br from-[#FFFFFF52] via-[#FFFFFF33] to-[#FFE0E033]">
+          <div className="flex justify-between items-center md:gap-4 gap-2">
+            <Image src={hero_image_2} height={2.897} width={11.554} alt="hero" />
+            <h5 className="text-white font-poppins md:text-xs text-[7px] font-medium leading-normal tracking-[-0.052px]">
+              Get Verified Instantly
+            </h5>
+          </div>
+          <p className="text-white md:w-[163.836px] w-[106px] font-poppins md:text-[9.489px] text-[5px] font-normal leading-normal tracking-[-0.052px]">
+            Get your account verified in just 60 secs and enjoy the product
+          </p>
+        </div>
+        
       </div>
     </div>
   );
