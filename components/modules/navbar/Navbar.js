@@ -24,9 +24,9 @@ const Learn = [
 ];
 const Resources = [
   { name: "team", link: "team", key: 1 },
-  { name: "Careers", link: "careers", key:2 },
-  { name: "Leadership", link: "leadership", key:3 },
-  { name: "Press", link: "press", key:4 },
+  { name: "Careers", link: "careers", key: 2 },
+  { name: "Leadership", link: "leadership", key: 3 },
+  { name: "Press", link: "press", key: 4 },
 ];
 const Partnerships = [
   { name: "For Classrooms", link: "for-classrooms", key: 1 },
@@ -68,13 +68,17 @@ const Navbar = () => {
     <div className="flex justify-between items-center mx-[100px] text-white py-5 text-lg">
       <div>
         <Link href="/">
-          <Image src={logo} alt="logo"/>
+          <Image src={logo} alt="logo" />
         </Link>
       </div>
       <div>
         <ul className="flex list-none gap-8 font-poppins text-slate-300">
-          <Menu name="Features" list={Features} />
-          <Menu name="Plans" list={Plans} />
+          <Menu name="For GenZ" list={Features} />
+          <li className="relative float-left group">
+            <Link className="flex gap-px pl-2 rounded-xl" href="/for-classroom" >
+              For Colleges
+            </Link>
+          </li>
           <Menu name="Learn" list={Learn} />
           <Menu name="Who we are" list={Resources} />
           <Menu name="Partnerships" list={Partnerships} />

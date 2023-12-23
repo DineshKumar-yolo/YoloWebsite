@@ -72,22 +72,21 @@ const Faq = () => {
             </button>
           </Link>
         </div>
-        <div className="grid lg:grid-cols-2 grid-cols-1 justify-between w-full gap-5">
+        <div className="grid lg:grid-cols-2 grid-cols-1 justify-between w-full gap-x-5 mx-5">
           {faqData.map((item, index) => (
             <div
             key={item.key} 
-              className={`grid grid-col-1 gap-3 items-start self-stretch relative ${
-                activeIndex === index ? "bg-[#121212]" : ""
-              }`}
+              className={`flex flex-col relative justify-center  items-stretch px-5 pt-7  transition-all  duration-700 ease-in-out hover:bg-[#121212] border-b-[0.3px] border-[#1E1E1E] cursor-pointer ${activeIndex === index ? "bg-[#121212]" : ""}
+              `}
+              onClick={() => toggleAccordion(index)}
             >
               <div
                 key={index}
-                className="flex py-4 flex-col items-start gap-4 self-stretch cursor-pointer hover:bg-[#121212]"
-                onClick={() => toggleAccordion(index)}
+                className="transition-all ease-in-out duration-700"
               >
-                <div className="flex justify-between px-5 items-start self-stretch">
+                <div className="flex justify-between px-5 items-start self-stretch transition-all ease-in-out duration-700">
                   <p
-                    className={`font-poppins font-normal md:hidden block leading-[142.857%] transition-all duration-300 ${
+                    className={`font-poppins font-normal md:hidden block leading-[142.857%] transition-all duration-700 ${
                       activeIndex === index
                         ? "text-[#676767] text-sm"
                         : "text-white text-xs"
@@ -96,7 +95,7 @@ const Faq = () => {
                     {item.mobileQuestion}
                   </p>
                   <p
-                    className={`font-poppins font-normal md:block hidden leading-[142.857%] transition-all duration-300 ${
+                    className={`font-poppins font-normal md:block hidden leading-[142.857%] transition-all duration-700 ${
                       activeIndex === index
                         ? "text-[#676767] text-xs"
                         : "text-white text-sm"
@@ -106,18 +105,18 @@ const Faq = () => {
                   </p>
                   {activeIndex === index ? (
                     <>
-                      <BiMinus className="text-white text-lg shrink-0 transition-all duration-300" />
+                      <BiMinus className="text-white text-lg shrink-0 transition-all duration-700" />
                     </>
                   ) : (
                     <>
-                      <VscAdd className="text-white text-lg shrink-0 transition-all duration-300" />
+                      <VscAdd className="text-white text-lg shrink-0 transition-all duration-700" />
                     </>
                   )}
                 </div>
               </div>
               <div
-                className={`${activeIndex === index ? "relative translate-y-0 z-10" : "-z-10 absolute top-16 -translate-y-[100%]"
-                  } transition-all ease-in-out duration-300 p-4`}
+                className={`${activeIndex === index ? "relative z-10 h-10" : "-z-10 overflow-hidden h-0 pb-0"
+                  } transition-all ease-in-out duration-700 p-4`}
               >
                 <p className="text-white text-sm">{item.answer}</p>
               </div>

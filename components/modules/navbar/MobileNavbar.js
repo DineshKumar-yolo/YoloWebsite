@@ -118,7 +118,7 @@ const MobileNavbar = () => {
           }}
           className={"flex w-full justify-between text-[#CFCFCF] font-poppins text-base font-normal tracking-[-0.165px]"}
         >
-          Features <RiArrowDropDownLine className="text-3xl" />
+          For GenZ <RiArrowDropDownLine className="text-3xl" />
         </Link>
         {
           isFeatures ?
@@ -128,11 +128,10 @@ const MobileNavbar = () => {
         </div>
         <div className="flex flex-col w-full gap-6">
         <Link
-          href=""
-          onClick={() => setisPlans(!isPlans)}
+          href="/for-classroom"
           className="flex w-full justify-between text-[#CFCFCF] font-poppins text-base font-normal tracking-[-0.165px]"
         >
-          Plans <RiArrowDropDownLine className="text-3xl" />
+          For Colleges
         </Link>
         {
           isPlans ?
