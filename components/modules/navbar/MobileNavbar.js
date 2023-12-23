@@ -128,7 +128,7 @@ const MobileNavbar = () => {
         </div>
         <div className="flex flex-col w-full gap-6">
         <Link
-          href="/for-classroom"
+          href="/for-classrooms"
           className="flex w-full justify-between text-[#CFCFCF] font-poppins text-base font-normal tracking-[-0.165px]"
         >
           For Colleges

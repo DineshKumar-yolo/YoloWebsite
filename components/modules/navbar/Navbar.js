@@ -47,7 +47,7 @@ const Navbar = () => {
           {
             list.map((item) => {
               return (
-                <li className="p-2 w-full">
+                <li key={item.key} className="p-2 w-full">
                   <a
                     key={item.key}
                     href={`/${item.link}`}
@@ -75,7 +75,7 @@ const Navbar = () => {
         <ul className="flex list-none gap-8 font-poppins text-slate-300">
           <Menu name="For GenZ" list={Features} />
           <li className="relative float-left group">
-            <Link className="flex gap-px pl-2 rounded-xl" href="/for-classroom" >
+            <Link className="flex gap-px pl-2 rounded-xl" href="/for-classrooms" >
               For Colleges
             </Link>
           </li>
