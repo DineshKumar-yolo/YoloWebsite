@@ -4,13 +4,13 @@ import { BiLogoPlayStore, BiLogoApple } from "react-icons/bi";
 import logo from "../../../public/logo.svg";
 import Image from "next/image";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import Scanner from "../../../public/Scanner.png";
 
 const Features = [
   { name: "Debit Card", link: "debit-card", key: 1 },
-  { name: "Investing", link: "investing", key: 2 },
-  { name: "Security", link: "security", key: 3 },
-  { name: "Chores & Allowance", link: "tasks", key: 4 },
-  { name: "Cashback and Savings", link: "cashback-and-savings", key: 5 },
+  { name: "Security", link: "security", key: 2 },
+  { name: "Chores & Allowance", link: "tasks", key: 3 },
+  { name: "Cashback and Savings", link: "cashback-and-savings", key: 4 },
 ];
 const Plans = [
   { name: "Refer Friends", link: "refer-friends", key: 1 },
@@ -18,20 +18,15 @@ const Plans = [
 ];
 const Learn = [
   { name: "Blog", link: "blog", key: 1 },
-  { name: "Help Center", link: "help-center", key: 2 },
-  { name: "FAQ", link: "faq", key: 3 },
-  { name: "Financial Literacy", link: "financial-literacy", key: 4 },
+  { name: "FAQ", link: "faq", key: 2 },
 ];
 const Resources = [
   { name: "team", link: "team", key: 1 },
-  { name: "Careers", link: "careers", key: 2 },
-  { name: "Leadership", link: "leadership", key: 3 },
-  { name: "Press", link: "press", key: 4 },
+  { name: "Press", link: "press", key: 2 },
 ];
 const Partnerships = [
   { name: "For Classrooms", link: "for-classrooms", key: 1 },
-  { name: "Credit Unions", link: "credit-unions", key: 2 },
-  { name: "Partner With Us", link: "partner-with-us", key: 3 },
+  { name: "Partner With Us", link: "partner-with-us", key: 2 },
 ];
 
 const Navbar = () => {
@@ -43,7 +38,7 @@ const Navbar = () => {
           {name}
           <RiArrowDropDownLine className="text-3xl" />
         </button>
-        <ul className="absolute rounded-3xl m-auto top-[30px] z-10 shadow-sm shadow-[#303030] bg-[#0D0D0D] p-2 w-[200px] hidden group-hover:block " >
+        <ul className="absolute rounded-3xl m-auto top-[40px] z-10 bg-[#1B1B1B] p-2 w-[200px] hidden group-hover:block " >
           {
             list.map((item) => {
               return (
@@ -84,10 +79,14 @@ const Navbar = () => {
           <Menu name="Partnerships" list={Partnerships} />
         </ul>
       </div>
-      <div className="border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3">
+      <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
         <button className="flex w-[20px] p-[1px] items-start shrink-0">
           <BiLogoPlayStore />
         </button>
+        <div className="absolute group-hover:block rounded-lg m-auto w-auto h-auto p-4 top-[40px] z-10 bg-[#1B1B1B] hidden " >
+          <Image src={Scanner} alt="Scanner" width={109} height={109} />
+          <p className="text-white w-[112px] pt-[10px] text-center font-poppins text-[12px] font-normal leading-[18px] -tracking-[0.165px] " >scan qr code to download app</p>
+        </div>
       </div>
     </div>
   );

@@ -11,10 +11,9 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Features = [
   { name: "Debit Card", link: "debit-card", key: 1 },
-  { name: "Investing", link: "investing", key: 2 },
-  { name: "Security", link: "security", key: 3 },
-  { name: "Chores & Allowance", link: "tasks", key: 4 },
-  { name: "Cashback and Savings", link: "cashback-and-savings", key: 5 },
+  { name: "Security", link: "security", key: 2 },
+  { name: "Chores & Allowance", link: "tasks", key: 3 },
+  { name: "Cashback and Savings", link: "cashback-and-savings", key: 4 },
 ];
 const Plans = [
   { name: "Refer Friends", link: "refer-friends", key: 1 },
@@ -22,20 +21,15 @@ const Plans = [
 ];
 const Learn = [
   { name: "Blog", link: "blog", key: 1 },
-  { name: "Help Center", link: "help-center", key: 2 },
-  { name: "FAQ", link: "faq", key: 3 },
-  { name: "Financial Literacy", link: "financial-literacy", key: 4 },
+  { name: "FAQ", link: "faq", key: 2 },
 ];
 const Resources = [
   { name: "team", link: "team", key: 1 },
-  { name: "Careers", link: "careers", key: 2 },
-  { name: "Leadership", link: "leadership", key: 3 },
-  { name: "Press", link: "press", key: 4 },
+  { name: "Press", link: "press", key: 2 },
 ];
 const Partnerships = [
   { name: "For Classrooms", link: "for-classrooms", key: 1 },
-  { name: "Credit Unions", link: "credit-unions", key: 2 },
-  { name: "Partner With Us", link: "partner-with-us", key: 3 },
+  { name: "Partner With Us", link: "partner-with-us", key: 2 },
 ];
 
 const MobileNavbar = () => {
@@ -130,6 +124,7 @@ const MobileNavbar = () => {
         <Link
           href="/for-classrooms"
           className="flex w-full justify-between text-[#CFCFCF] font-poppins text-base font-normal tracking-[-0.165px]"
+          onClick={() => setisMenuOpen(!setisMenuOpen)}
         >
           For Colleges
         </Link>
