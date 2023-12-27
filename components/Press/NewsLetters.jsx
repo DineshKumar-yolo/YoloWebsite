@@ -46,12 +46,12 @@ const MockNews = [
 
 const NewsLetters = () => {
   return (
-    <div className="flex min-h-screen justify-center mx-16 my-16">
-      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 my-7 sm:p-0 p-4">
+    <div className="flex min-h-screen justify-center sm:mx-16 mx-5 my-16 ">
+      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 my-7 p-0 md:p-4">
         {MockNews &&
           MockNews.map((news) => {
             return (
-              <div className="2xl:w-[400px] h-[550px] border border-white" key={MockNews.key}>
+              <div className="2xl:w-[400px] sm:h-[550px] h-auto border border-white" key={MockNews.key}>
                 <div className="flex flex-col items-start gap-10 p-4">
                   <Image
                   alt="NewsLetter"

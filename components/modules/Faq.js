@@ -115,7 +115,7 @@ const Faq = () => {
                 </div>
               </div>
               <div
-                className={`${activeIndex === index ? "relative z-10 h-10" : "-z-10 overflow-hidden h-0 pb-0"
+                className={`${activeIndex === index ? "relative z-10 h-10 pb-10" : "-z-10 overflow-hidden h-0 pb-0"
                   } transition-all ease-in-out duration-700 p-4`}
               >
                 <p className="text-white text-sm">{item.answer}</p>
