@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from 'next/link'
 import Button from "../modules/Button";
 import hero_phone_1 from "../../public/hero-phone-1.png";
 import hero_phone_2 from "../../public/hero-phone-2.png";
@@ -20,7 +21,9 @@ const Hero = () => {
           </p>
         </div>
         <div className="sm:w-2/3 flex w-full items-center justify-center">
-          <Button buttonName={"Get Your Card"} />
+          <Link href={"https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"}>
+            <Button buttonName={"Get Your Card"} />
+          </Link>
         </div>
       </div>
       <div className="absolute gap-[121px] -ml-[40px] mt-20 flex flex-row w-full">
@@ -52,7 +55,7 @@ const Hero = () => {
             Get your account verified in just 60 secs and enjoy the product
           </p>
         </div>
-        
+
       </div>
     </div>
   );

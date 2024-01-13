@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Button from '../modules/Button'
 
 const Hero = () => {
@@ -11,7 +12,9 @@ const Hero = () => {
                 </h1>
                 <p className='text-[#9C9C9C] text-center text-base font-normal leading-[170%] tracking-[-0.165px]'>We are happy to answer your questions</p>
                 <div className="flex gap-4 items-start flex-wrap justify-center w-full xl:w-auto">
-                    <Button buttonName={"Get Your Card"} />
+                    <Link href={"https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"}>
+                        <Button buttonName={"Get Your Card"} />
+                    </Link>
                 </div>
             </div>
         </div>
