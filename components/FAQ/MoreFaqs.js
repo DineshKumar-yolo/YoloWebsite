@@ -6,30 +6,13 @@ import React, {useState} from 'react'
 import { FaRegEnvelope } from 'react-icons/fa'
 import Button from '../modules/Button'
 import { BsChatLeftText } from "react-icons/bs"
-//smtp.zoho.com
-//viplao.itankar@getyolo.in
-//HQTedEjdQTfw
-//CA5E46486016E2B79A491C66839F0EAB3849
+
 const MoreFaqs = () => {
 
     const [fName, setfName] = useState("");
     const [lName, setlName] = useState("");
     const [email, setemail] = useState("");
     const [message, setmessage] = useState("");
-
-    function handleSubmit(){
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "viplaoitankar26@gmail.com",
-            Password : "CA5E46486016E2B79A491C66839F0EAB3849",
-            To : 'viplaoitankar26@gmail.com',
-            From : "viplaoitankar26@gmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-          message => alert('email sent')
-        )
-    }
 
     return (
         <div className='w-full py-20 flex justify-center items-center'>
