@@ -17,7 +17,7 @@ const data = [
       "This includes your name, contact information, login name, profile image (if applicable), email address, birthday, and any other relevant information.",
   },
   {
-    Particulars: "Demographic/Geolocation Data",
+    Particulars: "Demographic/ Geolocation Data",
     "Data Collected":
       "This includes your name, age, gender, income, occupation, and address (including city). If you enable location services, we will be able to gather location information from your mobile device, or when our Platform is running in the background on your mobile device. If you disable location services, you won’t be able to access the Platform’s crucial functions.",
   },
@@ -45,8 +45,8 @@ const data = [
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-[#F8F8F8] xl:px-[100px] px-10 pt-[80px] pb-[184px]">
-      <div className="flex max-w-[1240px] flex-col items-start gap-16">
+    <div className="bg-[#F8F8F8] xl:px-[100px] px-10 xs:px-4 pt-[80px] xs:pt-10  pb-[184px]">
+      <div className="flex w-full flex-col items-start gap-16">
         <div className="flex flex-col items-start gap-2">
           <h1 className="text-black font-poppins text-[48px] font-Medium leading-[150%]">
             PRIVACY POLICY
@@ -143,7 +143,7 @@ const PrivacyPolicy = () => {
             personal information in our business operations to deliver our goods
             and services and To carry out, among other things, the following:
             <br />
-            1.To speed up transactions or provide reports on them.
+            1. To speed up transactions or provide reports on them.
             <br />
             2. To enable our Services and update our Platform social features;
             services, automated actions to be triggered in certain events as
@@ -196,7 +196,7 @@ const PrivacyPolicy = () => {
             <br />
           </p>
 
-          <table>
+          <table border={2} >
             <thead>
               <tr>
                 <th>Particulars</th>
@@ -206,8 +206,8 @@ const PrivacyPolicy = () => {
             <tbody>
               {data.map((item, index) => (
                 <tr key={index}>
-                  <td>{item.Particulars}</td>
-                  <td>{item["Data Collected"]}</td>
+                  <td><div className="my-1.5 text-left " >{item.Particulars}</div></td>
+                  <td><div className="my-1.5" >{item["Data Collected"]}</div></td>
                 </tr>
               ))}
             </tbody>

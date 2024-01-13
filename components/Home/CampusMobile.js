@@ -43,7 +43,7 @@ const CampusMobile = () => {
                         <Image src={ChatsTeardrop} alt="Chats Teardrop" className="md:h-[34px] h-[18px] md:w-[35px] w-[18px] " />
                     </div>
                 </div>
-                <div className="flex flex-col md:gap-10 gap-6 items-center justify-start sm:mt-20">
+                <div className="flex flex-col md:gap-10 gap-6 items-start justify-start sm:mt-20">
                     <div className="flex flex-col gap-6">
                         <h1 className="text-white font-poppins md:text-[40px] text-[20px] md:font-semibold font-normal leading-normal tracking-[-0.165px]">
                             Make Your Campus<br />Digital Through {" "}
@@ -58,12 +58,11 @@ const CampusMobile = () => {
                     <div>
                         <Button buttonName={"Book a Demo Now"} />
                     </div>
-                    <div className="gap-2">
+                    <div className="gap-2 flex flex-col items-start w-full">
                         <p className="text-white font-poppins text-base font-normal leading-[170%] tracking-[2px] uppercase">
                             Our Partners
                         </p>
                         <div className="flex flex-row gap-4">
-                            <Image src={Swarnim} alt="Swarnim University Logo" />
                             <Image src={LJUniversity} alt="LJ University" />
                         </div>
                     </div>

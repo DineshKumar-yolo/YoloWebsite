@@ -20,39 +20,38 @@ const Faq = () => {
   const faqData = [
     {
       key: 1,
-      question: "How does using my personal debit card for bill payments work?",
-      mobileQuestion: "How to apply for prepaid card?",
-      answer: "To register on Yolo, you can follow these steps...",
+      question: "How do I earn Yolo Coins?",
+      mobileQuestion: "How do I earn Yolo Coins?",
+      answer: "You earn Yolo Coins with every eligible transaction made on the Yolo platform. The more you use Yolo for payments, the more coins you accumulate, unlocking exciting rewards and benefits.",
     },
     {
       key: 2,
-      question: "Are there any hidden fees or charges when using this service?",
-      mobileQuestion: "Can I trust the prepaid card service?",
-      answer: "The answer to another frequently asked question...",
+      question: "Can I use Yolo Coins for purchases?",
+      mobileQuestion: "Can I use Yolo Coins for purchases?",
+      answer: "Yes, definitely! Yolo Coins can be used within the platform for various purposes, including discounted purchases, accessing premium features, participating in giveaways, and more.",
     },
     {
       key: 3,
-      question: "How can I get started with your product?",
-      mobileQuestion: "Are there any hidden fees or charges?",
-      answer: "The answer to yet another frequently asked question...",
+      question: "How can I subscribe to OTT platforms using Yolo?",
+      mobileQuestion: "How can I subscribe to OTT platforms using Yolo?",
+      answer: "It's simple! Within the Yolo platform, explore the OTT subscription section, choose your preferred service, and complete the subscription process hassle-free using your Yolo account.",
     },
     {
       key: 4,
-      question: "Can I trust the prepaid card provided by your service?",
-      mobileQuestion: "What benefits do I get?",
-      answer: "The answer to one more frequently asked question...",
+      question: "What kind of internship opportunities does Yolo offer?",
+      mobileQuestion: "What kind of internship opportunities does Yolo offer?",
+      answer: "Yolo provides a diverse range of internship opportunities across various industries. Explore the 'Internship Opportunities' section on our platform to find positions suitable for your interests and skills.",
     },
     {
       key: 5,
-      question:
-        "What benefits do I get from using your service for bill payments?",
-      mobileQuestion: "How can I get started with product?",
-      answer: "The answer to the last frequently asked question...",
+      question: "How can I order a prepaid card from Yolo?",
+      mobileQuestion: "How can I order a prepaid card from Yolo?",
+      answer: "Ordering a prepaid card through Yolo is easy. Simply navigate to the 'Order Card' section, add your address and make payment, and it'll be delivered to your provided address. Enjoy convenient transactions with your Yolo prepaid card!",
     },
   ];
 
   return (
-    <div className="flex h-screen justify-center items-center bg-[#0D0D0D]">
+    <div className="flex h-auto lg:h-screen my-10 lg:my-0 justify-center items-center bg-[#0D0D0D]">
       <div className="flex flex-col items-center self-stretch w-10/12 gap-10 m-auto">
         <div className="flex flex-col sm:flex-row md:items-start items-center justify-between sm:gap-3 gap-10 self-stretch">
           <div className="flex flex-col md:items-start items-center gap-3 flex-grid">
@@ -115,7 +114,7 @@ const Faq = () => {
                 </div>
               </div>
               <div
-                className={`${activeIndex === index ? "relative z-10 h-10 pb-10" : "-z-10 overflow-hidden h-0 pb-0"
+                className={`${activeIndex === index ? "relative z-10 lg:h-24 md:h-36 h-48 pb-10" : "-z-10 overflow-hidden h-0 pb-0"
                   } transition-all ease-in-out duration-700 p-4`}
               >
                 <p className="text-white text-sm">{item.answer}</p>

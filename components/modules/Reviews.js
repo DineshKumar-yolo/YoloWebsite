@@ -8,61 +8,63 @@ import review_1 from "../../public/review-1.png";
 import review_2 from "../../public/review-2.png";
 import review_3 from "../../public/review-3.png";
 import review_4 from "../../public/review-4.png";
+import review_5 from "../../public/review-5.png";
+import review_6 from "../../public/review-6.png";
 
 const AllReviews = [
   {
     key: 1,
-    name: "Rajesh Jain",
+    name: "Aishwarya Singhal",
     userImg: review_1,
-    username: "@username",
+    username: "@aishwarya_singhal",
     date: "22.03.2021",
     reviewContent:
-      "I was skeptical at first, but using my personal debit card for bill payments with this service has been a game-changer. It's so convenient, and I can't believe I didn't start using it sooner!",
+      "Yolo changed how I handle payments. It's so simple and stress-free! Earning Yolo Coins is like a bonus after each purchase!",
   },
   {
     key: 2,
-    name: "RK Vishnoi",
+    name: "Kunj Joshi",
     userImg: review_2,
-    username: "@username",
+    username: "@kunj_joshi",
     date: "22.03.2021",
     reviewContent:
-      "Getting my first prepaid card through this product was a breeze. I never thought it would be this easy, and now I feel more in control of my finances than ever before.",
+      "I love how Yolo connects me to various OTT platforms effortlessly. No more subscription headaches, just pure entertainment!",
   },
   {
     key: 3,
-    name: "Gopal Das",
+    name: "Akshat Gupta",
     userImg: review_3,
-    username: "@username",
+    username: "@akshat_gupta",
     date: "22.03.2021",
     reviewContent:
-      "The prepaid card I got through this service has been a lifesaver. It's perfect for managing my expenses and staying on top of my budget.",
+      "Yolo isn’t just about payments; it’s a gateway to opportunities. Thanks to Yolo, I landed my dream internship! It’s life-changing.",
   },
   {
     key: 4,
-    name: "Deepika",
+    name: "Vipul Jain",
     userImg: review_4,
-    username: "@username",
+    username: "@vipul_jain",
     date: "22.03.2021",
     reviewContent:
-      "This service has saved me so much time and effort when it comes to managing my bills. I love how it simplifies the process and keeps everything in one place.",
+      "Participating in giveaways and tasks through Yolo has been exciting! The platform keeps surprising me with its engaging activities.",
   },
   {
     key: 5,
-    name: "Vishal",
-    userImg: review_2,
-    username: "@username",
+    name: "Arpit Sharma",
+    userImg: review_5,
+    username: "@arpit_sharma",
     date: "22.03.2021",
     reviewContent:
-      "Getting my first prepaid card through this product was a breeze. I never thought it would be this easy, and now I feel more in control of my finances than ever before.",
+      "Yolo’s prepaid card feature is a game-changer! I ordered mine in minutes, making transactions a breeze. Highly recommended!",
   },
   {
     key: 6,
     name: "Karanjot",
-    userImg: review_3,
-    username: "@username",
+    userImg: review_6,
+    username: "@karanjot_12",
     date: "22.03.2021",
     reviewContent:
-      "This service has saved me so much time and effort when it comes to managing my bills. I love how it simplifies the process and keeps everything in one place.",
+      "Yolo isn't just a platform; it's a supportive community. The way it offers perks and growth opportunities is phenomenal. I feel valued.",
   },
 ];
 
@@ -71,7 +73,7 @@ const Review = ({ userImg, name, username, date, reviewContent, key }) => {
     <div>
       <div className="flex flex-col flex-grid lg:p-5 p-4 items-start rounded-[10px] h-full lg:h-[260px] lg:w-[400px] w-[280px] sm:w-[320px] bg-[#121213]">
         <div className="flex pb-4 gap-[10px] self-stretch items-center">
-          <Image src={userImg} alt="Review" />
+          <Image src={userImg} alt="Review" width={40} height={40} />
           <div>
             <h5 className="text-white font-poppins text-sm font-medium leading-[140%]">
               {name}
@@ -179,11 +181,13 @@ const Reviews = () => {
             </button>
           </div>
         </div>
+        <div className="relative flex flex-nowrap justify-start w-[100vw] overflow-x-scroll">
         <div
           className="review flex flex-nowrap justify-start gap-5 w-full overflow-x-scroll"
           ref={reviewsContainerRef}
           style={{ padding: "0 20px" }}
         >
+          <div className="lg:pl-16" ></div>
           {AllReviews &&
             AllReviews.map((EachReview) => {
               return (
@@ -197,6 +201,7 @@ const Reviews = () => {
                 />
               );
             })}
+        </div>
         </div>
       </div>
     </div>

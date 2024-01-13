@@ -22,7 +22,7 @@ const Campus = () => {
                                 Yolo
                             </span>
                         </h1>
-                        <p className="text-[#7F7F7F] font-poppins text-base font-normal leading-[170%] tracking-[2px]">
+                        <p className="text-[#7F7F7F] font-poppins text-base font-normal leading-[170%] tracking-[-0.165px]">
                             YOLO Debit Card & App: Empowering Kids to Save, Spend Wisely. Informed Parents with Real-time Notifications. Financial Freedom for the Whole Family.
                         </p>
                     </div>
@@ -48,7 +48,7 @@ const Campus = () => {
                             Make your hostel login<br/>digital
                         </h5>
                     </div>
-                    <Image src={CampusImg} alt="Campus Image" />
+                    <Image src={CampusImg} alt="Campus Image" className="h-[321px] w-[321px]" />
                     <div className="absolute flex flex-row items-center justify-start pl-[14px] gap-3 h-16 w-[230px] -ml-28 -mt-28 rounded-2xl backdrop-blur-sm shrink-0 bg-gradient-to-br from-[#FFFFFF52] via-[#FFFFFF33] to-[#FFE0E033]">
                         <Image src={CreditCard} alt="Credit Card" />
                         <h5 className="text-white font-poppins text-xs font-medium leading-normal tracking-[-0.052px]">

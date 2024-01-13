@@ -24,6 +24,8 @@ const config: Config = {
       screens: {
         slg: {max: '1259px'},
         mlg: {min: '1260px'},
+        xs: {max: '639px'},
+        xxs: {max: '475px'},
       },
     },
   },

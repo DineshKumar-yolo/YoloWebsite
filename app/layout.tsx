@@ -27,8 +27,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         />
       </head>
-      <body className={`${inter.className} font-poppins`}>
-        <Navtop />
+      <body className={`${inter.className} font-poppins overflow-x-hidden`}>
+        {/* <Navtop /> */}
         <div className="block lg:hidden">
           <MobileNavbar />
         </div>

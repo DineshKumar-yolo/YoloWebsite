@@ -5,9 +5,7 @@ import Link from "next/link";
 import { CiSearch } from 'react-icons/ci'
 
 const Items = [
-  { label: "All Topics", link: "all-topics" },
-  { label: "Ginie", link: "ginie" },
-  { label: "Debit Card", link: "debit-card" },
+  { label: "Deals", link: "all-topics" },
   { label: "Giveaways", link: "giveaways" },
   { label: "Tasks", link: "tasks" },
   { label: "Subscription", link: "subscription" },

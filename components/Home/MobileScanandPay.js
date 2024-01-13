@@ -13,27 +13,23 @@ const ScanandPayMobile = () => {
   const accordionData = [
     {
       key: 1,
-      title: "Pay Anywhere in Seconds",
-      content:
-        "Effortlessly manage transactions tailored for students and kids, making money matters stress-free.",
+      title: "Pay with Ease",
+      content: "Pay effortlessly for seamless and convenient transactions."
     },
     {
       key: 2,
-      title: "Get Rewards for every payment",
-      content:
-        "Dive into financial literacy while having fun, turning learning into an adventure.",
+      title: "Earn Yolo Coins",
+      content: "Get Yolo Coins with every transaction for added rewards.",
     },
     {
       key: 3,
-      title: "Subscribe to favourite OTT’s",
-      content:
-        "Enjoy your favorite shows and content hassle-free, without any complications.",
+      title: "OTT Subscription",
+      content: "Access exclusive OTT subscriptions hassle-free and easily.",
     },
     {
       key: 4,
-      title: "Get internship opportunities",
-      content:
-        "Unlock doors to real-world experience and growth, kickstarting your career journey.",
+      title: "Internship Opportunities",
+      content: "Explore exciting internship opportunities for career growth and experience.",
     },
   ];
 

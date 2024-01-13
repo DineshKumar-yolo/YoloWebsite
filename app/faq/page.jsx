@@ -8,9 +8,10 @@ const page = () => {
   return (
       <div className=''>
           <Hero />
-          <SearchBlogs />
           <Faqs />
-          <MoreFaqs />
+          <section id='contact'>
+            <MoreFaqs />
+          </section>
     </div>
   )
 }

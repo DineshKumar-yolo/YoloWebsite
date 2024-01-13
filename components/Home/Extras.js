@@ -9,15 +9,15 @@ const Extras = () => {
   return (
     <div className="xl:py-24 xl:px-[100px] bg-[#F8F8F8] px-10 py-8 flex justify-center items-center">
       <div className="flex flex-col justify-center items-start gap-20 xl:w-[1240px] w-full">
-        <div className="flex flex-col sm:flex-row justify-center self-stretch items-start gap-[10px]">
+        <div className="flex flex-col sm:flex-row justify-center self-stretch items-center gap-[10px]">
           <h1 className="flex-1 text-[#0D0D0D] md:text-left text-center font-poppins xl:text-[40px] text-xl font-semibold leading-normal -tracking-[0.165px]">
-            Children&apos;s happiness is our delight.
+            people happiness <br/>is our delight.
           </h1>
           <div className="h-full flex-1 flex justify-end">
             <Image src={profile_2} alt="Extras" />
           </div>
         </div>
-        <div className="flex items-center md:gap-5 gap-4 w-full overflow-x-auto md:overflow-hidden">
+        <div className="flex items-center gap-4 w-screen overflow-x-auto -ml-10 px-10">
           <div className="md:py-[75px] py-12 md:px-[55px] px-8 flex flex-col justify-center h-80 shrink-0 items-center gap-[10px] bg-[#F8F8F8] border-gradient-bottom">
             <div className="flex flex-col items-start gap-[30px] md:w-[290px] w-52">
               <Image src={yolo_coins} alt="Extras" className="" />

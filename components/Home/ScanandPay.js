@@ -21,22 +21,22 @@ const ScanandPay = () => {
     {
       key: 1,
       title: "Pay with Ease",
-      content: "Effortlessly manage transactions tailored for students and kids, making money matters stress-free."
+      content: "Pay effortlessly for seamless and convenient transactions."
     },
     {
       key: 2,
-      title: "Get Yolo Coins",
-      content: "Dive into financial literacy while having fun, turning learning into an adventure.",
+      title: "Earn Yolo Coins",
+      content: "Get Yolo Coins with every transaction for added rewards.",
     },
     {
       key: 3,
       title: "OTT Subscription",
-      content: "Enjoy your favorite shows and content hassle-free, without any complications.",
+      content: "Access exclusive OTT subscriptions hassle-free and easily.",
     },
     {
       key: 4,
       title: "Internship Opportunities",
-      content: "Unlock doors to real-world experience and growth, kickstarting your career journey.",
+      content: "Explore exciting internship opportunities for career growth and experience.",
     },
   ];
 
