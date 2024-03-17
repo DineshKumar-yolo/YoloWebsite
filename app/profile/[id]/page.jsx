@@ -6,13 +6,8 @@ const profile = ({ params }) => {
   const dealId = params.id;
 
   return (
-    <div className="flex h-screen overflow-hidden">
-      <div className={`w-1/6`}>
-        <SideNavbar />
-      </div>
-      <div className={`w-5/6 bg-[#F8F8F8]`}>
-        <EditDeals dealId={dealId} />
-      </div>
+    <div className="flex h-screen overflow-hidden justify-center items-center">
+      <p>Redirecting to app ...</p>
     </div>
   );
 }
