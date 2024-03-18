@@ -30,7 +30,7 @@ const Profile = ({ params }) => {
 
   useEffect(() => {
     getUser()
-  })
+  }, [])
 
 
   return isLoading ?
