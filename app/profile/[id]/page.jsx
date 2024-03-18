@@ -24,7 +24,9 @@ const Profile = ({ params }) => {
       }).catch(err => {
         console.log(err)
       }).finally(() => {
-        setIsLoading(false);
+        setTimeout(()=>{
+          setIsLoading(false);
+        }, 1000)
       })
   }
 
@@ -36,7 +38,7 @@ const Profile = ({ params }) => {
   return isLoading ?
     (
       <div className="flex h-screen justify-center items-center">
-        <GridLoader color="#660B0B" />
+        <GridLoader color="#fff" loading={isLoading} />
       </div>
     )
     :
@@ -55,77 +57,61 @@ const Profile = ({ params }) => {
             }
             {
               data.visibility.phoneNumber && (
-                <div className='button w-full text-[#ffffff]' >
-                  <Link href={`tel:${data.phoneNumber}`} className='flex gap-2 justify-center items-center' >
-                    <FiPhone />  
-                    <button>phone number</button>
-                  </Link>
-                </div>
+                <Link href={`tel:${data.phoneNumber}`} className='button w-full text-[#ffffff] flex gap-2 justify-center items-center' >
+                  <FiPhone />
+                  <button>phone number</button>
+                </Link>
               )
             }
             {
               data.visibility.emailId && (
-                <div className='button w-full text-[#ffffff]' >
-                  <Link href={`mailto:${data.emailId}`} className='flex gap-2 justify-center items-center' >
-                    <MdOutlineEmail />
-                    <button>Email</button>
-                  </Link>
-                </div>
+                <Link href={`mailto:${data.emailId}`} className='button w-full text-[#ffffff] flex gap-2 justify-center items-center' >
+                  <MdOutlineEmail />
+                  <button>Email</button>
+                </Link>
               )
             }
-            <div className='flex flex-row gap-4 flex-wrap w-full items-center justify-center' >
+            <div className='flex flex-row gap-4 flex-wrap w-full items-center justify-around' >
               {
                 data.visibility.facebook && (
-                  <div className='share button w-1/4 text-[#ffffff]' >
-                    <Link href={data.facebook} className='px-3' >
-                      <TiSocialFacebookCircular />
-                    </Link>
-                  </div>
+                  <Link href={data.facebook} className='px-3 share button min-w-[25%] text-[#ffffff] flex-1 text-[35px]' >
+                    <TiSocialFacebookCircular />
+                  </Link>
                 )
               }
               {
                 data.visibility.instagram && (
-                  <div className='share button w-1/4 text-[#ffffff]' >
-                    <Link href={data.instagram} >
-                      <FaInstagram />
-                    </Link>
-                  </div>
+                  <Link href={data.instagram} className='px-3 share button min-w-[25%] text-[#ffffff] flex-1 text-[35px]' >
+                    <FaInstagram />
+                  </Link>
                 )
               }
-                {
-                  data.visibility.twitter && (
-                    <div className='share button w-1/4 text-[#ffffff]' >
-                      <Link href={data.twitter} >
-                        <FaXTwitter />
-                      </Link>
-                    </div>
-                  )
-                }
+              {
+                data.visibility.twitter && (
+                  <Link href={data.twitter} className='px-3 share button min-w-[25%] text-[#ffffff] flex-1 text-[35px]' >
+                    <FaXTwitter />
+                  </Link>
+                )
+              }
               {
                 data.visibility.whatsapp && (
-                  <div className='share button w-1/4 text-[#ffffff]' >
-                    <Link href={data.whatsapp} >
-                      <FaWhatsapp />
-                    </Link>
-                  </div>
+                  <Link href={data.whatsapp} className='px-3 share button min-w-[25%] text-[#ffffff] flex-1 text-[35px]' >
+                    <FaWhatsapp />
+                  </Link>
                 )
               }
               {
                 data.visibility.snapchat && (
-                  <div className='share button w-1/4 text-[#ffffff]' >
-                    <Link href={data.snapchat} >
-                      <FaSnapchat />
-                    </Link>
-                  </div>
+                  <Link href={data.snapchat} className='px-3 share button min-w-[25%] text-[#ffffff] flex-1 text-[35px]' >
+                    <FaSnapchat />
+                  </Link>
                 )
               }
               {
                 data.visibility.discord && (
-                  <div className='share button w-1/4 text-[#ffffff]' >
-                    <Link href={data.discord} >
-                      <RiDiscordLine />
-                    </Link>
-                  </div>
+                  <Link href={data.discord} className='px-3 share button min-w-[25%] text-[#ffffff] flex-1 text-[35px]' >
+                    <RiDiscordLine />
+                  </Link>
                 )
               }
             </div>

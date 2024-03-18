@@ -232,7 +232,7 @@ input[type="number"] {
 }
 
 .card-round {
-  --color: #ab0d0d;
+  --color: #fff;
   --border-size: 1rem;
   --bg-color: #252525;
   position: relative;
@@ -283,14 +283,15 @@ input[type="number"] {
 }
 
 .button {
-  --color: #a70000;
+  --color: #fff;
   height:50px;
+  font-size: 20;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0px 0px 4px  rgba(108, 6, 6, 0.8);
+  box-shadow: 0px 0px 4px  rgba(255, 255, 255, 0.5);
   transition: 0.5s;
 }
 .button:hover::before {
@@ -317,7 +318,7 @@ input[type="number"] {
 }
 .button:hover {
   background:rgb(19, 17, 17);
-  box-shadow: 0px 0px 10px  rgba(108, 6, 6, 0.8);
+  box-shadow: 0px 0px 10px  rgba(255, 255, 255, 0.8);
 }
 .button:hover::before, .button:hover::after {
   animation-play-state: running;

@@ -1,3 +1,4 @@
+"use client";
 import Navtop from '@/components/modules/navtop/Navtop'
 import './globals.css'
 import type { Metadata } from 'next'
@@ -6,6 +7,7 @@ import MobileNavbar from '@/components/modules/navbar/MobileNavbar'
 import Navbar from '@/components/modules/navbar/Navbar'
 import Footer from '@/components/modules/footer/Footer'
 import MobileFooter from "@/components/modules/footer/MobileFooter"
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +21,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname();
+  const routesWithoutFooter = ['profile'];
+  let hideLayout = false;
+  for (const str of routesWithoutFooter) {
+    // Check if the current string includes the substring
+    if (str.includes(pathname)) {
+      // If found, set the flag and break out of the loop
+      hideLayout = true;
+      break;
+    }
+  }
+  console.log(pathname, hideLayout);
+
   return (
     <html lang="en" className="bg-[#0D0D0D]">
       <head>
@@ -29,20 +44,37 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} font-poppins overflow-x-hidden`}>
         {/* <Navtop /> */}
-        <div className="block lg:hidden">
-          <MobileNavbar />
-        </div>
-        <div className="lg:block hidden">
-          <Navbar />
-        </div>
+        {
+          hideLayout && (
+            <div className="block lg:hidden">
+              <MobileNavbar />
+            </div>
+          )
+        }
+        {
+          hideLayout && (
+            <div className="lg:block hidden">
+              <Navbar />
+            </div>
+          )
+        }
+
         {children}
 
-        <div className="block lg:hidden">
-          <MobileFooter />
-        </div>
-        <div className="lg:block hidden">
-          <Footer />
-        </div>
+        {
+          hideLayout && (
+            <div className="block lg:hidden">
+              <MobileFooter />
+            </div>
+          )
+        }
+        {
+          hideLayout && (
+            <div className="lg:block hidden">
+              <Footer />
+            </div>
+          )
+        }
       </body>
     </html>
   );
