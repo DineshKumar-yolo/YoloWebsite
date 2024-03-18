@@ -110,3 +110,232 @@ input[type="number"] {
 .animate-scrolling-photos:hover {
   animation-play-state: paused;
 }
+
+.border-animation {
+  width: 200px;
+  height: 200px;
+  box-shadow: 16px 14px 20px #0000008c;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-animation::before {
+  content: "";
+  background-image: conic-gradient(#ff0052 20deg,
+      transparent 120deg);
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+}
+
+.border-animation::after {
+  content: "";
+  width: 190px;
+  height: 190px;
+  background: #101010;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff0052;
+  font-size: larger;
+  letter-spacing: 5px;
+  box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.card {
+  --color: #a70000;
+  --border-size: 1rem;
+  --bg-color: #252525;
+  position: relative;
+  background-color: var(--bg-color);
+  margin: 2rem;
+  border-radius: var(--border-size);
+  color: white;
+  display: grid;
+  place-content: center;
+  padding: 1rem 0rem;
+  isolation: isolate;
+}
+
+.card::before, .card::after {
+  content: "";
+  position: absolute;
+}
+
+.card::before {
+  width: 5rem;
+  height: 5rem;
+  background-image: conic-gradient(var(--color) 0deg,
+  transparent 80deg,
+  transparent 180deg,
+  var(--color) 180deg,
+  transparent 260deg);
+  z-index: -2;
+  animation: border 8s linear infinite;
+}
+
+.card:hover::before {
+  animation-play-state: paused;
+}
+
+@keyframes border {
+  0%{
+    bottom: calc(100% - 3.5rem);
+    left: -2.5rem;
+  }
+  25%{
+    bottom: calc(100% - 3.5rem);
+    left: calc(100% - 3.5rem);
+  }
+  50%{
+    top: calc(100% - 2.5rem);
+    left: calc(100% - 3.5rem);
+  }
+  75%{
+    left: -3.5rem;
+    top: calc(100% - 2.5rem);
+  }
+  100%{
+    bottom: calc(100% - 3.5rem);
+    left: -2.5rem;
+  }
+}
+
+.card::after {
+  --inset: 0.25rem;
+  background-color: #111;
+  inset: var(--inset);
+  border-radius: calc(var(--border-size) - var(--inset));
+  z-index: -1;
+  transition: all 0.35s linear;
+}
+
+.card:hover::after {
+  background-color: var(--bg-color);
+}
+
+.card-round {
+  --color: #ab0d0d;
+  --border-size: 1rem;
+  --bg-color: #252525;
+  position: relative;
+  background-color: var(--bg-color);
+  margin: 2rem;
+  border-radius: var(--border-size);
+  color: white;
+  display: grid;
+  place-content: center;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.card-round::after, .card-round::before {
+  content: "";
+  position: absolute;
+}
+
+.card-round::before {
+  width: 200%;
+  height: 200%;
+  background-image: conic-gradient(var(--color) 0deg,
+      transparent 80deg,
+      transparent 180deg,
+      var(--color) 180deg,
+      transparent 260deg);
+  inset: -50%;
+  z-index: -2;
+  animation: rotate 8s linear infinite;
+}
+
+.card-round:hover::before {
+  animation-play-state: paused;
+}
+
+.card-round::after {
+  --inset: 0.25rem;
+  background-color: #111;
+  inset: var(--inset);
+  border-radius: 100%;
+  z-index: -1;
+  transition: all 0.35s linear;
+}
+
+.card-round:hover::after {
+  background-color: var(--bg-color);
+}
+
+.button {
+  --color: #a70000;
+  height:50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 4px  rgba(108, 6, 6, 0.8);
+  transition: 0.5s;
+}
+.button:hover::before {
+  content: "";
+  position: absolute;
+  left:0;
+  top:0;
+  width: 0;
+  height: 0;
+  border-top: 2px solid var(--color);
+  border-right: 2px solid var(--color);
+  animation: border-top-right 5s infinite alternate;
+}
+.button:hover::after {
+  content: "";
+  position: absolute;
+  right:0;
+  bottom:0;
+  width: 0;
+  height: 0;
+  border-bottom:2px solid var(--color);
+  border-left: 2px solid var(--color);
+  animation: border-bottom-left 5s infinite alternate;
+}
+.button:hover {
+  background:rgb(19, 17, 17);
+  box-shadow: 0px 0px 10px  rgba(108, 6, 6, 0.8);
+}
+.button:hover::before, .button:hover::after {
+  animation-play-state: running;
+}
+@keyframes border-top-right {
+  0%    {width:0px;   height:0px;}
+  25%   {width:100%; height:0px;}
+  50%   {width:100%; height:48px;}
+  100%  {width:100%; height:48px;}
+}
+@keyframes border-bottom-left {
+  0%    {width:0px;   height:0px; opacity: 0;}
+  50%   {width:0px;   height:0px; opacity: 0;}
+  50.1% {width:0px;   height:0px; opacity: 1;}
+  75%   {width:100%; height:0px; opacity: 1;}
+  100%  {width:100%; height:48px;opacity: 1;}
+}
+
+.share {
+  font-size: 25px;
+}
