@@ -19,7 +19,6 @@ const Profile = ({ params }) => {
   const getUser = async () => {
     const result = await axios.get(`https://uat-api-iam.getyolo.in/user/user-profile/${dealId}`)
       .then(res => {
-        console.log({ result: res.data });
         setData(res.data);
       }).catch(err => {
         console.log(err)
