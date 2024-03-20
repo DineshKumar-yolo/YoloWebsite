@@ -41,7 +41,7 @@ const Profile = ({ params }) => {
       </div>
     )
     :
-    data !== null ?
+    data !== null  ?
       (
         <div className="flex justify-center items-center w-screen">
           <div className="flex flex-col justify-center items-center my-5 lg:w-[50%] md:w-[60%] sm:w-[75%] w-[90%] gap-4 max-w-[600px]" >
@@ -134,7 +134,7 @@ const Profile = ({ params }) => {
       :
       (
         <div className="flex h-screen justify-center items-center">
-          <p className='' >
+          <p className='text-[#ffffff] text-[25px] font-semibold' >
             sorry, we couldn&apos;t found the user.
           </p>
         </div>
