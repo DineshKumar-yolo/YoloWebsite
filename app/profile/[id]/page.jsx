@@ -49,44 +49,44 @@ const Profile = ({ params }) => {
             <div className='card-round' >
               <Image src={data.profile} alt='profile' width={100} height={100} className='rounded-full p-1' />
             </div>
-            <p className='text-[#ffffff] text-[25px] font-semibold' >{data.name}</p>
+            <p className='text-[#ffffff] text-[16px] font-semibold' >{data.name}</p>
             {
               data.visibility.bio && (
-                <div className='self-start bg-[#121212] w-full px-4 py-6 flex-1' style={{ boxShadow: "0px 0px 5px  rgba(50, 50, 50, 0.8)" }} >
-                  <p className='text-[#ffffff] text-[20px]' >about me</p>
+                <div className='self-start bg-[#121212] w-full px-4 py-6 flex-1' >
+                  <p className='text-[#ffffff] text-[12px]' >about me</p>
                   <div className='line-stroke my-4' />
-                  <p className='text-[#ffffff50]' >{data.bio}</p>
+                  <p className='text-[#ffffff50] text-[12px]' >{data.bio}</p>
                 </div>
               )
             }
             <div className='flex-row flex gap-4 px-4 w-full' >
               {
                 data.visibility.emailId && (
-                  <Link href={`mailto:${data.emailId}`} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1 button-glow' >
+                  <Link href={`mailto:${data.emailId}`} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
                     <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><MdOutlineEmail /></p>
-                    <button className='text-[14px]' >Email</button>
+                    <button className='text-[12px]' >Email</button>
                   </Link>
                 )
               }
               {
                 data.visibility.whatsapp && (
-                  <Link href={data.whatsapp} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1 button-glow' >
+                  <Link href={data.whatsapp} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
                     <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaWhatsapp /></p>
-                    <button className='text-[14px]' >whatsapp</button>
+                    <button className='text-[12px]' >whatsapp</button>
                   </Link>
                 )
               }
             </div>
             <div className='self-start px-4' >
-              <p className='text-[#ffffff50] mt-2' >LINKS</p>
-              <p className='text-[#ffffff] text-[25px] font-semibold leading-7' >let&apos;s connect on<br />the social media</p>
+              <p className='text-[#ffffff50] mt-2 text-[12px]' >LINKS</p>
+              <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s connect on<br />the social media</p>
             </div>
             <div className='grid grid-flow-row grid-cols-3 gap-4 items-center justify-around' >
               {
                 data.visibility.phoneNumber && (
                   <Link href={`tel:${data.phoneNumber}`} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                     <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FiPhone /></p>
-                    <button className='text-[14px]' >mobile</button>
+                    <button className='text-[12px]' >mobile</button>
                   </Link>
                 )
               }
@@ -95,7 +95,7 @@ const Profile = ({ params }) => {
                 data.visibility.facebook && (
                   <Link href={data.facebook} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                     <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-[25px] flex justify-center items-center' ><TiSocialFacebookCircular /></p>
-                    <button className='text-[14px]' >facebook</button>
+                    <button className='text-[12px]' >facebook</button>
                   </Link>
                 )
               }
@@ -103,7 +103,7 @@ const Profile = ({ params }) => {
                 data.visibility.instagram && (
                   <Link href={data.instagram} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                     <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaInstagram /></p>
-                    <button className='text-[14px]' >instagram</button>
+                    <button className='text-[12px]' >instagram</button>
                   </Link>
                 )
               }
@@ -111,7 +111,7 @@ const Profile = ({ params }) => {
                 data.visibility.twitter && (
                   <Link href={data.twitter} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                     <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaXTwitter /></p>
-                    <button className='text-[14px]' >twitter</button>
+                    <button className='text-[12px]' >twitter</button>
                   </Link>
                 )
               }
@@ -120,7 +120,7 @@ const Profile = ({ params }) => {
                 data.visibility.snapchat && (
                   <Link href={data.snapchat} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                     <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaSnapchat /></p>
-                    <button className='text-[14px]' >snapchat</button>
+                    <button className='text-[12px]' >snapchat</button>
                   </Link>
                 )
               }
@@ -128,7 +128,7 @@ const Profile = ({ params }) => {
                 data.visibility.discord && (
                   <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                     <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><RiDiscordLine /></p>
-                    <button className='text-[14px]' >discord</button>
+                    <button className='text-[12px]' >discord</button>
                   </Link>
                 )
               }
