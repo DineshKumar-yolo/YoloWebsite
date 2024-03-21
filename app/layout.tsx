@@ -31,7 +31,6 @@ export default function RootLayout({
       break;
     }
   }
-  console.log(pathname, hideLayout);
 
   return (
     <html lang="en" className="bg-[#0D0D0D]">
