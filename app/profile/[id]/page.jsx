@@ -44,7 +44,7 @@ const Profile = ({ params }) => {
     data !== null ?
       (
         <div className="flex justify-center items-center w-screen">
-          <div className="flex flex-col justify-center items-center my-5 w-[360px] gap-6" >
+          <div className="flex flex-col justify-center items-center my-5 w-[360px] px-4 gap-6" >
             <div className="share-bg absolute h-[200px] top-0 w-[360px]" />
             <div className='card-round' >
               <Image src={data.profile} alt='profile' width={100} height={100} className='rounded-full p-1' />
@@ -59,7 +59,7 @@ const Profile = ({ params }) => {
                 </div>
               )
             }
-            <div className='flex-row flex gap-4 px-4 w-full' >
+            <div className='flex-row flex gap-4 w-full' >
               {
                 data.visibility.emailId && (
                   <Link href={`mailto:${data.emailId}`} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
@@ -77,7 +77,7 @@ const Profile = ({ params }) => {
                 )
               }
             </div>
-            <div className='self-start px-4' >
+            <div className='self-start' >
               <p className='text-[#ffffff50] mt-2 text-[12px]' >LINKS</p>
               <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s connect on<br />the social media</p>
             </div>
