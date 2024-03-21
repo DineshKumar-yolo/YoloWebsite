@@ -21,16 +21,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const pathname = usePathname();
-  const routesWithoutFooter = ['profile'];
-  let hideLayout = false;
+  const routesWithoutFooter = ['/profile/'];
+  var hideLayout = false;
   for (const str of routesWithoutFooter) {
     // Check if the current string includes the substring
-    if (str.includes(pathname)) {
+    if (pathname.includes(str)) {
       // If found, set the flag and break out of the loop
       hideLayout = true;
       break;
     }
   }
+  console.log(pathname, hideLayout);
 
   return (
     <html lang="en" className="bg-[#0D0D0D]">
@@ -44,14 +45,14 @@ export default function RootLayout({
       <body className={`${inter.className} font-poppins overflow-x-hidden`}>
         {/* <Navtop /> */}
         {
-          hideLayout && (
+          !hideLayout && (
             <div className="block lg:hidden">
               <MobileNavbar />
             </div>
           )
         }
         {
-          hideLayout && (
+          !hideLayout && (
             <div className="lg:block hidden">
               <Navbar />
             </div>
@@ -61,14 +62,14 @@ export default function RootLayout({
         {children}
 
         {
-          hideLayout && (
+          !hideLayout && (
             <div className="block lg:hidden">
               <MobileFooter />
             </div>
           )
         }
         {
-          hideLayout && (
+          !hideLayout && (
             <div className="lg:block hidden">
               <Footer />
             </div>
