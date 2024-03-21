@@ -41,7 +41,7 @@ const Profile = ({ params }) => {
       </div>
     )
     :
-    data !== null  ?
+    data !== null ?
       (
         <div className="flex justify-center items-center w-screen">
           <div className="flex flex-col justify-center items-center my-5 w-[360px] gap-6" >
@@ -52,12 +52,31 @@ const Profile = ({ params }) => {
             <p className='text-[#ffffff] text-[25px] font-semibold' >{data.name}</p>
             {
               data.visibility.bio && (
-                <div className='self-start bg-[#121212] w-full px-4 py-6 flex-1' style={{boxShadow: "0px 0px 10px  rgba(40, 40, 40, 0.8)"}} >
+                <div className='self-start bg-[#121212] w-full px-4 py-6 flex-1' style={{ boxShadow: "0px 0px 5px  rgba(50, 50, 50, 0.8)" }} >
                   <p className='text-[#ffffff] text-[20px]' >about me</p>
+                  <div className='line-stroke my-4' />
                   <p className='text-[#ffffff50]' >{data.bio}</p>
                 </div>
               )
             }
+            <div className='flex-row flex gap-4 px-4 w-full' >
+              {
+                data.visibility.emailId && (
+                  <Link href={`mailto:${data.emailId}`} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1 button-glow' >
+                    <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><MdOutlineEmail /></p>
+                    <button className='text-[14px]' >Email</button>
+                  </Link>
+                )
+              }
+              {
+                data.visibility.whatsapp && (
+                  <Link href={data.whatsapp} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1 button-glow' >
+                    <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaWhatsapp /></p>
+                    <button className='text-[14px]' >whatsapp</button>
+                  </Link>
+                )
+              }
+            </div>
             <div className='self-start px-4' >
               <p className='text-[#ffffff50] mt-2' >LINKS</p>
               <p className='text-[#ffffff] text-[25px] font-semibold leading-7' >let&apos;s connect on<br />the social media</p>
@@ -71,14 +90,7 @@ const Profile = ({ params }) => {
                   </Link>
                 )
               }
-              {
-                data.visibility.emailId && (
-                  <Link href={`mailto:${data.emailId}`} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                    <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><MdOutlineEmail /></p>
-                    <button className='text-[14px]' >Email</button>
-                  </Link>
-                )
-              }
+
               {
                 data.visibility.facebook && (
                   <Link href={data.facebook} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
@@ -103,14 +115,7 @@ const Profile = ({ params }) => {
                   </Link>
                 )
               }
-              {
-                data.visibility.whatsapp && (
-                  <Link href={data.whatsapp} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                    <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaWhatsapp /></p>
-                    <button className='text-[14px]' >whatsapp</button>
-                  </Link>
-                )
-              }
+
               {
                 data.visibility.snapchat && (
                   <Link href={data.snapchat} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
