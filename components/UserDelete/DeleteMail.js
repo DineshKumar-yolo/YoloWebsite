@@ -41,7 +41,7 @@ const DeleteMail = () => {
                             Or Fill this form
                         </h2>
                     </div>
-                    <form className='flex flex-col gap-6' action="https://formsubmit.co/support@getyolo.in" method="POST" >
+                    <form className='flex flex-col gap-6' action="https://formsubmit.co/5b2ed4aa696dbbdd8fa5513617af4cf9" method="POST" >
                         <div className='flex flex-col lg:flex-row gap-6' >
                             <div className='flex flex-col gap-1' >
                                 <label htmlFor="Fname" className="font-poppins text-[#6E6E6E] text-[14px] font-medium leading-[150%] tracking-[-0.165px]" >
@@ -72,7 +72,7 @@ const DeleteMail = () => {
                         </div>
                         <div className='flex flex-col gap-1' >
                             <label htmlFor="message" className="font-poppins text-[#6E6E6E] text-[14px] font-medium leading-[150%] tracking-[-0.165px]" >
-                                Any message you would like to leave for us ?
+                                Reason for leaving us ?
                             </label>
                             <input type='text' name='message' value={message} placeholder='Type here' required onChange={(e) => setmessage(e.target.value)} className="font-poppins bg-transparent input-border-gradient-right text-[#A0A0A1] text-[16px] font-semibold leading-[150%] tracking-[-0.165px]" />
                         </div>
