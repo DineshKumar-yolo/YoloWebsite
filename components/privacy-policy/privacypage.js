@@ -57,7 +57,7 @@ const PrivacyPolicy = () => {
         </div>
         <div className="text-black font-poppins text-base font-normal leading-[180%] tracking-[-0.165px] text-justify">
           <p className="font-poppins">
-            Trivy Technology Services Private Limited, a company incorporated
+            Trivy Technologies Private Limited, a company incorporated
             under the Companies Act, 2013 vide CIN – U63030MH2020PTC336556, –
             having its corporate office at 404 B-WING,GREEN TOWER, CTS NO-216,
             NR PURAB PASCHIM BLDG GILBERT HILL ANDHERI WEST MUMBAI Mumbai City
