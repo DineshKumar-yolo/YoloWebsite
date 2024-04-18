@@ -245,6 +245,7 @@ input[type="number"] {
   isolation: isolate;
   overflow: hidden;
   border-radius: 100%;
+  z-index: 10;
 }
 
 .card-round::after, .card-round::before {
@@ -325,15 +326,15 @@ input[type="number"] {
 @keyframes border-top-right {
   0%    {width:0px;   height:0px;}
   25%   {width:100%; height:0px;}
-  50%   {width:100%; height:99%;}
-  100%  {width:100%; height:99%;}
+  50%   {width:100%; height:100%;}
+  100%  {width:100%; height:100%;}
 }
 @keyframes border-bottom-left {
   0%    {width:0px;   height:0px; opacity: 0;}
   50%   {width:0px;   height:0px; opacity: 0;}
   50.1% {width:0px;   height:0px; opacity: 1;}
   75%   {width:100%; height:0px; opacity: 1;}
-  100%  {width:100%; height:99%;opacity: 1;}
+  100%  {width:100%; height:100%;opacity: 1;}
 }
 
 .share {
@@ -350,4 +351,46 @@ input[type="number"] {
   border: 1px solid;
   border-image: linear-gradient( to right, #FFFFFF30, #ffffff05);
   border-image-slice: 1;
+}
+
+@media (min-width: 640px) {
+  /* .custom-border {
+    background-image: linear-gradient(180deg, #ffffff00 5%, #FFFFFF30 100%);
+  } */
+  .custom-border {
+    --color: #fff;
+    font-size: 20;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 1px ridge;
+    border-image: linear-gradient( to bottom, #ffffff05, #FFFFFF30);
+    border-image-slice: 1;
+    transition: 0.5s;
+  }
+  .custom-border::before {
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width: 0;
+    height: 0;
+    border-top: 2px solid #BB0707;
+    border-right: 2px solid #BB0707;
+    animation: border-top-right 5s infinite alternate;
+  }
+  .custom-border::after {
+    content: "";
+    position: absolute;
+    right:0;
+    bottom:0;
+    width: 0;
+    height: 0;
+    border-bottom:2px solid #BB0707;
+    border-left: 2px solid #BB0707;
+    animation: border-bottom-left 5s infinite alternate;
+  }
+  .custom-border::before, .custom-border::after {
+    animation-play-state: running;
+  }
 }

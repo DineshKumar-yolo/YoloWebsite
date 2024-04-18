@@ -44,8 +44,9 @@ const Profile = ({ params }) => {
     data !== null ?
       (
         <div className="flex justify-center items-center w-screen">
-          <div className="flex flex-col justify-center items-center my-5 w-[360px] px-4 gap-6" >
-            <div className="share-bg absolute h-[200px] top-0 w-[360px]" />
+          <div className='custom-border my-5'>
+          <div className="flex flex-col justify-center items-center m-[3px] w-[360px] py-5 px-4 gap-6 bg-[#0D0D0D]" >
+            <div className="share-bg absolute h-[200px] top-5 w-[360px]" />
             <div className='card-round' >
               <Image src={data.profile} alt='profile' width={100} height={100} className='rounded-full p-1' />
             </div>
@@ -81,7 +82,7 @@ const Profile = ({ params }) => {
               <p className='text-[#ffffff50] mt-2 text-[12px]' >LINKS</p>
               <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s connect on<br />the social media</p>
             </div>
-            <div className='grid grid-flow-row grid-cols-3 gap-4 items-center justify-around' >
+            <div className='grid grid-flow-row grid-cols-3 gap-4 items-center justify-between' >
               {
                 data.visibility.phoneNumber && (
                   <Link href={`tel:${data.phoneNumber}`} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
@@ -133,6 +134,7 @@ const Profile = ({ params }) => {
                 )
               }
             </div>
+          </div>
           </div>
         </div>
       )
