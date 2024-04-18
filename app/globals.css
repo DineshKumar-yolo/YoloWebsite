@@ -357,7 +357,7 @@ input[type="number"] {
   font-size: 20;
   position: relative;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   border: 1px ridge;
   border-image: linear-gradient( to bottom, #FFFFFF40, #ffffff10);
   border-image-slice: 1;

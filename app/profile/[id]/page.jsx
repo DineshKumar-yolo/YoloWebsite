@@ -168,12 +168,12 @@ const Profile = ({ params }) => {
                 <p className='text-[#ffffff50] mt-2 text-[12px]' >EDUCATION</p>
                 <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s know more<br /> about me</p>
               </div>
-              <div className='self-start flex flex-col gap-3' >
+              <div className='self-start flex flex-col gap-3 w-full' >
                 {
                   data.visibility.school && (
                     <div className='p-4 custom-edu flex items-start justify-start gap-4' >
                       <p className='text-[#ffffff50] text-[13px] w-[100px]' >12<sup>th</sup> college name</p>
-                      <p className='text-[#ffffff] text-[14px] font-normal' >Dr. ambedkar school, armori</p>
+                      <p className='text-[#ffffff] text-[14px] font-normal' >{data.school}</p>
                     </div>
                   )
                 }
@@ -182,12 +182,12 @@ const Profile = ({ params }) => {
                     <div className='p-4 custom-edu flex flex-col items-start justify-start gap-4' >
                       <div className='flex items-start justify-start gap-4'>
                         <p className='text-[#ffffff50] text-[13px] w-[100px]' >current college name</p>
-                        <p className='text-[#ffffff] text-[14px] font-normal' >GHRIET</p>
+                        <p className='text-[#ffffff] text-[14px] font-normal' >{data.university.name}</p>
                       </div>
                       <div className='line-stroke w-full' />
                       <div className='flex items-start justify-start gap-4'>
                         <p className='text-[#ffffff50] text-[13px] w-[100px]' >year, branch & program</p>
-                        <p className='text-[#ffffff] text-[14px] font-normal' >fourth year, CSE, b.tech</p>
+                        <p className='text-[#ffffff] text-[14px] font-normal' >{data.university.details}</p>
                       </div>
                     </div>
                   )
