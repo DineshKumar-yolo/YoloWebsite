@@ -164,10 +164,14 @@ const Profile = ({ params }) => {
                   )
                 }
               </div>
-              <div className='self-start' >
-                <p className='text-[#ffffff50] mt-2 text-[12px]' >EDUCATION</p>
-                <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s know more<br />about me</p>
-              </div>
+              {
+                data.visibility.school && data.visibility?.education && (
+                  <div className='self-start' >
+                    <p className='text-[#ffffff50] mt-2 text-[12px]' >EDUCATION</p>
+                    <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s know more<br />about me</p>
+                  </div>
+                )
+              }
               <div className='self-start flex flex-col gap-3 w-full' >
                 {
                   data.visibility.school && (
