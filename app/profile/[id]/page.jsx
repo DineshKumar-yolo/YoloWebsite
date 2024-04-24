@@ -166,7 +166,7 @@ const Profile = ({ params }) => {
               </div>
               <div className='self-start' >
                 <p className='text-[#ffffff50] mt-2 text-[12px]' >EDUCATION</p>
-                <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s know more<br /> about me</p>
+                <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s know more<br />about me</p>
               </div>
               <div className='self-start flex flex-col gap-3 w-full' >
                 {
@@ -178,7 +178,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility.university && (
+                  data.visibility?.education && (
                     <div className='p-4 custom-edu flex flex-col items-start justify-start gap-4' >
                       <div className='flex items-start justify-start gap-4'>
                         <p className='text-[#ffffff50] text-[13px] w-[100px]' >current college name</p>
