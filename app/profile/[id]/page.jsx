@@ -140,7 +140,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  !data.visibility?.portfolio && (
+                  data.visibility?.portfolio && (
                     <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><TiDocumentText /></p>
                       <button className='text-[12px]' >portfolio</button>
