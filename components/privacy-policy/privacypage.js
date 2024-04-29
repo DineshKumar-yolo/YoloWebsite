@@ -421,7 +421,7 @@ const PrivacyPolicy = () => {
             Please email us with any cancellation requests at team@getyolo.in.
             Customers are free to cancel their YOLO Pay cards and ask for a
             refund if they are unhappy with our services. After deducting the
-            cost of the card’s printing and logistics, a refund will be given.
+            cost of the card’s printing and logistics, a refund will be given. If you’re applicable for a refund or cancellation you’ll get the refund in maximum 90 days from the date of your request.
           </p>
           <br />
           <h5 className="font-semibold">

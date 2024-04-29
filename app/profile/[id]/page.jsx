@@ -70,7 +70,7 @@ const Profile = ({ params }) => {
                 {
                   data.visibility.emailId && (
                     <Link href={`mailto:${data.emailId}`} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><MdOutlineEmail /></p>
+                      <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><MdOutlineEmail /></p>
                       <button className='text-[12px]' >Email</button>
                     </Link>
                   )
@@ -78,7 +78,7 @@ const Profile = ({ params }) => {
                 {
                   data.visibility.whatsapp && (
                     <Link href={data.whatsapp} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaWhatsapp /></p>
+                      <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><FaWhatsapp /></p>
                       <button className='text-[12px]' >whatsapp</button>
                     </Link>
                   )
@@ -92,7 +92,7 @@ const Profile = ({ params }) => {
                 {
                   data.visibility.phoneNumber && (
                     <Link href={`tel:${data.phoneNumber}`} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FiPhone /></p>
+                      <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><FiPhone /></p>
                       <button className='text-[12px]' >mobile</button>
                     </Link>
                   )
@@ -101,7 +101,7 @@ const Profile = ({ params }) => {
                 {
                   data.visibility.facebook && (
                     <Link href={data.facebook} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-[25px] flex justify-center items-center' ><TiSocialFacebookCircular /></p>
+                      <Image src={require('@/public/Facebook.png')} width={50} height={50} />
                       <button className='text-[12px]' >facebook</button>
                     </Link>
                   )
@@ -109,7 +109,7 @@ const Profile = ({ params }) => {
                 {
                   data.visibility.instagram && (
                     <Link href={data.instagram} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaInstagram /></p>
+                      <Image src={require('@/public/Instagram-logo.png')} width={40} height={40} />
                       <button className='text-[12px]' >instagram</button>
                     </Link>
                   )
@@ -117,7 +117,7 @@ const Profile = ({ params }) => {
                 {
                   data.visibility.twitter && (
                     <Link href={data.twitter} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaXTwitter /></p>
+                      <Image src={require('@/public/Twitter-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >twitter</button>
                     </Link>
                   )
@@ -126,7 +126,7 @@ const Profile = ({ params }) => {
                 {
                   data.visibility.snapchat && (
                     <Link href={data.snapchat} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><FaSnapchat /></p>
+                      <Image src={require('@/public/Snapchat.png')} width={30} height={30} />
                       <button className='text-[12px]' >snapchat</button>
                     </Link>
                   )
@@ -134,31 +134,31 @@ const Profile = ({ params }) => {
                 {
                   data.visibility.discord && (
                     <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><RiDiscordLine /></p>
+                      <Image src={require('@/public/Discord.png')} width={40} height={40} />
                       <button className='text-[12px]' >discord</button>
                     </Link>
                   )
                 }
                 {
-                  data.visibility.discord && (
+                  !data.visibility?.portfolio && (
                     <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><TiDocumentText /></p>
+                      <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><TiDocumentText /></p>
                       <button className='text-[12px]' >portfolio</button>
                     </Link>
                   )
                 }
                 {
-                  data.visibility.discord && (
+                  data.visibility?.spotify && (
                     <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><SlSocialSpotify /></p>
+                      <Image src={require('@/public/Spotify-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >spotify</button>
                     </Link>
                   )
                 }
                 {
-                  data.visibility.discord && (
+                  data.visibility?.slack && (
                     <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
-                      <p className='bg-[#ffffff10] rounded-full h-[33px] w-[33px] text-xl flex justify-center items-center' ><LuSlack /></p>
+                      <Image src={require('@/public/Slack.png')} width={30} height={30} />
                       <button className='text-[12px]' >slack</button>
                     </Link>
                   )
