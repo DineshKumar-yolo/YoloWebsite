@@ -10,16 +10,18 @@ import { FaLink } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { TiSocialFacebookCircular } from "react-icons/ti";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa";
 import { FaXTwitter, FaSnapchat } from "react-icons/fa6";
 import { RiDiscordLine } from "react-icons/ri";
 import { LuSlack } from "react-icons/lu";
 import { SlSocialSpotify } from "react-icons/sl";
 import { TiDocumentText } from "react-icons/ti";
+import { CiGlobe } from "react-icons/ci";
 
 const Profile = ({ params }) => {
   const dealId = params.id;
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState()
   const [education, setEducation] = useState(false);
   const [data, setData] = useState(null);
   const getUser = async () => {
@@ -27,7 +29,7 @@ const Profile = ({ params }) => {
       .then(res => {
         setData(res.data);
       }).catch(err => {
-        console.log(err)
+        setError(err.response.data)
       }).finally(() => {
         setTimeout(() => {
           setIsLoading(false);
@@ -38,7 +40,7 @@ const Profile = ({ params }) => {
   useEffect(() => {
     getUser()
   }, [])
-
+  console.log({ 'clg': data?.postgraduate, 'uni': data?.undergraduate });
 
   return isLoading ?
     (
@@ -141,7 +143,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.visibility?.portfolio && (
-                    <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link href={data.portfolio} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><TiDocumentText /></p>
                       <button className='text-[12px]' >portfolio</button>
                     </Link>
@@ -149,7 +151,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.visibility?.spotify && (
-                    <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link href={data.spotify} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Spotify-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >spotify</button>
                     </Link>
@@ -157,15 +159,71 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.visibility?.slack && (
-                    <Link href={data.discord} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link href={data.slack} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Slack.png')} width={30} height={30} />
                       <button className='text-[12px]' >slack</button>
                     </Link>
                   )
                 }
+                {
+                  data.visibility?.linkedin && (
+                    <Link href={data.linkedin} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                      <Image src={require('@/public/Linkedin-logo.png')} width={30} height={30} />
+                      <button className='text-[12px]' >linkedin</button>
+                    </Link>
+                  )
+                }
+                {
+                  data.visibility?.bumble && (
+                    <Link href={data.bumble} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                      <Image src={require('@/public/Bumble.png')} width={30} height={30} />
+                      <button className='text-[12px]' >bumble</button>
+                    </Link>
+                  )
+                }
+                {
+                  data.visibility?.behance && (
+                    <Link href={data.behance} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                      <Image src={require('@/public/Behance.png')} width={30} height={30} />
+                      <button className='text-[12px]' >behance</button>
+                    </Link>
+                  )
+                }
+                {
+                  data.visibility?.github && (
+                    <Link href={data.github} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                      <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><FaGithub /></p>
+                      <button className='text-[12px]' >github</button>
+                    </Link>
+                  )
+                }
+                {
+                  data.visibility?.quora && (
+                    <Link href={data.quora} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                      <Image src={require('@/public/Quora.png')} width={30} height={30} />
+                      <button className='text-[12px]' >quora</button>
+                    </Link>
+                  )
+                }
+                {
+                  data.visibility?.youtube && (
+                    <Link href={data.youtube} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                      <Image src={require('@/public/Youtube.png')} width={30} height={30} />
+                      <button className='text-[12px]' >youtube</button>
+                    </Link>
+                  )
+                }
+                {
+                  data.visibility?.website && (
+                    <Link href={data.website} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                      <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><CiGlobe /></p>
+                      <button className='text-[12px]' >website</button>
+                    </Link>
+                  )
+                }
               </div>
               {
-                (data.visibility.school || data.visibility?.education) && (
+                (data.visibility.school || (data.undergraduate?.collageName !== '' && !!data?.undergraduate == undefined) || (data.postgraduate?.collageName !== '' && !!data?.postgraduate == undefined)) && (
                   <div className='self-start' >
                     <p className='text-[#ffffff50] mt-2 text-[12px]' >EDUCATION</p>
                     {/* <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s know more<br />about me</p> */}
@@ -182,16 +240,33 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.education && (
-                    <div className='p-4 custom-edu flex flex-col items-start justify-start gap-4' >
+                  (data.undergraduate?.collageName == '' || data?.undergraduate == undefined) ? null : (
+                    <div className='p-4 custom-edu flex flex-col items-start justify-start gap-2' >
+                      <p className='text-[#ffffff] text-[13px] w-[100px]' >undergraduation</p>
                       <div className='flex items-start justify-start gap-4'>
-                        <p className='text-[#ffffff50] text-[13px] w-[100px]' >current college name</p>
-                        <p className='text-[#ffffff] text-[14px] font-normal' >{data.university.name}</p>
+                        <p className='text-[#ffffff50] text-[13px] w-[100px]' >college name{'\n'}semester{'\n'}branch{'\n'}passing year</p>
+                        <p className='text-[#ffffff] text-[14px] font-normal' >
+                          {data.undergraduate?.collageName}{'\n'}
+                          {data.undergraduate?.semester}{'\n'}
+                          {data.undergraduate?.branch}{'\n'}
+                          {data.undergraduate?.passingYear}
+                        </p>
                       </div>
-                      <div className='line-stroke w-full' />
+                    </div>
+                  )
+                }
+                {
+                  (data.postgraduate?.collageName == '' || data?.postgraduate == undefined) ? null : (
+                    <div className='p-4 custom-edu flex flex-col items-start justify-start gap-2' >
+                      <p className='text-[#ffffff] text-[13px] w-[100px]' >postgraduation</p>
                       <div className='flex items-start justify-start gap-4'>
-                        <p className='text-[#ffffff50] text-[13px] w-[100px]' >year, branch & program</p>
-                        <p className='text-[#ffffff] text-[14px] font-normal' >{data.university.details}</p>
+                        <p className='text-[#ffffff50] text-[13px] w-[100px]' >college name{'\n'}semester{'\n'}branch{'\n'}passing year</p>
+                        <p className='text-[#ffffff] text-[14px] font-normal' >
+                          {data.postgraduate?.collageName}{'\n'}
+                          {data.postgraduate?.semester}{'\n'}
+                          {data.postgraduate?.branch}{'\n'}
+                          {data.postgraduate?.passingYear}
+                        </p>
                       </div>
                     </div>
                   )
@@ -205,7 +280,7 @@ const Profile = ({ params }) => {
       (
         <div className="flex h-screen justify-center items-center">
           <p className='text-[#ffffff] text-[25px] font-semibold' >
-            sorry, we couldn&apos;t found the user.
+            {error.message}
           </p>
         </div>
       )
