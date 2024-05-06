@@ -28,7 +28,7 @@ const DeleteMail = () => {
                         </p>
                     </div>
                     <div className='flex items-start gap-5'>
-                        <a href="mailto:support@getyolo.in" className='border-gradient-right flex min-w-[168px] px-6 py-4 justify-center items-center gap-3 border bg-[#121213]'>
+                        <a href="mailto:admin.tech@getyolo.in" className='border-gradient-right flex min-w-[168px] px-6 py-4 justify-center items-center gap-3 border bg-[#121213]'>
                             <p className='text-white font-poppins text-sm font-medium leading-[131.429%]'>Email Us</p>
                             <FaRegEnvelope className="text-white text-lg" />
                         </a>
@@ -41,7 +41,7 @@ const DeleteMail = () => {
                             Or Fill this form
                         </h2>
                     </div>
-                    <form className='flex flex-col gap-6' action="https://formsubmit.co/5b2ed4aa696dbbdd8fa5513617af4cf9" method="POST" >
+                    <form className='flex flex-col gap-6' action="https://formsubmit.co/admin.tech@getyolo.in" method="POST" >
                         <div className='flex flex-col lg:flex-row gap-6' >
                             <div className='flex flex-col gap-1' >
                                 <label htmlFor="Fname" className="font-poppins text-[#6E6E6E] text-[14px] font-medium leading-[150%] tracking-[-0.165px]" >
