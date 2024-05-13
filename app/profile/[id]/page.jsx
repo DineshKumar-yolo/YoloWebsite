@@ -17,6 +17,7 @@ import { LuSlack } from "react-icons/lu";
 import { SlSocialSpotify } from "react-icons/sl";
 import { TiDocumentText } from "react-icons/ti";
 import { CiGlobe } from "react-icons/ci";
+require('dotenv').config()
 
 const Profile = ({ params }) => {
   const dealId = params.id;
@@ -25,7 +26,7 @@ const Profile = ({ params }) => {
   const [education, setEducation] = useState(false);
   const [data, setData] = useState(null);
   const getUser = async () => {
-    const result = await axios.get(`https://uat-api-iam.getyolo.in/user/user-profile/${dealId}`)
+    const result = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL_IAM}/user/user-profile/${dealId}`)
       .then(res => {
         setData(res.data);
       }).catch(err => {
