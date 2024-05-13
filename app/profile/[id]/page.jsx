@@ -41,7 +41,6 @@ const Profile = ({ params }) => {
   useEffect(() => {
     getUser()
   }, [])
-  console.log({ 'clg': data?.postgraduate, 'uni': data?.undergraduate });
 
   return isLoading ?
     (
