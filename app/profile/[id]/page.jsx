@@ -38,6 +38,10 @@ const Profile = ({ params }) => {
       })
   }
 
+  const sendClick = async () => {
+    
+  }
+
   useEffect(() => {
     getUser()
   }, [])
@@ -71,7 +75,7 @@ const Profile = ({ params }) => {
               <div className='flex-row flex gap-4 w-full' >
                 {
                   data.visibility.emailId && (
-                    <Link href={`mailto:${data.emailId}`} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
+                    <Link href={`mailto:${data.emailId}`} onClick={() => sendClick()} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
                       <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><MdOutlineEmail /></p>
                       <button className='text-[12px]' >Email</button>
                     </Link>
