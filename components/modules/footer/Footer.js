@@ -38,7 +38,7 @@ const Footer = () => {
 
   return (
     <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-center gap-36">
-      <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
+      {/*<div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
         <div className="w-[190px]">
           <Image src={logo} className="mb-[31px]" alt="Logo" />
           <Link
@@ -147,7 +147,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="xl:my-[72px] mlg:my-12 slg:my-9 w-full h-0 border-t  border-[#1E1E1E]" />
+            <div className="xl:my-[72px] mlg:my-12 slg:my-9 w-full h-0 border-t  border-[#1E1E1E]" />*/}
       <div className="flex flex-col flex-wrap items-start w-full gap-[68px] 2xl:w-[1240px]">
         <div className="flex flex-col items-start gap-12 w-full">
           <div className="flex items-start flex-wrap justify-between w-full gap-5 xl:gap-0">
@@ -160,13 +160,13 @@ const Footer = () => {
                 safe
               </p>
             </div>
-            <div className="flex items-start lg:flex-row flex-col gap-4">
+            {/* <div className="flex items-start lg:flex-row flex-col gap-4">
               <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   SECURITY PARTNERS
                 </p>
                 <Image src={SecurityPartners} alt="Security" />
-              </div>
+              </div> */}
               <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-1 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leading-[145.455%]">
                   BANKING AND PAYMENT PARTNERS

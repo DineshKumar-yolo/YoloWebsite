@@ -66,12 +66,12 @@ const MobileNavbar = () => {
       <Link href="/">
         <Image src={logo} alt="YOLO" className="h-6 w-20" />
       </Link>
-      {/* <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
+      <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
         <Link href="https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"  className="flex w-[20px] p-[1px] items-start shrink-0">
           <BiLogoPlayStore />
         </Link>
-      </div> */}
-      <button onClick={() => {
+      </div>
+      {/* <button onClick={() => {
         setisMenuOpen(!isMenuOpen);
         setisFeatures(false);
         setisPlans(false);
@@ -183,7 +183,7 @@ const MobileNavbar = () => {
         }
         </div>
 
-        {/* Need Approval for this beacause its looks nasty */}
+        <!--Need Approval for this beacause its looks nasty-->
         <div className="border-gradient-bottom my-6 flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3">
                   <Link href="https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share" target='_blank' className="flex w-[20px] p-[1px] items-start shrink-0">
                       <BiLogoPlayStore />
@@ -192,7 +192,7 @@ const MobileNavbar = () => {
                       <BiLogoApple />
                   </button>
               </div> 
-      </div>
+      </div> */}
     </div>
   );
 };
