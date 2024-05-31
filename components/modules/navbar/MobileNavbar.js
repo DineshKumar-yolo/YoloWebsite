@@ -66,12 +66,12 @@ const MobileNavbar = () => {
       <Link href="/">
         <Image src={logo} alt="YOLO" className="h-6 w-20" />
       </Link>
-      <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
+      {/* <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
         <Link href="https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"  className="flex w-[20px] p-[1px] items-start shrink-0">
           <BiLogoPlayStore />
         </Link>
-      </div>
-      {/* <button onClick={() => {
+      </div> */}
+      <button onClick={() => {
         setisMenuOpen(!isMenuOpen);
         setisFeatures(false);
         setisPlans(false);
@@ -94,8 +94,8 @@ const MobileNavbar = () => {
             stroke-linejoin="round"
           />
         </svg>
-      </button> */}
-      {/* <div
+      </button>
+      <div
         className={`${!isMenuOpen ? "-translate-y-[100%] -z-10" : "translate-y-0 z-20"
           } shadow-2xl transition-all duration-300 w-full min-h-screen px-5 md:py-10 py-6 m-0 top-0 left-0 fixed flex flex-col items-center gap-10 bg-[#0D0D0D]`}
       >
@@ -184,15 +184,15 @@ const MobileNavbar = () => {
         </div>
 
         {/* Need Approval for this beacause its looks nasty */}
-        {/* <div className="border-gradient-bottom my-6 flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3">
-                  <button className="flex w-[20px] p-[1px] items-start shrink-0">
+        <div className="border-gradient-bottom my-6 flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3">
+                  <Link href="https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share" target='_blank' className="flex w-[20px] p-[1px] items-start shrink-0">
                       <BiLogoPlayStore />
-                  </button>
+                  </Link>
                   <button className="flex w-[20px] px-[3px] py-[1.5px] items-start shrink-0">
                       <BiLogoApple />
                   </button>
               </div> 
-      </div> */}
+      </div>
     </div>
   );
 };

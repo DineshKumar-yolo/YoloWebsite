@@ -69,9 +69,11 @@ const Dropdowns = ({ title, items }) => {
 };
 
 const MobileFooter = () => {
+    const year = new Date().getFullYear();
+    
     return (
         <div className='flex px-5 py-10 flex-col items-center gap-10 bg-[#121213]'>
-            {/* <div className='flex flex-col items-start gap-3 self-stretch'>
+            <div className='flex flex-col items-start gap-3 self-stretch'>
                 <div className="flex items-center justify-between self-stretch">
                     <Image src={logo} alt='YOLO' className='h-5 w-16' />
                     <Link
@@ -98,7 +100,7 @@ const MobileFooter = () => {
             </div>
             <div>
                 <hr className='h-px bg-[#1E1E1E]' />
-            </div> */}
+            </div>
             <div className='flex flex-col justify-center items-start gap-10'>
                 <div className='flex flex-col justify-center items-center gap-6'>
                     <div className='flex flex-col justify-center items-start gap-1'>
@@ -106,12 +108,12 @@ const MobileFooter = () => {
                         <p className='text-[#878787] text-xs font-normal leading-[170%]'>Yolo deploys high level security standards to keep your money safe</p>
                     </div>
                     <div className="flex items-start w-full flex-col gap-4">
-                        {/* <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
+                        <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
                             <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                                 SECURITY PARTNERS
                             </p>
                             <Image src={SecurityPartners} alt="Security" className='w-full' />
-                        </div> */}
+                        </div>
                         <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-1 bg-white rounded-[7px] items-start">
                             <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                                 BANKING AND PAYMENT PARTNERS
@@ -122,7 +124,7 @@ const MobileFooter = () => {
                 </div>
                 {/* <p className='text-[#F3F3F3] text-xs font-normal leading-[170%]'>*Yolo Core and Yolo + Invest families can earn monthly rewards of 1% per annum, Yolo Max families can earn 2% per annum, and Yolo Infinity families can earn 5% per annum on an average daily savings balance of up to $5,000 per family. Only Yolo Max and Infinity families can earn 1% cash back on spending monthly. To qualify, the Primary Account must be in Good Standing and have a verified ACH funding account. See Yolo Terms of Service for details. Subject to change at any time.</p> */}
                 <div className='flex flex-wrap justify-start items-start gap-3'>
-                    <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>copyright © 2023-24 Trivy Technologies Pvt Ltd.</p>
+                    <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>copyright © {year} Trivy Technologies Pvt Ltd.</p>
                     <div className="flex items-center gap-4">
                         <Link href="/privacy-policy" className='text-center text-[#F3F3F3] text-xs font-normal leading-[150%]'>privacy policy</Link>
                         <div className='w-px h-4 bg-white'></div>

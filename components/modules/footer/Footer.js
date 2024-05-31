@@ -34,12 +34,11 @@ const Partnerships = [
 ];
 
 const Footer = () => {  
-  // const date = new Date();
-  // const year = date.getFullYear();
+   const year = new Date().getFullYear();
 
   return (
     <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-center gap-36">
-      {/* <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
+      <div className="flex xl:flex-row flex-col xl:w-[1240px] xl:h-[216px] items-start gap-5 shrink-0">
         <div className="w-[190px]">
           <Image src={logo} className="mb-[31px]" alt="Logo" />
           <Link
@@ -63,7 +62,7 @@ const Footer = () => {
         <div className="flex pb-4 flex-wrap justify-between items-start gap-5 flex-grid">
           <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
-              Features (coming soon)
+              Features
             </h5>
             {Features &&
               Features.map((feature) => {
@@ -80,7 +79,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
-              Plans (coming soon)
+              Plans
             </h5>
             {Plans &&
               Plans.map((plan) => {
@@ -97,7 +96,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
-              Learn (coming soon)
+              Learn
             </h5>
             {Learn &&
               Learn.map((learn) => {
@@ -114,7 +113,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px] uppercase">
-              Resources (coming soon)
+              Resources
             </h5>
             {Resources &&
               Resources.map((resource) => {
@@ -131,7 +130,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col sm:w-[190px] items-start justify-start">
             <h5 className="text-white font-poppins text-xs font-semibold leading-[133.333%] opacity-60 mb-[21px]">
-              Partnerships (coming soon)
+              Partnerships
             </h5>
             {Partnerships &&
               Partnerships.map((partners) => {
@@ -148,7 +147,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="xl:my-[72px] mlg:my-12 slg:my-9 w-full h-0 border-t  border-[#1E1E1E]" /> */}
+      <div className="xl:my-[72px] mlg:my-12 slg:my-9 w-full h-0 border-t  border-[#1E1E1E]" />
       <div className="flex flex-col flex-wrap items-start w-full gap-[68px] 2xl:w-[1240px]">
         <div className="flex flex-col items-start gap-12 w-full">
           <div className="flex items-start flex-wrap justify-between w-full gap-5 xl:gap-0">
@@ -162,12 +161,12 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-start lg:flex-row flex-col gap-4">
-              {/* <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
+              <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   SECURITY PARTNERS
                 </p>
                 <Image src={SecurityPartners} alt="Security" />
-              </div> */}
+              </div>
               <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 pb-[26px] gap-1 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leading-[145.455%]">
                   BANKING AND PAYMENT PARTNERS
@@ -189,7 +188,7 @@ const Footer = () => {
         </div>
         <div className="w-full flex-wrap flex justify-between items-start gap-5 md:gap-0">
           <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
-            copyright © 2024 Trivy Technologies Pvt Ltd.
+            copyright © {year} Trivy Technologies Pvt Ltd.
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy">

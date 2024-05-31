@@ -26,7 +26,7 @@ const Profile = ({ params }) => {
   const [education, setEducation] = useState(false);
   const [data, setData] = useState(null);
   const getUser = async () => {
-    await axios.get(`https://uat-api-iam.getyolo.in/user/user-profile/${dealId}`)
+    await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL_IAM}/user/user-profile/${dealId}`)
       .then(res => {
         setData(res.data);
       }).catch(err => {
@@ -39,7 +39,7 @@ const Profile = ({ params }) => {
   }
 
   const sendClick = async (keyName) => {
-    await axios.get(`https://uat-api-iam.getyolo.in/user/contact-sharing-analytical/${dealId}?keyName=${keyName}`)
+    await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL_IAM}/user/contact-sharing-analytical/${dealId}?keyName=${keyName}`)
   }
 
   useEffect(() => {

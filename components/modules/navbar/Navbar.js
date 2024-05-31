@@ -66,7 +66,7 @@ const Navbar = () => {
           <Image src={logo} alt="logo" />
         </Link>
       </div>
-      {/* <div>
+      <div>
         <ul className="flex list-none gap-8 font-poppins text-slate-300">
           <Menu name="For GenZ" list={Features} />
           <li className="relative float-left group">
@@ -78,7 +78,7 @@ const Navbar = () => {
           <Menu name="Who we are" list={Resources} />
           <Menu name="Partnerships" list={Partnerships} />
         </ul>
-      </div> */}
+      </div>
       <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
         <button className="flex w-[20px] p-[1px] items-start shrink-0">
           <BiLogoPlayStore />

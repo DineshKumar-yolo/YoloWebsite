@@ -1,4 +1,5 @@
 import React from 'react'
+import LJ from '@/public/LJUniversity.png'
 import smu from "@/public/smu.png"
 import amity from "@/public/amity.png"
 import lpu from "@/public/lpu.png"
@@ -16,15 +17,7 @@ const EducationPartners = () => {
             <div className='max-w-[1240px] flex flex-col items-start gap-12 mx-auto px-10 xl:px-0 py-14'>
                 <h2 className='text-[#212426] text-2xl not-italic font-normal leading-[170%]'>Our School & University Partners</h2>
                 <div className="flex flex-wrap items-center gap-12 mix-blend-darken">
-                    <Image src={smu} alt='Edu' />
-                    <Image src={amity} alt='Edu' />
-                    <Image src={lpu} alt='Edu' />
-                    <Image src={ashoka} alt='Edu' />
-                    <Image src={gu}  alt='Edu'/>
-                    <Image src={nu} alt='Edu' />
-                    <Image src={university} alt='Edu' />
-                    <Image src={nmims} alt='Edu' />
-                    <Image src={iim} alt='Edu' />
+                    <Image src={LJ} alt='Edu' />
                 </div>
             </div>
         </div>
