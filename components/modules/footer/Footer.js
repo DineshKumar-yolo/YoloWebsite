@@ -160,8 +160,8 @@ const Footer = () => {
                 safe
               </p>
             </div>
-            {/* <div className="flex items-start lg:flex-row flex-col gap-4">
-              <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
+            <div className="flex items-start lg:flex-row flex-col gap-4">
+              {/* <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
                 <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                   SECURITY PARTNERS
                 </p>

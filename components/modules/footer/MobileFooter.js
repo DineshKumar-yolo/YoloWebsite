@@ -107,8 +107,8 @@ const MobileFooter = () => {
                         <h1 className='text-white text-xl font-semibold'>We work with trusted partners</h1>
                         <p className='text-[#878787] text-xs font-normal leading-[170%]'>Yolo deploys high level security standards to keep your money safe</p>
                     </div>
-                    {/* <div className="flex items-start w-full flex-col gap-4">
-                        <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
+                    <div className="flex items-start w-full flex-col gap-4">
+                        {/* <div className="max-w-[341px] flex flex-1 w-full flex-col p-4 gap-3 bg-white rounded-[7px] items-start">
                             <p className="text-[#656565] font-poppins text-[11px] font-normal leding-[145.455%]">
                                 SECURITY PARTNERS
                             </p>
