@@ -60,7 +60,7 @@ const Profile = ({ params }) => {
             <div className="flex flex-col justify-center items-center m-[1.5px] w-[360px] py-5 px-4 gap-6 bg-[#0D0D0D]" >
               <div className="share-bg absolute h-[200px] top-5 w-[360px]" />
               <div className='card-round' >
-                <Image src={data.profile} alt='profile' width={100} height={100} className='rounded-full p-1' />
+                <Image src={data.profile.includes("amazonaws.com") ?data.profile : data.gender == 'male'? require('@/public/ProfilePic.png') : data.gender == 'female'? require('@/public/Female.png') : require('@/public/User.png')} alt='profile' width={100} height={100} className='rounded-full p-1' />
               </div>
               <p className='text-[#ffffff] text-[16px] font-semibold' >{data.name}</p>
               {
@@ -227,7 +227,7 @@ const Profile = ({ params }) => {
                 }
               </div>
               {
-                (data.visibility.school || (data.undergraduate?.collageName !== '' && !!data?.undergraduate == undefined) || (data.postgraduate?.collageName !== '' && !!data?.postgraduate == undefined)) && (
+                (data.visibility.school || ((data.undergraduate?.collageName == '' || data?.undergraduate == undefined) && !data.visibility.undergraduate) || ((data.postgraduate?.collageName == '' || data?.postgraduate == undefined) && !data.visibility.postgraduate)) && (
                   <div className='self-start' >
                     <p className='text-[#ffffff50] mt-2 text-[12px]' >EDUCATION</p>
                     {/* <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s know more<br />about me</p> */}
@@ -244,9 +244,9 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  (data.undergraduate?.collageName == '' || data?.undergraduate == undefined) ? null : (
+                  (data.undergraduate?.collageName == '' || data?.undergraduate == undefined) && !data.visibility.undergraduate ? null : (
                     <div className='p-4 custom-edu flex flex-col items-start justify-start gap-2' >
-                      <p className='text-[#ffffff] text-[13px] w-[100px]' >undergraduation</p>
+                      <p className='text-[#ffffff] text-[13px] w-[100px]' >under-graduation</p>
                       <div className='flex items-start justify-start gap-4'>
                         <p className='text-[#ffffff50] text-[13px] w-[100px]' >college name{'\n'}semester{'\n'}branch{'\n'}passing year</p>
                         <p className='text-[#ffffff] text-[14px] font-normal' >
@@ -260,9 +260,9 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  (data.postgraduate?.collageName == '' || data?.postgraduate == undefined) ? null : (
+                  (data.postgraduate?.collageName == '' || data?.postgraduate == undefined) && !data.visibility.postgraduate ? null : (
                     <div className='p-4 custom-edu flex flex-col items-start justify-start gap-2' >
-                      <p className='text-[#ffffff] text-[13px] w-[100px]' >postgraduation</p>
+                      <p className='text-[#ffffff] text-[13px] w-[100px]' >post-graduation</p>
                       <div className='flex items-start justify-start gap-4'>
                         <p className='text-[#ffffff50] text-[13px] w-[100px]' >college name{'\n'}semester{'\n'}branch{'\n'}passing year</p>
                         <p className='text-[#ffffff] text-[14px] font-normal' >
