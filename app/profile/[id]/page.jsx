@@ -64,7 +64,7 @@ const Profile = ({ params }) => {
               </div>
               <p className='text-[#ffffff] text-[16px] font-semibold' >{data.name}</p>
               {
-                data.visibility.bio && (
+                data.bio !== '' && data.visibility.bio && (
                   <div className='self-start bg-[#121212] w-full px-4 py-6 flex-1' >
                     <p className='text-[#ffffff] text-[12px]' >about me</p>
                     <div className='line-stroke my-4' />
@@ -74,15 +74,15 @@ const Profile = ({ params }) => {
               }
               <div className='flex-row flex gap-4 w-full' >
                 {
-                  data.visibility.emailId && (
-                    <Link href={`mailto:${data.emailId}`} onClick={() => sendClick('emailId')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
+                  data.alternateEmails.length !== 0 && data.alternateEmails[0] !== '' && data.visibility.alternateEmails && (
+                    <Link href={`mailto:${data.alternateEmails[0]}`} onClick={() => sendClick('emailId')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
                       <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><MdOutlineEmail /></p>
                       <button className='text-[12px]' >Email</button>
                     </Link>
                   )
                 }
                 {
-                  data.visibility.whatsapp && (
+                  data.whatsapp !== '' && data.visibility.whatsapp && (
                     <Link href={data.whatsapp} onClick={() => sendClick('whatsapp')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
                       <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><FaWhatsapp /></p>
                       <button className='text-[12px]' >whatsapp</button>
@@ -96,7 +96,7 @@ const Profile = ({ params }) => {
               </div>
               <div className='grid grid-flow-row grid-cols-3 gap-4 items-center justify-between' >
                 {
-                  data.visibility.phoneNumber && (
+                  data.phoneNumber !== '' && data.visibility.phoneNumber && (
                     <Link href={`tel:${data.phoneNumber}`} onClick={() => sendClick('phoneNumber')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><FiPhone /></p>
                       <button className='text-[12px]' >mobile</button>
@@ -105,7 +105,7 @@ const Profile = ({ params }) => {
                 }
 
                 {
-                  data.visibility.facebook && (
+                  data.facebook !== '' && data.visibility.facebook && (
                     <Link href={data.facebook} onClick={() => sendClick('facebook')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Facebook.png')} width={50} height={50} />
                       <button className='text-[12px]' >facebook</button>
@@ -113,7 +113,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility.instagram && (
+                  data.instagram !== '' && data.visibility.instagram && (
                     <Link href={data.instagram} onClick={() => sendClick('instagram')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Instagram-logo.png')} width={40} height={40} />
                       <button className='text-[12px]' >instagram</button>
@@ -121,7 +121,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility.twitter && (
+                  data.twitter !== '' && data.visibility.twitter && (
                     <Link href={data.twitter} onClick={() => sendClick('twitter')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Twitter-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >twitter</button>
@@ -130,7 +130,7 @@ const Profile = ({ params }) => {
                 }
 
                 {
-                  data.visibility.snapchat && (
+                  data.snapchat !== '' && data.visibility.snapchat && (
                     <Link href={data.snapchat} onClick={() => sendClick('snapchat')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Snapchat.png')} width={30} height={30} />
                       <button className='text-[12px]' >snapchat</button>
@@ -138,7 +138,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility.discord && (
+                  data.discord !== '' && data.visibility.discord && (
                     <Link href={data.discord} onClick={() => sendClick('discord')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Discord.png')} width={40} height={40} />
                       <button className='text-[12px]' >discord</button>
@@ -146,7 +146,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.portfolio && (
+                  data.portfolio !== '' && data.visibility?.portfolio && (
                     <Link href={data.portfolio} onClick={() => sendClick('portfolio')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><TiDocumentText /></p>
                       <button className='text-[12px]' >portfolio</button>
@@ -154,7 +154,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.spotify && (
+                  data.spotify !== '' && data.visibility?.spotify && (
                     <Link href={data.spotify} onClick={() => sendClick('spotify')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Spotify-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >spotify</button>
@@ -162,7 +162,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.slack && (
+                  data.slack !== '' && data.visibility?.slack && (
                     <Link href={data.slack} onClick={() => sendClick('slack')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Slack.png')} width={30} height={30} />
                       <button className='text-[12px]' >slack</button>
@@ -170,7 +170,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.linkedIn && (
+                  data.linkedIn !== '' && data.visibility?.linkedIn && (
                     <Link href={data.linkedIn} onClick={() => sendClick('linkedIn')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Linkedin-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >linkedin</button>
@@ -178,7 +178,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.bumble && (
+                  data.bumble !== '' && data.visibility?.bumble && (
                     <Link href={data.bumble} onClick={() => sendClick('bumble')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Bumble.png')} width={30} height={30} />
                       <button className='text-[12px]' >bumble</button>
@@ -186,7 +186,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.behance && (
+                  data.behance !== '' && data.visibility?.behance && (
                     <Link href={data.behance} onClick={() => sendClick('behance')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Behance.png')} width={30} height={30} />
                       <button className='text-[12px]' >behance</button>
@@ -194,7 +194,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.github && (
+                  data.github !== '' && data.visibility?.github && (
                     <Link href={data.github} onClick={() => sendClick('github')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><FaGithub /></p>
                       <button className='text-[12px]' >github</button>
@@ -202,7 +202,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.quora && (
+                  data.quora !== '' && data.visibility?.quora && (
                     <Link href={data.quora} onClick={() => sendClick('quora')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Quora.png')} width={30} height={30} />
                       <button className='text-[12px]' >quora</button>
@@ -210,7 +210,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.youtube && (
+                  data.youtube !== '' && data.visibility?.youtube && (
                     <Link href={data.youtube} onClick={() => sendClick('youtube')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Youtube.png')} width={30} height={30} />
                       <button className='text-[12px]' >youtube</button>
@@ -218,7 +218,7 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.visibility?.website && (
+                  data.website !== '' && data.visibility?.website && (
                     <Link href={data.website} onClick={() => sendClick('website')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><CiGlobe /></p>
                       <button className='text-[12px]' >website</button>
@@ -227,7 +227,7 @@ const Profile = ({ params }) => {
                 }
               </div>
               {
-                (data.visibility.school || ((data.undergraduate?.collageName == '' || data?.undergraduate == undefined) && !data.visibility.undergraduate) || ((data.postgraduate?.collageName == '' || data?.postgraduate == undefined) && !data.visibility.postgraduate)) && (
+                ((data.school !== '' && data.visibility.school) || ((data.undergraduate?.collageName !== '' && data?.undergraduate !== undefined) && data.visibility.undergraduate) || ((data.postgraduate?.collageName !== '' && data?.postgraduate !== undefined) && data.visibility.postgraduate)) && (
                   <div className='self-start' >
                     <p className='text-[#ffffff50] mt-2 text-[12px]' >EDUCATION</p>
                     {/* <p className='text-[#ffffff] text-[18px] font-semibold' >let&apos;s know more<br />about me</p> */}
@@ -236,7 +236,7 @@ const Profile = ({ params }) => {
               }
               <div className='self-start flex flex-col gap-3 w-full' >
                 {
-                  data.visibility.school && (
+                  data.school !== '' && data.visibility.school && (
                     <div className='p-4 custom-edu flex items-start justify-start gap-4' >
                       <p className='text-[#ffffff50] text-[13px] w-[100px]' >12<sup>th</sup> college name</p>
                       <p className='text-[#ffffff] text-[14px] font-normal' >{data.school}</p>
@@ -244,9 +244,9 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  (data.undergraduate?.collageName == '' || data?.undergraduate == undefined) && !data.visibility.undergraduate ? null : (
+                  (data.undergraduate?.collageName == '' || data?.undergraduate == undefined) || !data.visibility.undergraduate ? null : (
                     <div className='p-4 custom-edu flex flex-col items-start justify-start gap-2' >
-                      <p className='text-[#ffffff] text-[13px] w-[100px]' >under-graduation</p>
+                      <p className='text-[#ffffff] text-[13px] w-[120px]' >under-graduation</p>
                       <div className='flex items-start justify-start gap-4'>
                         <p className='text-[#ffffff50] text-[13px] w-[100px]' >college name{'\n'}semester{'\n'}branch{'\n'}passing year</p>
                         <p className='text-[#ffffff] text-[14px] font-normal' >
@@ -260,9 +260,9 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  (data.postgraduate?.collageName == '' || data?.postgraduate == undefined) && !data.visibility.postgraduate ? null : (
+                  (data.postgraduate?.collageName == '' || data?.postgraduate == undefined) || !data.visibility.postgraduate ? null : (
                     <div className='p-4 custom-edu flex flex-col items-start justify-start gap-2' >
-                      <p className='text-[#ffffff] text-[13px] w-[100px]' >post-graduation</p>
+                      <p className='text-[#ffffff] text-[13px] w-[120px]' >post-graduation</p>
                       <div className='flex items-start justify-start gap-4'>
                         <p className='text-[#ffffff50] text-[13px] w-[100px]' >college name{'\n'}semester{'\n'}branch{'\n'}passing year</p>
                         <p className='text-[#ffffff] text-[14px] font-normal' >
