@@ -83,7 +83,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.whatsapp !== '' && data.visibility.whatsapp && (
-                    <Link href={data.whatsapp} onClick={() => sendClick('whatsapp')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
+                    <Link target='_blank' href={data.whatsapp} onClick={() => sendClick('whatsapp')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
                       <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><FaWhatsapp /></p>
                       <button className='text-[12px]' >whatsapp</button>
                     </Link>
@@ -106,7 +106,7 @@ const Profile = ({ params }) => {
 
                 {
                   data.facebook !== '' && data.visibility.facebook && (
-                    <Link href={data.facebook} onClick={() => sendClick('facebook')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.facebook} onClick={() => sendClick('facebook')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Facebook.png')} width={50} height={50} />
                       <button className='text-[12px]' >facebook</button>
                     </Link>
@@ -114,7 +114,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.instagram !== '' && data.visibility.instagram && (
-                    <Link href={data.instagram} onClick={() => sendClick('instagram')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.instagram} onClick={() => sendClick('instagram')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Instagram-logo.png')} width={40} height={40} />
                       <button className='text-[12px]' >instagram</button>
                     </Link>
@@ -122,7 +122,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.twitter !== '' && data.visibility.twitter && (
-                    <Link href={data.twitter} onClick={() => sendClick('twitter')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.twitter} onClick={() => sendClick('twitter')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Twitter-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >twitter</button>
                     </Link>
@@ -131,7 +131,7 @@ const Profile = ({ params }) => {
 
                 {
                   data.snapchat !== '' && data.visibility.snapchat && (
-                    <Link href={data.snapchat} onClick={() => sendClick('snapchat')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.snapchat} onClick={() => sendClick('snapchat')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Snapchat.png')} width={30} height={30} />
                       <button className='text-[12px]' >snapchat</button>
                     </Link>
@@ -139,7 +139,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.discord !== '' && data.visibility.discord && (
-                    <Link href={data.discord} onClick={() => sendClick('discord')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.discord} onClick={() => sendClick('discord')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Discord.png')} width={40} height={40} />
                       <button className='text-[12px]' >discord</button>
                     </Link>
@@ -147,7 +147,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.portfolio !== '' && data.visibility?.portfolio && (
-                    <Link href={data.portfolio} onClick={() => sendClick('portfolio')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.portfolio} onClick={() => sendClick('portfolio')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><TiDocumentText /></p>
                       <button className='text-[12px]' >portfolio</button>
                     </Link>
@@ -155,7 +155,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.spotify !== '' && data.visibility?.spotify && (
-                    <Link href={data.spotify} onClick={() => sendClick('spotify')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.spotify} onClick={() => sendClick('spotify')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Spotify-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >spotify</button>
                     </Link>
@@ -163,7 +163,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.slack !== '' && data.visibility?.slack && (
-                    <Link href={data.slack} onClick={() => sendClick('slack')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.slack} onClick={() => sendClick('slack')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Slack.png')} width={30} height={30} />
                       <button className='text-[12px]' >slack</button>
                     </Link>
@@ -171,7 +171,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.linkedIn !== '' && data.visibility?.linkedIn && (
-                    <Link href={data.linkedIn} onClick={() => sendClick('linkedIn')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.linkedIn} onClick={() => sendClick('linkedIn')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Linkedin-logo.png')} width={30} height={30} />
                       <button className='text-[12px]' >linkedin</button>
                     </Link>
@@ -179,7 +179,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.bumble !== '' && data.visibility?.bumble && (
-                    <Link href={data.bumble} onClick={() => sendClick('bumble')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.bumble} onClick={() => sendClick('bumble')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Bumble.png')} width={30} height={30} />
                       <button className='text-[12px]' >bumble</button>
                     </Link>
@@ -187,7 +187,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.behance !== '' && data.visibility?.behance && (
-                    <Link href={data.behance} onClick={() => sendClick('behance')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.behance} onClick={() => sendClick('behance')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Behance.png')} width={30} height={30} />
                       <button className='text-[12px]' >behance</button>
                     </Link>
@@ -195,7 +195,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.github !== '' && data.visibility?.github && (
-                    <Link href={data.github} onClick={() => sendClick('github')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.github} onClick={() => sendClick('github')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><FaGithub /></p>
                       <button className='text-[12px]' >github</button>
                     </Link>
@@ -203,7 +203,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.quora !== '' && data.visibility?.quora && (
-                    <Link href={data.quora} onClick={() => sendClick('quora')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.quora} onClick={() => sendClick('quora')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Quora.png')} width={30} height={30} />
                       <button className='text-[12px]' >quora</button>
                     </Link>
@@ -211,7 +211,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.youtube !== '' && data.visibility?.youtube && (
-                    <Link href={data.youtube} onClick={() => sendClick('youtube')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.youtube} onClick={() => sendClick('youtube')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <Image src={require('@/public/Youtube.png')} width={30} height={30} />
                       <button className='text-[12px]' >youtube</button>
                     </Link>
@@ -219,7 +219,7 @@ const Profile = ({ params }) => {
                 }
                 {
                   data.website !== '' && data.visibility?.website && (
-                    <Link href={data.website} onClick={() => sendClick('website')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <Link target='_blank' href={data.website} onClick={() => sendClick('website')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
                       <p className='bg-[#ffffff10] rounded-full h-[35px] w-[35px] text-2xl flex justify-center items-center' ><CiGlobe /></p>
                       <button className='text-[12px]' >website</button>
                     </Link>
