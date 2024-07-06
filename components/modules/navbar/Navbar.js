@@ -4,7 +4,8 @@ import { BiLogoPlayStore, BiLogoApple } from "react-icons/bi";
 import logo from "../../../public/logo.svg";
 import Image from "next/image";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import Scanner from "../../../public/Scanner.png";
+import ScannerIos from "@/public/ScannerIos.jpg";
+import ScannerAndroid from "@/public/ScannerAndroid.jpg"
 
 const Features = [
   { name: "Debit Card", link: "debit-card", key: 1 },
@@ -79,13 +80,24 @@ const Navbar = () => {
           <Menu name="Partnerships" list={Partnerships} />
         </ul>
       </div> */}
-      <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
-        <button className="flex w-[20px] p-[1px] items-start shrink-0">
-          <BiLogoPlayStore />
-        </button>
-        <div className="absolute group-hover:block rounded-lg m-auto w-auto h-auto p-4 top-[40px] z-10 bg-[#1B1B1B] hidden " >
-          <Image src={Scanner} alt="Scanner" width={109} height={109} />
-          <p className="text-white w-[112px] pt-[10px] text-center font-poppins text-[12px] font-normal leading-[18px] -tracking-[0.165px] " >scan qr code to download app</p>
+      <div className="relative flex gap-2" >
+        <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
+          <button className="flex w-[20px] p-[1px] items-start shrink-0">
+            <BiLogoPlayStore />
+          </button>
+          <div className="absolute group-hover:block rounded-lg m-auto w-auto h-auto p-4 top-[40px] z-10 bg-[#1B1B1B] hidden " >
+            <Image src={ScannerAndroid} alt="ScannerAndroid" width={109} height={109} />
+            <p className="text-white w-[112px] pt-[10px] text-center font-poppins text-[12px] font-normal leading-[18px] -tracking-[0.165px] " >scan qr code to download app</p>
+          </div>
+        </div>
+        <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
+          <button className="flex w-[20px] p-[1px] items-start shrink-0">
+            <BiLogoApple />
+          </button>
+          <div className="absolute group-hover:block rounded-lg m-auto w-auto h-auto p-4 top-[40px] z-10 bg-[#1B1B1B] hidden " >
+            <Image src={ScannerIos} alt="ScannerIos" width={109} height={109} />
+            <p className="text-white w-[112px] pt-[10px] text-center font-poppins text-[12px] font-normal leading-[18px] -tracking-[0.165px] " >scan qr code to download app</p>
+          </div>
         </div>
       </div>
     </div>

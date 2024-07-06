@@ -66,10 +66,17 @@ const MobileNavbar = () => {
       <Link href="/">
         <Image src={logo} alt="YOLO" className="h-6 w-20" />
       </Link>
-      <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
-        <Link href="https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share"  className="flex w-[20px] p-[1px] items-start shrink-0">
-          <BiLogoPlayStore />
-        </Link>
+      <div className="relative flex gap-2" >
+        <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
+          <Link href="https://play.google.com/store/apps/details?id=com.getyolo&pcampaignid=web_share" target='_blank' className="flex w-[20px] p-[1px] items-start shrink-0">
+            <BiLogoPlayStore />
+          </Link>
+        </div>
+        <div className="relative border-gradient-bottom shadow flex justify-center items-center h-10 bg-transparent text-[#8A8989] px-3 group cursor-pointer">
+          <Link href="https://apps.apple.com/in/app/yolo-pay/id6458690547" target='_blank' className="flex w-[20px] p-[1px] items-start shrink-0">
+            <BiLogoApple />
+          </Link>
+        </div>
       </div>
       {/* <button onClick={() => {
         setisMenuOpen(!isMenuOpen);
