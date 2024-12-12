@@ -41,7 +41,7 @@ const DeleteMail = () => {
                             Or Fill this form
                         </h2>
                     </div>
-                    <form className='flex flex-col gap-6' action="https://formsubmit.co/68b375d540e5579604152c3ce0a5b00c" method="POST" >
+                    <form className='flex flex-col gap-6' action="https://formsubmit.co/team@getyolo.in" method="POST" >
                         <div className='flex flex-col lg:flex-row gap-6' >
                             <div className='flex flex-col gap-1' >
                                 <label htmlFor="Fname" className="font-poppins text-[#6E6E6E] text-[14px] font-medium leading-[150%] tracking-[-0.165px]" >
