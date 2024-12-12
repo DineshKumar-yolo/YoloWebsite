@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import { FaRegEnvelope } from 'react-icons/fa'
 import Button from '../modules/Button'
 import { BsChatLeftText } from "react-icons/bs"
+import { toast } from 'react-toastify';
 
 const DeleteMail = () => {
 
@@ -14,6 +15,43 @@ const DeleteMail = () => {
     const [email, setemail] = useState("");
     const [message, setmessage] = useState("");
     const [phone, setPhone] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData();
+        formData.append("Fname", fName);
+        formData.append("Lname", lName);
+        formData.append("email", email);
+        formData.append("Phone", phone);
+        formData.append("message", message);
+        formData.append("_next", "#");
+        formData.append("_subject", `New delete account from ${fName} ${lName} ${email}!`);
+        formData.append("_captcha", "false");
+        formData.append("_template", "table");
+
+        try {
+            const response = await fetch("https://formsubmit.co/283a4f7628bbd586749a9fd843d4b74d", {
+                method: "POST",
+                body: formData,
+            });
+
+            if (response.ok) {
+                toast.success("Your request has been submitted successfully!");
+                // Clear the form
+                setfName("");
+                setlName("");
+                setemail("");
+                setPhone("");
+                setmessage("");
+            } else {
+                toast.error("There was an issue submitting your request. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error submitting the form:", error);
+            toast.error("An unexpected error occurred. Please try again.");
+        }
+    };
 
     return (
         <div className='w-full py-20 flex justify-center items-center'>
@@ -41,7 +79,7 @@ const DeleteMail = () => {
                             Or Fill this form
                         </h2>
                     </div>
-                    <form className='flex flex-col gap-6' action="https://formsubmit.co/team@getyolo.in" method="POST" >
+                    <form className='flex flex-col gap-6' onSubmit={handleSubmit} >
                         <div className='flex flex-col lg:flex-row gap-6' >
                             <div className='flex flex-col gap-1' >
                                 <label htmlFor="Fname" className="font-poppins text-[#6E6E6E] text-[14px] font-medium leading-[150%] tracking-[-0.165px]" >
@@ -76,10 +114,10 @@ const DeleteMail = () => {
                             </label>
                             <input type='text' name='message' value={message} placeholder='Type here' required onChange={(e) => setmessage(e.target.value)} className="font-poppins bg-transparent input-border-gradient-right text-[#A0A0A1] text-[16px] font-semibold leading-[150%] tracking-[-0.165px]" />
                         </div>
-                        <input type="hidden" name="_next" value="https://getyolo.in/user-account-delete" />
+                        {/* <input type="hidden" name="_next" value="https://getyolo.in/user-account-delete" />
                         <input type="hidden" name="_subject" value={`New delete account from ${fName}${lName} ${email} !`} />
                         <input type="hidden" name="_captcha" value="false" />
-                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_template" value="table" /> */}
                         <div className='flex items-start gap-5'>
                             <Button buttonName={"Submit"} />
                         </div>

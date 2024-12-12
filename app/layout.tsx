@@ -8,7 +8,8 @@ import Navbar from '@/components/modules/navbar/Navbar'
 import Footer from '@/components/modules/footer/Footer'
 import MobileFooter from "@/components/modules/footer/MobileFooter"
 import { usePathname } from 'next/navigation';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const inter = Inter({ subsets: ['latin'] })
 
 const metadata: Metadata = {
@@ -75,6 +76,11 @@ export default function RootLayout({
             </div>
           )
         }
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          theme='dark'
+        />
       </body>
     </html>
   );
