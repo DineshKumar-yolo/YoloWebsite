@@ -33,8 +33,8 @@ const Partnerships = [
   { name: "Partner With Us", link: "partner-with-us", key: 2 },
 ];
 
-const Footer = () => {  
-   const year = new Date().getFullYear();
+const Footer = () => {
+  const year = new Date().getFullYear();
 
   return (
     <div className="py-16 xl:px-[100px] px-10 w-full bg-[#121213] inline-flex justify-center flex-col items-center gap-36">
@@ -175,7 +175,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-           {/* <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%] text-justify">
+          {/* <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%] text-justify">
             *Yolo Core and Yolo + Invest families can earn monthly rewards of 1%
             per annum, Yolo Max families can earn 2% per annum, and Yolo
             Infinity families can earn 5% per annum on an average daily savings
@@ -205,7 +205,13 @@ const Footer = () => {
             <div className="w-[1px] h-7 bg-white"></div>
             <Link href="/faq/#contact">
               <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
-              contact-us
+                contact-us
+              </p>
+            </Link>
+            <div className="w-[1px] h-7 bg-white"></div>
+            <Link href="/user-account-delete">
+              <p className="text-[#F3F3F3] font-poppins text-sm font-normal leading-[150%]">
+                YOLO account deletion
               </p>
             </Link>
           </div>

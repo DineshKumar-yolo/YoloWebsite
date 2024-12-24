@@ -70,7 +70,7 @@ const Dropdowns = ({ title, items }) => {
 
 const MobileFooter = () => {
     const year = new Date().getFullYear();
-    
+
     return (
         <div className='flex px-5 py-10 flex-col items-center gap-10 bg-[#121213]'>
             {/* <div className='flex flex-col items-start gap-3 self-stretch'>
@@ -123,15 +123,18 @@ const MobileFooter = () => {
                     </div>
                 </div>
                 {/* <p className='text-[#F3F3F3] text-xs font-normal leading-[170%]'>*Yolo Core and Yolo + Invest families can earn monthly rewards of 1% per annum, Yolo Max families can earn 2% per annum, and Yolo Infinity families can earn 5% per annum on an average daily savings balance of up to $5,000 per family. Only Yolo Max and Infinity families can earn 1% cash back on spending monthly. To qualify, the Primary Account must be in Good Standing and have a verified ACH funding account. See Yolo Terms of Service for details. Subject to change at any time.</p> */}
-                <div className='flex flex-wrap justify-start items-start gap-3'>
-                    <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>copyright © {year} Trivy Technologies Pvt Ltd.</p>
+                <div className='flex flex-wrap justify-center items-center gap-3'>
                     <div className="flex items-center gap-4">
                         <Link href="/privacy-policy" className='text-center text-[#F3F3F3] text-xs font-normal leading-[150%]'>privacy policy</Link>
                         <div className='w-px h-4 bg-white'></div>
                         <Link href="/terms-of-services" className='text-center text-[#F3F3F3] text-xs font-normal leading-[150%]'>terms and conditions</Link>
-                        <div className='w-px h-4 bg-white'></div>
-                        <Link href="/faq/#contact" className='text-center text-[#F3F3F3] text-xs font-normal leading-[150%]'>contact us</Link>
                     </div>
+                    <div className="flex items-center gap-4">
+                        <Link href="/faq/#contact" className='text-center text-[#F3F3F3] text-xs font-normal leading-[150%]'>contact us</Link>
+                        <div className='w-px h-4 bg-white'></div>
+                        <Link href="/user-account-delete" className='text-center text-[#F3F3F3] text-xs font-normal leading-[150%]'>YOLO account deletion</Link>
+                    </div>
+                    <p className='text-[#F3F3F3] text-xs font-normal leading-[150%]'>copyright © {year} Trivy Technologies Pvt Ltd.</p>
                 </div>
             </div>
         </div>

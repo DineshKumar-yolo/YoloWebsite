@@ -60,7 +60,7 @@ const Profile = ({ params }) => {
             <div className="flex flex-col justify-center items-center m-[1.5px] w-[360px] py-5 px-4 gap-6 bg-[#0D0D0D]" >
               <div className="share-bg absolute h-[200px] top-5 w-[360px]" />
               <div className='card-round' >
-                <Image src={data.profile.includes("amazonaws.com") ?data.profile : data.gender == 'male'? require('@/public/ProfilePic.png') : data.gender == 'female'? require('@/public/Female.png') : require('@/public/User.png')} alt='profile' width={100} height={100} className='rounded-full p-1' />
+                <Image src={data.profile.includes("storage.googleapis.com") ?data.profile : data.gender == 'male'? require('@/public/ProfilePic.png') : data.gender == 'female'? require('@/public/Female.png') : require('@/public/User.png')} alt='profile' width={100} height={100} className='rounded-full p-1 w-[100px] h-[100px] object-contain' />
               </div>
               <p className='text-[#ffffff] text-[16px] font-semibold' >{data.name}</p>
               {
