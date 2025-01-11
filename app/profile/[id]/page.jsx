@@ -42,6 +42,22 @@ const Profile = ({ params }) => {
     await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL_IAM}/user/contact-sharing-analytical/${dealId}?keyName=${keyName}`)
   }
 
+  const saveContact = async (keyName) => {
+    sendClick(keyName);
+
+    // create a vcard file
+    var vcard = `BEGIN:VCARD\nVERSION:3.0\nFN;CHARSET=UTF-8:${data.name}${data.phoneNumber !== '' && data.visibility.phoneNumber ? '\nTEL;TYPE=CELL:+91' + data?.phoneNumber + '\nTEL;TYPE=WORK,VOICE:+91' + data?.phoneNumber : ''}${data.alternateEmails.length !== 0 && data.alternateEmails[0] !== '' && data.visibility.alternateEmails? '\nEMAIL;CHARSET=UTF-8;type=WORK,INTERNET:' + data.alternateEmails[0] : ''}\nEND:VCARD`;
+    var blob = new Blob([vcard], { type: "text/vcard" });
+    var url = URL.createObjectURL(blob);
+
+    const newLink = document.createElement('a');
+    newLink.download = data.name + ".vcf";
+    newLink.textContent = data.name;
+    newLink.href = url;
+
+    newLink.click();
+  }
+
   useEffect(() => {
     getUser()
   }, [])
@@ -60,7 +76,7 @@ const Profile = ({ params }) => {
             <div className="flex flex-col justify-center items-center m-[1.5px] w-[360px] py-5 px-4 gap-6 bg-[#0D0D0D]" >
               <div className="share-bg absolute h-[200px] top-5 w-[360px]" />
               <div className='card-round' >
-                <Image src={data.profile.includes("storage.googleapis.com") ?data.profile : data.gender == 'male'? require('@/public/ProfilePic.png') : data.gender == 'female'? require('@/public/Female.png') : require('@/public/User.png')} alt='profile' width={100} height={100} className='rounded-full p-1 w-[100px] h-[100px] object-contain' />
+                <Image src={data.profile.includes("storage.googleapis.com") ? data.profile : data.gender == 'male' ? require('@/public/ProfilePic.png') : data.gender == 'female' ? require('@/public/Female.png') : require('@/public/User.png')} alt='profile' width={100} height={100} className='rounded-full p-1 w-[100px] h-[100px] object-contain' />
               </div>
               <p className='text-[#ffffff] text-[16px] font-semibold' >{data.name}</p>
               {
@@ -76,7 +92,7 @@ const Profile = ({ params }) => {
                 {
                   data.alternateEmails.length !== 0 && data.alternateEmails[0] !== '' && data.visibility.alternateEmails && (
                     <Link href={`mailto:${data.alternateEmails[0]}`} onClick={() => sendClick('emailId')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
-                      <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><MdOutlineEmail /></p>
+                      <Image src={require('@/public/email.png')} width={40} height={40} />
                       <button className='text-[12px]' >Email</button>
                     </Link>
                   )
@@ -84,7 +100,7 @@ const Profile = ({ params }) => {
                 {
                   data.whatsapp !== '' && data.visibility.whatsapp && (
                     <Link target='_blank' href={data.whatsapp} onClick={() => sendClick('whatsapp')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
-                      <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><FaWhatsapp /></p>
+                      <Image src={require('@/public/Whatsapp.png')} width={30} height={30} />
                       <button className='text-[12px]' >whatsapp</button>
                     </Link>
                   )
@@ -97,10 +113,10 @@ const Profile = ({ params }) => {
               <div className='grid grid-flow-row grid-cols-3 gap-4 items-center justify-between' >
                 {
                   data.phoneNumber !== '' && data.visibility.phoneNumber && (
-                    <Link href={`tel:${data.phoneNumber}`} onClick={() => sendClick('phoneNumber')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                    <div onClick={() => saveContact('phoneNumber')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4 cursor-pointer' >
                       <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><FiPhone /></p>
                       <button className='text-[12px]' >mobile</button>
-                    </Link>
+                    </div>
                   )
                 }
 
