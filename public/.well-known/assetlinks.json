@@ -5,11 +5,26 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.getyolo",
+      "package_name": "com.finch.pay",
       "sha256_cert_fingerprints": [
-        "B5:60:F8:6B:AB:73:D4:8C:DC:9A:E5:41:BA:3D:ED:4D:D9:33:01:59:1B:DE:53:4F:0D:8F:D5:8F:AB:71:CA:EE",
-        "D5:E3:5B:39:A3:17:60:2D:1F:DF:49:76:5D:2E:F0:BA:DB:62:EE:9B:73:B3:F7:07:28:6F:C1:BC:26:4C:8D:54"
+        "07:EE:18:70:F5:F7:6A:E8:A1:93:B1:70:0F:3F:A4:09:B2:90:F7:65:09:D4:E2:13:53:5E:EF:FB:FC:DF:86:A7"
       ]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "web",
+      "site": "https://finchpay.co"
+    },
+    "pathPattern": "/profile/*"
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "web",
+      "site": "https://yourwebsite.com"
+    },
+    "pathPattern": "/redirect/*"
   }
 ]
