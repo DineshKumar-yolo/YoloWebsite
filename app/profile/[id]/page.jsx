@@ -5,6 +5,7 @@ import axios from 'axios';
 import { GridLoader } from 'react-spinners';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BsPersonAdd } from "react-icons/bs";
 import { FaGraduationCap } from "react-icons/fa6";
 import { FaLink } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
@@ -46,7 +47,7 @@ const Profile = ({ params }) => {
     sendClick(keyName);
 
     // create a vcard file
-    var vcard = `BEGIN:VCARD\nVERSION:3.0\nFN;CHARSET=UTF-8:${data.name}${data.phoneNumber !== '' && data.visibility.phoneNumber ? '\nTEL;TYPE=CELL:+91' + data?.phoneNumber + '\nTEL;TYPE=WORK,VOICE:+91' + data?.phoneNumber : ''}${data.alternateEmails.length !== 0 && data.alternateEmails[0] !== '' && data.visibility.alternateEmails? '\nEMAIL;CHARSET=UTF-8;type=WORK,INTERNET:' + data.alternateEmails[0] : ''}\nEND:VCARD`;
+    var vcard = `BEGIN:VCARD\nVERSION:3.0\nFN;CHARSET=UTF-8:${data.name}${data.phoneNumber !== '' && data.visibility.phoneNumber ? '\nTEL;TYPE=CELL:+91' + data?.phoneNumber + '\nTEL;TYPE=WORK,VOICE:+91' + data?.phoneNumber : ''}${data.alternateEmails.length !== 0 && data.alternateEmails[0] !== '' && data.visibility.alternateEmails ? '\nEMAIL;CHARSET=UTF-8;type=WORK,INTERNET:' + data.alternateEmails[0] : ''}\nEND:VCARD`;
     var blob = new Blob([vcard], { type: "text/vcard" });
     var url = URL.createObjectURL(blob);
 
@@ -98,11 +99,11 @@ const Profile = ({ params }) => {
                   )
                 }
                 {
-                  data.whatsapp !== '' && data.visibility.whatsapp && (
-                    <Link target='_blank' href={data.whatsapp} onClick={() => sendClick('whatsapp')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
-                      <Image src={require('@/public/Whatsapp.png')} width={30} height={30} />
-                      <button className='text-[12px]' >whatsapp</button>
-                    </Link>
+                  data.phoneNumber !== '' && data.visibility.phoneNumber && (
+                    <div target='_blank' onClick={() => saveContact('phoneNumber')} className='px-3 py-4 share button flex flex-row text-[#ffffff] gap-4 flex-1' >
+                      <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><BsPersonAdd /></p>
+                      <button className='text-[12px]' >Save<br />Contact</button>
+                    </div>
                   )
                 }
               </div>
@@ -112,11 +113,20 @@ const Profile = ({ params }) => {
               </div>
               <div className='grid grid-flow-row grid-cols-3 gap-4 items-center justify-between' >
                 {
+                  data.whatsapp !== '' && data.visibility.whatsapp && (
+                    <Link target='_blank' href={data.whatsapp} onClick={() => sendClick('whatsapp')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4' >
+                      <Image src={require('@/public/Whatsapp.png')} width={35} height={35} />
+                      <button className='text-[12px]' >whatsapp</button>
+                    </Link>
+                  )
+                }
+
+                {
                   data.phoneNumber !== '' && data.visibility.phoneNumber && (
-                    <div onClick={() => saveContact('phoneNumber')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4 cursor-pointer' >
+                    <Link href={`tel:${data.phoneNumber}`} onClick={() => sendClick('phoneNumber')} className='px-3 share button w-[98px] h-[118px] flex flex-col text-[#ffffff] gap-4 cursor-pointer' >
                       <p className='bg-[#ffffff10] rounded-full h-[40px] w-[40px] text-xl flex justify-center items-center' ><FiPhone /></p>
                       <button className='text-[12px]' >mobile</button>
-                    </div>
+                    </Link>
                   )
                 }
 
